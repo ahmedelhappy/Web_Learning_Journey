@@ -1,0 +1,70 @@
+head
+  meta
+    charset="utf-8"
+    description
+    author
+    keywords
+  title 
+  link
+    adding favicon
+body
+  title attribute
+  anchor # with id (a href="#Osama")
+  anchor send email (a href=mailto:ahmedelhappy@gmail.com)
+  OL attributes:
+    type
+    start
+  Li attributes:
+    value
+  dl
+    dt =>term
+    dd =>description
+  table
+    thead
+      th (td)
+    tbody
+      tr
+
+      td  
+        colspan
+    tfoot 
+  div
+  =>all the following are divs:
+  header
+  aside
+  bav
+  section
+  main
+  article
+  footer
+  figure
+    figurecaption
+  audio //we type inside alt msg.
+    src attribute //only one source 
+    source //can use multiple sources just in case some extension is not supported.
+      src 
+      type => many type
+    controls
+    autoplay //not supported on chrome ?
+    loop
+  Video, the same as audio plus:
+    muted
+    poster
+    height
+    width
+    track
+      src
+      kind
+        subtitles
+        metadata
+        captions
+        etc..
+      srclang = en
+      label = English
+      preload
+
+  
+  
+  
+  
+
