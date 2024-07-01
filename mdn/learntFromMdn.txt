@@ -1,0 +1,7 @@
+=> concepts of proper use of headings (accessbility) ...
+  <em> vs <i>
+  <strong> vs <b>
+=> anything can be a link (imgs, h1, p, etc)
+=> we can use section link(with #) either it's on the same page or not.
+=> absolute link vs relative link
+=> download="<put the download name here>"
