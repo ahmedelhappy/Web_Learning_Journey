@@ -1,0 +1,50 @@
+html {
+  padding-bottom: 5000px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.product1,
+.product2 {
+  background-color: rgb(255 0 0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100px;
+}
+.product1 {
+  background-color: blueviolet;
+  position: relative;
+}
+.product1::after {
+  content: "";
+  position: absolute;
+  right: -19.5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent red;
+}
+div::before {
+  content: attr(lkjsdaf);
+  display: none;
+}
+div:hover::before {
+  display: block;
+  position: relative;
+}
+ul {
+  list-style: none;
+  position: relative;
+}
+li {
+  margin-bottom: 10px;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent red;
+}

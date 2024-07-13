@@ -1,0 +1,52 @@
+background-image: url ("")
+background stuff => repeat, scroll, cover, etc...
+
+padding or margin => auto 
+
+inline elements (span) doesn't respect padding top and bottom, height, width 
+display none vs visibility hidden
+width min max fit-content ...
+
+overflow x y auto hidden visible
+
+text-shadow x y blur color
+text align vs direction vs vertical-align
+text-decoration
+text-transformation (upper & lower & etc...)
+letter-spacing 
+line-height
+word-spacing
+text-indent
+white-space vs word-break 
+overflow vs  text-overflow
+san-serif vs serif
+font-size rem vs em vw
+font-variant
+font-style  (normal to reset)
+font-weight (normal)
+float: left
+$ float & clear is not really clear <==================================
+width:calc((100% - 120px ) / 5);
+opacity 
+posision: static relative absulote fixed sticky
+z-index (any value | -1)
+list-style (list-style-type list-style-posistion list-style-image ) 
+pseudo classes
+  :checked visisted focus hover empty
+  force state on chrome (select a state for an element to test & style)
+border => outline none 
+pseudo elements
+  ::first-letter
+  ::first-line
+  ::selection
+  ::before
+  div::after
+    content => leave blank if not gonna use
+    put here the specific properties
+    
+
+
+
+
+
+
