@@ -48,3 +48,20 @@ ul li::before {
   border-style: solid;
   border-color: transparent transparent transparent red;
 }
+
+.box {
+  background-color: aqua;
+  border: 100px;
+  width: 600px;
+  overflow: hidden;
+  margin: 20px auto;
+  padding:20px;
+}
+.one {
+  float:left;
+  width: 300px;
+  background-color: antiquewhite;
+  border:5px solid red;
+  padding: 20px;
+  box-sizing:border-box;
+}

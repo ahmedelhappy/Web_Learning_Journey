@@ -6,9 +6,8 @@ padding or margin => auto
 inline elements (span) doesn't respect padding top and bottom, height, width 
 display none vs visibility hidden
 width min max fit-content ...
-
 overflow x y auto hidden visible
-
+if the parent doesn't have height, will fit the inside content (invisible)
 text-shadow x y blur color
 text align vs direction vs vertical-align
 text-decoration
@@ -44,6 +43,24 @@ pseudo elements
     content => leave blank if not gonna use
     put here the specific properties
     
+outline:5px solid red; to add outline around the element
+border-radius: 50% (can add each corner independantly) (may add two values for each corner)
+box-shadow: H-Shadow  V-Shadow  Blur  Spread  Color  Inset/outset
+box-sizing: border-box (use * to apply for all elements)
+transition (we use it inside the main element not the hover)
+  duration
+  delay
+  property => choose which property to apply the transition on (default: all)
+  timing-function: ease, ease-in, ...
+  shorthand => propertyname duration delay (e.g: height 3s 1s ease) may seperate them with a comma (e.g: height 3s 1s, width 3s, 1)  
+important flag => to overwrite any css property even the inline one (!important) (highest priority)
+margin collapse => only vertical margin collapsing (bigger margin wins)
+CSS variables
+  globle variables => :root{--variableName: value, color, ...}
+  local varibales  => same, but inside the selector you wanna use in.
+  To use them, call the var(--variableName)
+
+
 
 
 
