@@ -5,35 +5,105 @@ padding or margin => auto
 
 inline elements (span) doesn't respect padding top and bottom, height, width 
 display none vs visibility hidden
-width min max fit-content ...
-overflow x y auto hidden visible
-if the parent doesn't have height, will fit the inside content (invisible)
-text-shadow x y blur color
+visibility
+  -hidden
+  -collapse => for table raws (otherwise acts like hidden)
+width
+  -min 
+  -max 
+  -fit-content
+overflow
+  visible
+  x 
+  y 
+  auto 
+  hidden 
+text-shadow => x y blur color => ie:   text-shadow:3px 3px 5px red;
 text align vs direction vs vertical-align
 text-decoration
-text-transformation (upper & lower & etc...)
+  underline
+  overline
+text-transformation
+  uppercase
+  lowercase
 letter-spacing 
 line-height
 word-spacing
 text-indent
-white-space vs word-break 
-overflow vs  text-overflow
-san-serif vs serif
-font-size rem vs em vw
+white-space
+  nowrap
+  pre
+word-break 
+  break-all
+  keep-all
+overflow
+  hidden
+  scroll
+  auto => scroll when needed 
+text-overflow
+  ellipsis
+  clip
+  =====================================================review============================================
+san-serif vs serif => san = Not (Edges)
+font-size units
+  -rem => Root em (browser default size (16px))
+  -em => same but for parent size not root 
+  -vw => 1vw is 1% of the viewport width, If the viewport is 1000px wide, 50vw equals 500px.
 font-variant
-font-style  (normal to reset)
-font-weight (normal)
-float: left
-$ float & clear is not really clear <==================================
+  -smallcaps
+font-style
+  -italic
+font-weight
+cursor
+float: left 
+  this solves the problem of extra width when distributing elements horizontly by the inline-block method. 
+  when using float, the parent will be hidden, so use overflow:hidden in the parent.
+  now If there is another element after, will be included next to the floating elements, so need to reset the layout
+  create an element after the floating elemnet, use clear:both; in the css file to reset the layout.
+  kinda annoying ik );
+  I Think will watch a video, Or no need ? idk
+=====================================================review============================================
 width:calc((100% - 120px ) / 5);
-opacity 
-posision: static relative absulote fixed sticky
+opacity
+  =>0.5
+posision
+  -static (Default Value)
+  -relative (move relativly to itself)
+  -absulote (You Know Buddy)
+  -fixed (fixed haha)
+  -sticky (Sticky)
 z-index (any value | -1)
-list-style (list-style-type list-style-posistion list-style-image ) 
+LISTS STYLING -> Shorthand property => list-style: square inside url("sqpurple.gif");
+  list-style-type
+    -circle
+    -square
+    -upper-roman
+    -lower-alpha
+    -none => to remove Default Settings
+  list-style-image
+    -url('sqpurple.gif');
+  list-style-position
+    -outside (default)
+    -inside
 pseudo classes
-  :checked visisted focus hover empty
-  force state on chrome (select a state for an element to test & style)
+  -link
+  -active
+  -checked 
+  -visisted 
+  -focus 
+  -hover 
+  -empty
+TIP=> force state on chrome (select a state for an element to test & style)
 border => outline none 
+  border-style 
+    -solid
+    -dashed
+    -...
+  border-top-style: dotted;(specifying each side)
+  border-width
+  border-color
+    -red green blue yellow
+  Shourt Hand=> border: 5px solid red;
 pseudo elements
   ::first-letter
   ::first-line
@@ -42,23 +112,73 @@ pseudo elements
   div::after
     content => leave blank if not gonna use
     put here the specific properties
+    .product1::after {
+    content: "";
+    position: absolute;
+    right: -19.5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent red;
+    }
     
-outline:5px solid red; to add outline around the element
-border-radius: 50% (can add each corner independantly) (may add two values for each corner)
+outline:5px solid red; -> Doesn't Add Extra Margin.
+  outline-style (like the border)
+  outline-color
+  outline-width
+  outline-offset
+border-radius
+  (can add each corner independantly) 
 box-shadow: H-Shadow  V-Shadow  Blur  Spread  Color  Inset/outset
-box-sizing: border-box (use * to apply for all elements)
-transition (we use it inside the main element not the hover)
+========================================Review=========================================
+box-sizing: border-box => This include Padding & border into The overall height & width
+  https://www.w3schools.com/css/css3_box-sizing.asp
+  (use * to apply for all elements)
+    * {
+    box-sizing: border-box;
+  }
+transition (we use it inside the main element not the hover) 
+  >>>>>>>>>>>>>>>>>>>>>>https://www.w3schools.com/css/css3_transitions.asp
   duration
   delay
   property => choose which property to apply the transition on (default: all)
   timing-function: ease, ease-in, ...
   shorthand => propertyname duration delay (e.g: height 3s 1s ease) may seperate them with a comma (e.g: height 3s 1s, width 3s, 1)  
 important flag => to overwrite any css property even the inline one (!important) (highest priority)
+  >>>>>>>>>>>>>>>>>>>>>>https://www.w3schools.com/css/css_important.asp
 margin collapse => only vertical margin collapsing (bigger margin wins)
 CSS variables
-  globle variables => :root{--variableName: value, color, ...}
+  globle variables => :root{--variableName: value, color, ...} eg: --blue: #6495ed;
   local varibales  => same, but inside the selector you wanna use in.
   To use them, call the var(--variableName)
+Flexbox 
+  >>>>>>>>>>>>>>>>>>>>>>https://www.w3schools.com/css/css3_flexbox.asp
+  flex-direction 
+    - row
+    - row-reverse 
+    - column
+    - column-reverse
+  flex-wrap
+    - nowrap
+    - wrap
+    - wrap-reverse
+  flex-flow
+    - row nowrap
+  justify-content
+    - space-between
+    - space-around
+    - space-evenly
+    - Flex-start
+
+  align-items
+    - stretch
+    - flex-start
+    - center
+    - flex-end
+  align-content
+    - space-between
+    - space-around
+    - space-evenly
+    - Flex-start
 
 
 

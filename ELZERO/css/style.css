@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.product1,
+/* .product1,
 .product2 {
   background-color: rgb(255 0 0);
   padding-top: 10px;
@@ -24,7 +24,7 @@ body {
   border-width: 10px;
   border-style: solid;
   border-color: transparent transparent transparent red;
-}
+} */
 div::before {
   content: attr(lkjsdaf);
   display: none;
@@ -55,13 +55,90 @@ ul li::before {
   width: 600px;
   overflow: hidden;
   margin: 20px auto;
-  padding:20px;
+  padding: 20px;
 }
 .one {
-  float:left;
+  float: left;
   width: 300px;
   background-color: antiquewhite;
-  border:5px solid red;
+  border: 5px solid red;
   padding: 20px;
-  box-sizing:border-box;
+  box-sizing: border-box;
+}
+.try1 {
+  background-color: blue;
+  visibility: collapse;
+}
+.try2 {
+  background-color: brown;
+}
+.try1,
+.try2 {
+  padding: 100px;
+}
+table {
+  border: 2px solid red;
+  min-width: 400px;
+  max-width: 800px;
+  position: static;
+}
+td,
+th {
+  border: 2px solid red;
+}
+.container {
+  border: 1px solid gray;
+  max-width: 460px;
+}
+.item {
+  background-color: #8ca0ff;
+  /* text-shadow: 3px 3px 5px red; */
+  text-indent: 30px;
+  white-space: nowrap;
+  width: 100%;
+}
+.link {
+  background-color: #8ca0ff;
+  width: 100%;
+  overflow: hidden;
+  font-size: 0.5rem;
+}
+.parent {
+  padding: 10px;
+  background-color: red;
+  width: 400px;
+  overflow: hidden;
+}
+
+.clear {
+  clear:both;
+}
+.product2 {
+  left: 50px;
+}
+.shit {
+  border: solid red 2px;
+  width: 100px;
+  background-color: aqua;
+  /* border-radius: 10px 2px 30px 0px; */
+  /* border-top-left-radius: 20px; */
+  /* box-shadow: 10px 10px 15px 2px red ; */
+  height: 100px;
+  outline:20px solid orange;
+  box-sizing: border-box;
+}
+.flex {
+  width: 500px;
+  background-color: aqua;
+  padding: 20px;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.products {
+  padding: 10px 0;
+  background-color: rgb(251, 255, 127);
+  text-align: center;
+  width: calc(98% / 3);
 }

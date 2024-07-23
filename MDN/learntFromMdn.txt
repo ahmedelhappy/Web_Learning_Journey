@@ -5,18 +5,18 @@
 =>we can use section link(with #) either it's on the same page or not.
 =>absolute link vs relative link
 =>download="<put the download name here>"
-=><blockquote cite=<url>> | <q cite>
+=><blockquote cite="url"> | <q cite="url">
 =>cite tag =>  <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>. 
   Usage: Generally used for citing the title of a work in a document.
 =><abbr>
 =><address>
 =><sub> | <sup>
 =>Replaced Elements ( the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself.)
-=>use the same image sizes (width & height) (not to distract user when the image load)
+=>use the same image sizes as (width & height) (not to distract user when the image load)
 =>figure
-    img
-    figcaption
+    <img>
+    <figcaption>
    captions and alt text have distinct roles. Captions benefit even people who can see the image, whereas alt text provides the same functionality as an absent image
    A figure doesn't have to be an image.
-  ( if an image has meaning, in terms of your content, you should use an HTML image.
+  ( if an image has meaning, in terms of your content, you should use an HTML image. (can be accessed through accessbilitys (like alt) and can have extra caption)
    If an image is purely decoration, you should use CSS background images.)

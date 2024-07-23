@@ -7,19 +7,20 @@ head
   title 
   link
     adding favicon
+    Css Files
 body
-  title attribute => when hovering
-  anchor # with id (a href="#Osama")
-  anchor send email (a href=mailto:ahmedelhappy@gmail.com)
-  OL attributes:
-    type
-    start
-  Li attributes:
-    value
-  dl
-    dt =>term
-    dd =>description
-  table
+  -title attribute => when hovering
+  <a> # with id (a href="#Osama") (This "Osama" is an id of an element either on the same page or not)
+  <a> send email (a href=mailto:ahmedelhappy@gmail.com)
+  <OL>
+    -type
+    -start
+  <Li>
+    -value (this override -type)
+  <dl>
+    <dt> =>term
+    <dd> =>description
+  <table>
     thead
       th =(td)
     tbody
@@ -38,62 +39,61 @@ body
   article
   footer
   figure
-    figurecaption
-  audio //we type inside alt msg.
-    src attribute //only one source 
-    source tag //can use multiple sources just in case some extension is not supported.
-      src 
-      type => mime type
-    controls
-    autoplay //not supported on chrome ?
-    loop
+    <figurecaption>
+  audio
+    -src =>only one source 
+    <source> => can use multiple sources just in case some extension is not supported.
+      -src 
+      -type => mime type
+    -controls
+    -autoplay //not supported on chrome
+    -loop
   Video, the same as audio plus:
-    muted
-    poster
-    height
-    width
-    track
-      src
-      kind
+    -muted
+    -preload
+    -poster
+    -height
+    -width
+    <track>
+      -src
+      -kind
         subtitles
         metadata
         captions
         etc..
-      srclang = en
-      label = English
-    preload    
-  label tag is to label XD.  
-  form => is used take inputs from the user.
-    action attribute => send the form data to
-    method attribute => the way the data is sent to back end.
+      -srclang = en (for the browser)
+      -label = English (for users)
+  <label> =>is to label XD (can be linked with some element like input or button)
+  <form> => is used take inputs from the user.
+    -action attribute => send the form data to
+    -method attribute => the way the data is sent to back end.
       get => data is appearing in url.
       post => data is not appearing in url.
-    novalidate
-    target
-  PS the data being sent to back-end can be seen in chrome (network).      
-  name => the query string parameters (you can add "name" attribute to any of the form subtags)
-    input
+    -novalidate
+    -target
+    =>PS the data being sent to back-end can be seen in chrome (network).      
+    -name => the query string parameters (you can add "name" attribute to any of the form subtags)
+    <input>
       => use label tag (lable for <id>)
-      attributes:
-      required 
-      readonly (the data is sent) vs disabled (the data isn't sent)
-      autofocus    
-      placeholder
-      minlegnth
-      maxlegnth
-      list <listname> (you can search unlike select)
-        datalist tag (id = listname)
-          option tag 
+      -required 
+      -readonly (the data is sent) vs -disabled (the data isn't sent)
+      -autofocus
+      -placeholder
+      -minlegnth
+      -maxlegnth
+      <list> (you can search unlike select)
+        <datalist> (id = listname)
+          <option> 
       type
       values of type attribute:
         text|password|email|hidden|reset(resets the whole form)|url|search|file(to upload files)|date|month|time
         submit (+ value to change "submit")
         color (sents the hex code of the color)
         (range or number) + min + max + step + value
+        checkbox
         radio 
           value (to be sent to back-end), "name" to isolate them
           checked
-        checkbox
     select tag => multiple attribute
       option tag => can categorize them using perant tag (optgroup)
         selected attribute
@@ -106,14 +106,14 @@ body
   q tag => "lksajdf"
   blockquote tage
   button
-  wbr => the code should be with no whitespace 
+  wbr => the text should be with no whitespace 
   bdi => to write arabic with English
   code
   pre
   iframe
 accessbility
   lighthouse in chrome in inspect
-  to make an element act like an element => role attribute
+??to make an element act like an element => role attribute
     ie: role ="checkbox" aria-checked ="true" => "like checked attribute" tabindex = "0" =>"to check when tabbing" aria-labelledby = "<labelId>" 
   
 
