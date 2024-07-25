@@ -113,9 +113,7 @@ th {
 .clear {
   clear:both;
 }
-.product2 {
-  left: 50px;
-}
+
 .shit {
   border: solid red 2px;
   width: 100px;
@@ -128,7 +126,7 @@ th {
   box-sizing: border-box;
 }
 .flex {
-  width: 500px;
+  width: 100%;
   background-color: aqua;
   padding: 20px;
   display: flex;
@@ -141,4 +139,10 @@ th {
   background-color: rgb(251, 255, 127);
   text-align: center;
   width: calc(98% / 3);
+  border: solid red 1px;
+    flex-grow: 0;
+
+}
+.product2 {
+  
 }

@@ -150,7 +150,8 @@ CSS variables
   globle variables => :root{--variableName: value, color, ...} eg: --blue: #6495ed;
   local varibales  => same, but inside the selector you wanna use in.
   To use them, call the var(--variableName)
-Flexbox 
+Flexbox -> block
+flex-inline -> Inline
   >>>>>>>>>>>>>>>>>>>>>>https://www.w3schools.com/css/css3_flexbox.asp
   flex-direction 
     - row
@@ -179,7 +180,18 @@ Flexbox
     - space-around
     - space-evenly
     - Flex-start
+  NOTES:
+    when flex-direction is column, justify-content and align-content are switched 
+  child element properties
+    order => - 0 (default value)
+    flex-grow => - 0 (default value)
+    flex-shrink => - 1 (default value) -> make this element shrink more when need
+    flex-basis => - auto (default value) -> The difference btw widht (This for height as well not only the width)
+    flex (short hand for the last 3) => - 0 1 auto
+    align-self => - auto (default value) -> Like align-items but for the child itself (overrides align-items)
+  
 
+  
 
 
 
