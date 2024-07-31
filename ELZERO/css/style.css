@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* .product1,
+/* /* .product1,
 .product2 {
   background-color: rgb(255 0 0);
   padding-top: 10px;
@@ -25,14 +25,14 @@ body {
   border-style: solid;
   border-color: transparent transparent transparent red;
 } */
-div::before {
+/* div::before {
   content: attr(lkjsdaf);
   display: none;
-}
-div:hover::before {
+} */
+/* div:hover::before {
   display: block;
   position: relative;
-}
+} 
 ul {
   list-style: none;
   position: relative;
@@ -92,7 +92,7 @@ th {
 }
 .item {
   background-color: #8ca0ff;
-  /* text-shadow: 3px 3px 5px red; */
+  text-shadow: 3px 3px 5px red;
   text-indent: 30px;
   white-space: nowrap;
   width: 100%;
@@ -118,9 +118,9 @@ th {
   border: solid red 2px;
   width: 100px;
   background-color: aqua;
-  /* border-radius: 10px 2px 30px 0px; */
-  /* border-top-left-radius: 20px; */
-  /* box-shadow: 10px 10px 15px 2px red ; */
+  border-radius: 10px 2px 30px 0px; 
+  border-top-left-radius: 20px; 
+  box-shadow: 10px 10px 15px 2px red ; 
   height: 100px;
   outline:20px solid orange;
   box-sizing: border-box;
@@ -143,6 +143,270 @@ th {
     flex-grow: 0;
 
 }
-.product2 {
-  
+.grad {
+  margin: 50px;
+  background-color: #8ca0ff;
+  height:300px;
+  width: 900px;
 }
+.grad::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width:900px;
+  background-image:linear-gradient(to right,red 0%, red 20%, orange 20% , orange 40% ,red 40%, red 60%)
+}
+*/
+
+/* .grid {
+  margin: 20px auto;
+  width:800px;
+  background-color: #eee;
+  display: grid;
+  height: 500px;
+  grid-template-columns:repeat(4, auto) ;
+  grid-template-rows: repeat(3, auto) ;
+  justify-content: space-between;
+  align-content: space-between;
+  column-gap: 5px; 
+  row-gap: 5px; 
+}
+
+
+.item {
+  background-color: red;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  padding:  30px;
+} 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.page {
+  background-color: #eee;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 2fr 15fr 2fr;
+  grid-template-areas:
+    "logo logo nav nav nav nav nav nav nav ." "cont cont cont cont cont cont cont cont side side"
+    "foot foot foot foot foot foot foot foot foot foot ";
+}
+
+.page h2 {
+  grid-area: logo;
+  background-color: blueviolet;
+}
+.page nav {
+  grid-area: nav;
+  background-color: yellow;
+}
+ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.page section {
+  background-color: red;
+
+  grid-area: cont;
+}
+.page aside {
+  background-color: orange;
+
+  grid-area: side;
+}
+.page footer {
+  color: wheat;
+  background-color: black;
+  grid-area: foot;
+}
+*/
+/* * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.grid {
+  margin: 50px auto;
+  padding: 0;
+  background-color: rgb(175, 226, 245);
+  display: grid;
+  height: 500px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+}
+.grid div {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  padding: 15px;
+  background-color: rgb(227, 105, 45);
+} 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  margin: 20px auto;
+  height: 500px;
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.grid div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+} */
+/* .grid {
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+    perspective: 200px;
+  }
+  .item1 { 
+    display: flex;
+    margin: 200px auto;
+    background-color: #b4b4b4;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    color: white;
+    transform: rotateX(deg);
+    transition: 0.5;
+    transform: translate3d(0, 0, 5px);
+  }  
+
+
+.container {
+  background-color: transparent;
+  margin: 60px auto;
+  width: 200px;
+  height: 200px;
+  perspective: 250px;
+}
+.box {
+  position: relative;
+  width:100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.box:hover {
+  transform: rotateY(-180deg);
+} 
+.box .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  backface-visibility: hidden;
+} 
+.box .front {
+  background-color: red;
+}
+.box .back {
+  background-color: green;
+  transform: rotateY(180deg);
+} 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.front {
+  animation-name: change-color;
+  animation-duration: 20s;
+}
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*
+body {
+  background-color: rgba(21, 21, 21, 0.891);
+ }
+.load {
+  display: flex;
+  margin: 50px auto;
+  justify-content: center;
+}
+.load div {
+  width: 20px;
+  height: 20px;
+  background-color: orchid;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation-name: up-and-down;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.load .two {
+  animation-delay: 0.2s;
+}
+.load .three {
+  animation-delay: 0.4s;
+}
+
+@keyframes up-and-down {
+  to {
+    opacity: 0.2;
+    transform: translateY(-20px);
+  }
+} */
+
+.parent {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; */
+}
+
+.parent div {
+  padding: 20px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+}
+/* 
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px){
+  .parent div {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 992px) {
+  .parent div {
+    width: calc(25% - 5px);
+  }
+}
+
+@media (min-width: 1200px) {
+} */
