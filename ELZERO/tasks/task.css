@@ -1,28 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
 div {
-  width: 400px;
-  height: 400px;
-  margin: 50px;
-  background-image: url(./../images/icons8-done-94.png);
-  border: solid 1px red;
+  height: 100px;
+  margin: 20px;
+  padding: 50px 60px;
+  line-height: 0px;
+  background-color: #eee;
+  display: inline-block;
+  outline: solid 5px black;
 }
 .assign-2-shape-1 {
-  background-repeat: no-repeat;
-  background-size: 80%;
+  border: solid 5px red;
 }
 .assign-2-shape-2 {
-  background-repeat: repeat-y;
-  background-position: right;
-  background-size: 80%;
-
+  border: 5px solid;
+  border-color: blue green;
 }
+
 .assign-2-shape-3 {
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-size: 80%;
-
-}
-.assign-2-shape-4 {
-  background-repeat: no-repeat;
-  background-size: 50% 50%;
-  background-position: right bottom;
+  border: 5px dashed;
+  border-color: red green blue yellow;
 }
