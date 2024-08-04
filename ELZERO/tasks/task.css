@@ -3,19 +3,26 @@ div {
   height: 400px;
   margin: 50px;
   background-image: url(./../images/icons8-done-94.png);
+  border: solid 1px red;
 }
 .assign-2-shape-1 {
   background-repeat: no-repeat;
+  background-size: 80%;
 }
 .assign-2-shape-2 {
   background-repeat: repeat-y;
   background-position: right;
+  background-size: 80%;
+
 }
 .assign-2-shape-3 {
   background-repeat: repeat-x;
   background-position: bottom;
+  background-size: 80%;
 
 }
 .assign-2-shape-4 {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: right bottom;
 }
