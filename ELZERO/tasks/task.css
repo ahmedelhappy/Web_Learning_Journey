@@ -9,9 +9,12 @@ div {
 }
 .assign-2-shape-2 {
   background-repeat: repeat-y;
+  background-position: right;
 }
 .assign-2-shape-3 {
   background-repeat: repeat-x;
+  background-position: bottom;
+
 }
 .assign-2-shape-4 {
   background-repeat: repeat;
