@@ -1,4 +1,4 @@
-background-image: url ("")
+background-image: url (""), url ("");
 background stuff => repeat, scroll, cover, etc...
 
 padding or margin => auto 
@@ -18,7 +18,7 @@ overflow
   y 
   auto 
   hidden 
-text-shadow => x y blur color => ie:   text-shadow:3px 3px 5px red;
+text-shadow => x y blur color -> ie:   text-shadow:3px 3px 5px red;
 text align vs direction vs vertical-align
 text-decoration
   underline
@@ -43,7 +43,6 @@ overflow
 text-overflow
   ellipsis
   clip
-  =====================================================review============================================
 san-serif vs serif => san = Not (Edges)
 font-size units
   -rem => Root em (browser default size (16px))
@@ -62,7 +61,6 @@ float: left
   create an element after the floating elemnet, use clear:both; in the css file to reset the layout.
   kinda annoying ik );
   I Think will watch a video, Or no need ? idk
-=====================================================review============================================
 width:calc((100% - 120px ) / 5);
 opacity
   =>0.5
@@ -121,8 +119,7 @@ pseudo elements
     border-style: solid;
     border-color: transparent transparent transparent red;
     }
-    
-outline:5px solid red; -> Doesn't Add Extra Margin.
+outline:5px solid red; => Doesn't Add Extra Margin.
   outline-style (like the border)
   outline-color
   outline-width
@@ -130,7 +127,6 @@ outline:5px solid red; -> Doesn't Add Extra Margin.
 border-radius
   (can add each corner independantly) 
 box-shadow: H-Shadow  V-Shadow  Blur  Spread  Color  Inset/outset
-========================================Review=========================================
 box-sizing: border-box => This include Padding & border into The overall height & width
   https://www.w3schools.com/css/css3_box-sizing.asp
   (use * to apply for all elements)
@@ -181,14 +177,14 @@ flex-inline -> Inline
     - space-evenly
     - Flex-start
   NOTES:
-    when flex-direction is column, justify-content and align-content are switched 
+    when flex-direction is column, justify-content and align-content are interchanged 
   child element properties
     order => - 0 (default value)
     flex-grow => - 0 (default value)
     flex-shrink => - 1 (default value) -> make this element shrink more when need
-    *flex-basis => - auto (default value) -> The difference btw widht (This for height as well not only the width)
+    flex-basis => - auto (default value) -> The difference btw width (This for height (when direction is column) as well not only the width)
     flex (short hand for the last 3) => - 0 1 auto
-    *align-self => - auto (default value) -> Like align-items but for the child itself (overrides align-items)
+    align-self => - auto (default value) -> Like align-items but for the child itself (overrides align-items)
 filter
   none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | invert() | opacity() | saturate()
 Gradient
@@ -234,11 +230,12 @@ grid
 responsive 
   minmax 
   repeat(auto-fill, minmax(200px, 1fr))
+==============================Review=========================
 transform 
   -scaleX(2) (vs width) -> this stretches the padding & content while the width and height don't
   -scaleY(1.2)
   -scale(1.5)
-  -rotate(deg | turn | rad | grad)
+  -rotate(deg | turn | rad (90 deg = 100rad) | grad (PI))
   -translate(px | % | rm ) ->   translate: 100px 20px;
   skewX(deg | turn | rad | grad)
   skewY()
@@ -256,7 +253,7 @@ transform
     => to use it, put perespctive in the parent, set the perespctive-origin as well in the parent
       ->perspective: 200px (parent)
       ->perspective: center center (parent)
-      ->transform3d(0, 0, 100px)
+      ->transform3d(0, 0, 100px) 
 *Card Flip 
   =>https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
   transform-style: preserve-3d;
@@ -281,49 +278,49 @@ animation
   (Shorthand)animation: example 5s linear 2s infinite alternate;
   -> loading animation kamd
 CSS Selectors
-===partOne===
-  - *
-  - Element => [p, div, h2]
-  - Element OtherElement => div p
-  - .class-name
-  - #id-name
-  - .parent .child
-  - .class-one.class-two => element has those classes
-  - .class-name div, .class-name p
-  - Element.class-name => p.class-name
-  - .parent > .child => Direct Child
-===partTwo===
-  - Element + Other Element => [div + p] => (P) following div
-  - Element ~ Other Elements => [p ~ div] => All (divs) came after p (sibilings)
-  - [Attribute] => All elements have this attribute -> [title]
-  - Element[Attribute] -> div [title] => only divs that have title attribute
-  - [Attribute=Value] 
-  - Element[Attribute=Value] => input[type="submit"]
-  - [Attribute~=Value] => Contains A Word
-  - [Attribute*=Value] => Contains A Atring
-  - [Attribute^=Value] => Start With A String
-===partThree===
-  - :first-child -> p:first-child => The first child in any P
-  - :last-child
-  - :first-of-type
-  - :last-of-type
-  - :only-child -> p:only-child => (P) has no sibilings.
-  - :only-of-type
-===partFour=== https://nthmaster.ru/
-  - :not(Selectors) -> p:not(:first-child) => All P that not (first child)
-  - :nth-child(n) -> -number, -even -> p:nth-child(5) => p and must be 5th order (ordering is not just paragraphs)
-  - :nth-last-child(n)
-  - :nth-of-type(n)
-  - :nth-last-of-type(n)
-===partFive===
-  - :root
-  - :checked
-  - :empty
-  - :disabled -> input[type=""]:disabled + label (not sure)
-  - :required
-  - :focus
-  - ::selection
-  - ::placeholder
+  ===partOne===
+    - *
+    - Element => [p, div, h2]
+    - Element OtherElement => div p => p inside div
+    - .class-name
+    - #id-name
+    - .parent .child
+    - .class-one.class-two => element has class-one && class-two
+    - .class-name div, .class-name p
+    - Element.class-name => p.class-name
+    - .parent > .child => Direct Child
+  ===partTwo===
+    - Element + Other Element => [div + p] => (P) following div (Adjacent )
+    - Element ~ Other Elements => [p ~ div] => All (divs) came after p (sibilings)
+    - [Attribute] => All elements have this attribute -> [title]
+    - Element[Attribute] -> div [title] => only divs that have title attribute
+    - [Attribute=Value] 
+    - Element[Attribute=Value] => input[type="submit"]
+    - [Attribute~=Value] => Contains A Word
+    - [Attribute*=Value] => Contains A Atring
+    - [Attribute^=Value] => Start With A String
+  ===partThree===
+    - :first-child -> p:first-child => The first child in any P
+    - :last-child
+    - :first-of-type
+    - :last-of-type
+    - :only-child -> p:only-child => (P) has no sibilings.
+    - :only-of-type
+  ===partFour=== https://nthmaster.ru/
+    - :not(Selectors) -> p:not(:first-child) => All P that not (first child)
+    - :nth-child(n) -> -number, -even -> p:nth-child(5) => p and must be 5th order (ordering is not just paragraphs)
+    - :nth-last-child(n)
+    - :nth-of-type(n)
+    - :nth-last-of-type(n)
+  ===partFive===
+    - :root
+    - :checked
+    - :empty
+    - :disabled -> input[type=""]:disabled + label (not sure)
+    - :required
+    - :focus
+    - ::selection
+    - ::placeholder
 Media Qurey
   @media condition {
     ...
@@ -332,6 +329,7 @@ Media Qurey
       font-size: 50px;
     }
   to isolate the media outta the css file, use link element in html => add media attribute (the media condition)
+    -> <link rel="stylesheet" type="text/css" href="print.css" media="print">
     you can use it in the style tag as well.
 Globle Values
   inherit

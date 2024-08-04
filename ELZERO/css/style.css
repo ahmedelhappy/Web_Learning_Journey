@@ -375,23 +375,28 @@ body {
     opacity: 0.2;
     transform: translateY(-20px);
   }
-} */
+} 
 
 .parent {
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; */
+  justify-content: space-evenly; 
 }
-
+*/
 .parent div {
+  --blue: #1e90ff;
+  width: 100px;
   padding: 20px;
-  background-color: red;
+  background-color: var(--blue);
   color: white;
   font-size: 20px;
   text-align: center;
   font-weight: bold;
-  position: absolute;
+  float: left;
+  margin-right: 30px;
 }
+
+
 /* 
 @media (max-width: 767px) {
 }
