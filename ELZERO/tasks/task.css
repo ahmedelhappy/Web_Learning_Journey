@@ -3,23 +3,4 @@
   padding: 0px;
   margin: 0px;
 }
-div {
-  width: 400px;
-  margin: 20px;
-  padding: 8px;
-  background-color: #eee;
-}
-.assign-2-shape-1 p {
-  border-left: solid red 5px;
-  line-height: 30px;
-  padding-left: 10px;
-}
-.assign-2-shape-2 {
-  visibility: hidden;
-}
 
-.assign-2-shape-3 p {
-  border-left: solid rgb(93, 135, 117) 5px;
-  line-height: 30px;
-  padding-left: 10px;
-}

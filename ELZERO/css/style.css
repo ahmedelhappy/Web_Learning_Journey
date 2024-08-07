@@ -383,7 +383,7 @@ body {
   justify-content: space-evenly; 
 }
 */
-.parent div {
+/* .parent div {
   --blue: #1e90ff;
   width: 100px;
   padding: 20px;
@@ -395,7 +395,7 @@ body {
   float: left;
   margin-right: 30px;
 }
-
+ */
 
 /* 
 @media (max-width: 767px) {
@@ -415,3 +415,17 @@ body {
 
 @media (min-width: 1200px) {
 } */
+
+.container {
+  display: grid;
+  background-color: #eee;
+  height: 300px;
+  justify-content: center;
+}
+.item {
+  background-color: red;
+  flex-basis: 50px;
+}
+.item:first-child {
+  background-color: blue;
+}

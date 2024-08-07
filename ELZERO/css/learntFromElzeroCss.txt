@@ -300,7 +300,8 @@ CSS Selectors
     - [Attribute*=Value] => Contains A Atring
     - [Attribute^=Value] => Start With A String
   ===partThree===
-    - :first-child -> p:first-child => The first child in any P
+    - :first-child -> p:first-child => P whitch is The first child 
+                        =>(becasue no space between p and :first-child if it's p :first-child, it's the first child inside p)
     - :last-child
     - :first-of-type
     - :last-of-type
@@ -314,15 +315,15 @@ CSS Selectors
     - :nth-last-of-type(n)
   ===partFive===
     - :root
-    - :checked
-    - :empty
+    - :checked -> input[type="checkbox"]:checked + label
+    - :empty -> div:empty 
     - :disabled -> input[type=""]:disabled + label (not sure)
     - :required
     - :focus
     - ::selection
     - ::placeholder
 Media Qurey
-  @media condition {
+  @media (condition) {
     ...
   }
     ->@media (min-width: 1000px) and (max-width: 1400px) {
