@@ -5,24 +5,45 @@
   <meta charset="utf-8" />
   <title>17_16 Assignments for CSS:</title>
   <style>
-    p.one {
-      text-transform: uppercase;
+    div {
+      font-size: 18px;
+      box-sizing: border-box;
+      background-color: #eee;
+      padding: 15px 10px;
+      width: 400px;
+      margin: 30px;
     }
 
-    p.two {
-      text-transform: capitalize;
+    .two {
+      white-space: nowrap;
+      padding-right: 100px;
+      overflow: hidden;
     }
 
-    p.three {
-      text-transform: initial;
+    .three {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   </style>
 </head>
 
 <body>
-  <p class="one">elzero Web school</p>
-  <p class="two">elzero Web school</p>
-  <p class="three">elzero Web school</p>
+  <div class="one">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Ea itaque fugit vitae incidunt quis dolores? Id alias
+    eveniet sequi perspiciatis iusto impedit,
+    accusamus maxime reprehenderit blanditiis adipisci sapiente hic velit.
+  </div>
+  <div class="two">
+    Lorem ipsum dolor sit amet consectetur
+  </div>
+  <div class="three">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Ea itaque fugit vitae incidunt quis dolores? Id alias
+    eveniet sequi perspiciatis iusto impedit,
+    accusamus maxime reprehenderit blanditiis adipisci sapiente hic velit.
+  </div>
 </body>
 
 </html>
