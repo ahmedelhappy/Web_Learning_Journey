@@ -3,36 +3,56 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>27_29 Assignments for CSS:</title>
+  <title>30 - 33 Assignments for CSS:</title>
   <style>
     * {
       box-sizing: border-box;
       padding: 0px;
       margin: 0px;
     }
-
+    :root {
+      --left: 50px;
+    }
     div {
-      margin: 20px auto;
-      width: 300px;
-      font-weight: bold;
-      font-size: 1rem;
-      padding: 20px;
-      background-color: rgb(150, 150, 150);
-      color: black;
+      width: 100px;
+      height: 100px;
+      background-color: #eee;
+      position: absolute;
+      
     }
-    div.one {
-      background-color: rgb(150 150 150 / 0.1);
+    .black {
+      background-color: black;
+      z-index: 1;
+      top: calc(var(--left) + 10px)  ;
+      left: calc(var(--left) + 0px)  ;
     }
-    div.two {
-      opacity: 0.1;
+    .blue {
+      background-color: blue;
+      z-index: 2;
+      top: calc(var(--left) + 0px)  ;
+      left: calc(var(--left) + 0px)  ;
     }
+    .green {
+      background-color: green;
+      z-index: 3;
+      top: calc(var(--left) + 10px)  ;
+      left: calc(var(--left) + 10px)  ;
+    }
+    .red {
+      background-color: red;
+      z-index: 4;
+      top: calc(var(--left) + 20px)  ;
+      left: calc(var(--left) + 20px)  ;
+    }
+
   </style>
 </head>
 
 <body>
-  <div class="normal">Normal</div>
-  <div class="one">One</div>
-  <div class="two">Two</div>
+  <div class="green"></div>
+  <div class="red"></div>
+  <div class="blue"></div>
+  <div class="black"></div>
 </body>
 
 </html>
