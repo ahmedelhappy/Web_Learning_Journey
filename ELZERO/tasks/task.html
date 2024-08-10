@@ -9,50 +9,65 @@
       box-sizing: border-box;
       padding: 0px;
       margin: 0px;
+      font-family: Arial, Helvetica, sans-serif;
     }
-    :root {
-      --left: 50px;
+
+    body>ul {
+      margin: 50px auto;
+      width: 400px;
+      background-color: #fbe9e935;
+      list-style-type: none;
+      padding: 10px;
     }
-    div {
-      width: 100px;
-      height: 100px;
+
+    body>ul>li {
       background-color: #eee;
-      position: absolute;
-      
+      margin: 20px 0;
+      padding: 10px;
     }
-    .black {
-      background-color: black;
-      z-index: 1;
-      top: calc(var(--left) + 10px)  ;
-      left: calc(var(--left) + 0px)  ;
+
+    body>ul>li li {
+      background-color: white;
+      margin-bottom: 8px;
+      list-style-position: outside;
+      margin-left: 25px;
+      padding: 5px;
     }
-    .blue {
-      background-color: blue;
-      z-index: 2;
-      top: calc(var(--left) + 0px)  ;
-      left: calc(var(--left) + 0px)  ;
+
+    body>ul>li li:first-child {
+      margin-top: 10px;
     }
-    .green {
-      background-color: green;
-      z-index: 3;
-      top: calc(var(--left) + 10px)  ;
-      left: calc(var(--left) + 10px)  ;
-    }
-    .red {
-      background-color: red;
-      z-index: 4;
-      top: calc(var(--left) + 20px)  ;
-      left: calc(var(--left) + 20px)  ;
-    }
+
 
   </style>
 </head>
 
 <body>
-  <div class="green"></div>
-  <div class="red"></div>
-  <div class="blue"></div>
-  <div class="black"></div>
+  <ul>
+    <li>
+      HTML
+      <ol start="10">
+        <li>Slim</li>
+        <li>Pugjs</li>
+        <li>HAML</li>
+      </ol>
+    </li>
+    <li>
+      CSS
+      <ol start="10">
+        <li>SASS</li>
+        <li>LESS</li>
+        <li>PostCSS</li>
+      </ol>
+    </li>
+    <li>
+      JavaScript
+      <ul>
+        <li>Vuejs</li>
+        <li>Sveltejs</li>
+      </ul>
+    </li>
+  </ul>
 </body>
 
 </html>
