@@ -12,62 +12,112 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    body>ul {
-      margin: 50px auto;
-      width: 400px;
-      background-color: #fbe9e935;
-      list-style-type: none;
-      padding: 10px;
+    table {
+      width: 700px;
+      border: solid 0.5px black;
+      margin: 30px auto;
+      text-align: center;
     }
 
-    body>ul>li {
+    td {
       background-color: #eee;
-      margin: 20px 0;
-      padding: 10px;
+
     }
 
-    body>ul>li li {
-      background-color: white;
-      margin-bottom: 8px;
-      list-style-position: outside;
-      margin-left: 25px;
+    th {
+      background-color: rgb(26, 26, 26);
+      color: white;
+      padding: 8px 15px;
+    }
+
+    img {
+      height: 75px;
+      width: 70px;
+      object-fit: cover;
+      margin: 8px 0;
+      border: solid 0.5px rgb(154, 154, 154);
       padding: 5px;
     }
 
-    body>ul>li li:first-child {
-      margin-top: 10px;
+    button:first-child {
+      background-color: rgb(37, 118, 118);
+      border: none;
+      padding: 6px 9px;
+      color: white;
+      font-weight: bold;
     }
 
-
+    button:nth-child(2) {
+      background-color: rgb(176, 37, 102);
+      border: none;
+      padding: 6px 9px;
+      color: white;
+      font-weight: bold;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      opacity: 0.8;
+    }
+    button:active {
+      opacity: 0.5;
+    }
   </style>
 </head>
 
 <body>
-  <ul>
-    <li>
-      HTML
-      <ol start="10">
-        <li>Slim</li>
-        <li>Pugjs</li>
-        <li>HAML</li>
-      </ol>
-    </li>
-    <li>
-      CSS
-      <ol start="10">
-        <li>SASS</li>
-        <li>LESS</li>
-        <li>PostCSS</li>
-      </ol>
-    </li>
-    <li>
-      JavaScript
-      <ul>
-        <li>Vuejs</li>
-        <li>Sveltejs</li>
-      </ul>
-    </li>
-  </ul>
+  <table>
+    <caption>Developers Rating</caption>
+    <tr>
+      <th>Avatar</th>
+      <th>Group</th>
+      <th>Name</th>
+      <th>Points</th>
+      <th>Control</th>
+    </tr>
+    <tr>
+      <td><img src="../images/pexels-arturoaez220-13766595.jpg" alt="avatar"></td>
+      <td>Ninja</td>
+      <td>Ahmed Mohamed</td>
+      <td>120</td>
+      <td><button>View</button> <button>Delete</button></td>
+    </tr>
+    <tr>
+      <td><img src="../images/pexels-arturoaez220-13766595.jpg" alt="avatar"></td>
+      <td rowspan="2">Shades</td>
+      <td>Shady Babil</td>
+      <td>180</td>
+      <td><button>View</button> <button>Delete</button></td>
+    </tr>
+    <tr>
+      <td><img src="../images/pexels-arturoaez220-13766595.jpg" alt="avatar"></td>
+      <td>Eman Mohamed</td>
+      <td>160</td>
+      <td><button>View</button> <button>Delete</button></td>
+    </tr>
+    <tr>
+      <td><img src="../images/pexels-arturoaez220-13766595.jpg" alt="avatar"></td>
+      <td rowspan="2">Valhala</td>
+      <td>Shady Babil</td>
+      <td>190</td>
+      <td><button>View</button> <button>Delete</button></td>
+    </tr>
+    <tr>
+      <td><img src="../images/pexels-arturoaez220-13766595.jpg" alt="avatar"></td>
+      <td>Eman Mohamed</td>
+      <td>110</td>
+      <td><button>View</button> <button>Delete</button></td>
+    </tr>
+    <tr>
+      <td><img src="../images/pexels-arturoaez220-13766595.jpg" alt="avatar"></td>
+      <td>Ninja</td>
+      <td>Ahmed Mohamed</td>
+      <td>120</td>
+      <td><button>View</button> <button>Delete</button></td>
+    </tr>
+  </table>
 </body>
 
 </html>
