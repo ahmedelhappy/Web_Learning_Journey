@@ -12,25 +12,40 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    div {
+    p {
       background-color: #eee;
-      padding: 20px;
-      width: fit-content;
-      margin: calc(25% - 20px) auto;
+      width: 400px;
+      margin: 15px auto;
+      padding: 15px;
+      border-left: solid rgb(255, 0, 89) 5px;
+      position: relative;
     }
-    div::first-letter {
-      background-color: red;
-      color: white;
-      padding: 8px;
-      margin-left: -33px;
-      margin-right: 10px;
+    p::before {
+      content: attr(data-person);
+      position: absolute;
+      left: -100px;
+      background-color: #eee;
+      padding: 10px;
+      top: 0;
+      margin-top: 7px;
     }
+    p::after {
+      content: "";
+      position: absolute;
+      border: solid 15px ;
+      border-color: transparent rgb(255, 0, 89) transparent transparent;
+      left: -30px;
+      margin-top: -5px
+    }
+
 
   </style>
 </head>
 
 <body>
-<div>1 Hello, Welcome To Elzero Web School</div>
+  <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+  <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+  <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
 </body>
 
 </html>
