@@ -13,27 +13,24 @@
     }
 
     div {
-      width: 300px;
-      height: 60px;
-      margin: 10px auto;
-      text-align: center;
-      line-height: 60px; 
-    }
-
-    div:not(:empty) {
       background-color: #eee;
+      padding: 20px;
+      width: fit-content;
+      margin: calc(25% - 20px) auto;
+    }
+    div::first-letter {
+      background-color: red;
+      color: white;
+      padding: 8px;
+      margin-left: -33px;
+      margin-right: 10px;
     }
 
-    div:empty {
-      background-color: red;
-    }
   </style>
 </head>
 
 <body>
-  <div>One</div>
-  <div></div>
-  <div>Three</div>
+<div>1 Hello, Welcome To Elzero Web School</div>
 </body>
 
 </html>
