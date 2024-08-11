@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>34 - 37 Assignments for CSS:</title>
+  <title>38 - 41 Assignments for CSS:</title>
   <style>
     * {
       box-sizing: border-box;
@@ -11,37 +11,44 @@
       margin: 0px;
       font-family: Arial, Helvetica, sans-serif;
     }
-
-    p {
-      background-color: #eee;
-      width: 400px;
-      margin: auto;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-right: solid 5px red;
+    div {
       position: relative;
-      counter-increment: number;
+      background-color: #eee;
+      width: 100px;
+      height: 100px;
+      margin: 20px auto;
+      border: solid black 2.5px;
+      border-radius: 50%;
+      box-shadow: 5px 5px rgb(30, 145, 246), -5px -5px rgb(248, 2, 117);
+      counter-increment: i;
     }
-    p::before {
-      content: counter(number);
-      background-color: red;
-      color: white;
-      padding: 10px 15px;
-      margin-right: 10px;
+    div::before {
+      content:counter(i);
       position: absolute;
-      left: -40px;
-      top:0px;
+      width: 25px;
+      height: 25px;
+      top: -15px;
+      left: 38%;
+      background-color: black;
+      line-height: 25px;
+      color: white;
+      text-align: center;
+      border-radius: 50%;
     }
+    div::after {
+      content: "Element";
+      position: absolute;
+      top: calc(50% - 10px);
+      left: calc(20%)
+    }
+
   </style>
 </head>
 
 <body>
-  <p>This Is Very Very Long Product Title</p>
-  <p>This Is Very Very Long Product Title</p>
-  <p>This Is Very Very Long Product Title</p>
-  <p>This Is Very Very Long Product Title</p>
-  <p>This Is Very Very Long Product Title</p>
-  <p>This Is Very Very Long Product Title</p>
+  <div></div>
+  <div></div>
+  <div></div>
 </body>
 
 </html>
