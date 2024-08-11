@@ -15,37 +15,33 @@
     p {
       background-color: #eee;
       width: 400px;
-      margin: 15px auto;
-      padding: 15px;
-      border-left: solid rgb(255, 0, 89) 5px;
+      margin: auto;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-right: solid 5px red;
       position: relative;
+      counter-increment: number;
     }
     p::before {
-      content: attr(data-person);
+      content: counter(number);
+      background-color: red;
+      color: white;
+      padding: 10px 15px;
+      margin-right: 10px;
       position: absolute;
-      left: -100px;
-      background-color: #eee;
-      padding: 10px;
-      top: 0;
-      margin-top: 7px;
+      left: -40px;
+      top:0px;
     }
-    p::after {
-      content: "";
-      position: absolute;
-      border: solid 15px ;
-      border-color: transparent rgb(255, 0, 89) transparent transparent;
-      left: -30px;
-      margin-top: -5px
-    }
-
-
   </style>
 </head>
 
 <body>
-  <p data-person="Osama">This Is Very Very Long Comment Number One</p>
-  <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
-  <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+  <p>This Is Very Very Long Product Title</p>
+  <p>This Is Very Very Long Product Title</p>
+  <p>This Is Very Very Long Product Title</p>
+  <p>This Is Very Very Long Product Title</p>
+  <p>This Is Very Very Long Product Title</p>
+  <p>This Is Very Very Long Product Title</p>
 </body>
 
 </html>
