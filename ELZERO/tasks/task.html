@@ -14,8 +14,8 @@
 
     .parent {
       display: flex;
-      flex-flow: column;
-      align-items: flex-end;
+      flex-flow: row wrap;
+      align-items: flex-start;
       justify-content: space-between;
       width: 600px;
       height: 300px;
@@ -31,23 +31,38 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 5%;
-      height: calc(85% / 3);
+      height: calc((100% / 2) - 20px);
+      width: calc(70%/4); 
+    }
+    .parent .one {
+      order: 2;
+      background-color: #ff9800;
+    }
+    .parent .two {
+      order: 3;
+      align-self: flex-end;
+      background-color: #8bc34a;
+    }
+    .parent .three {
+      order: 4;
+      background-color: #795548;
+    }
+    .parent .four {
+      order: 1;
+      align-self: flex-end;
+      background-color: #673ab7;
     }
 
-    .parent .two {
-      align-self: flex-start;
-      width: 30%;
-    }
   </style>
 </head>
 
 <body>
-  <div class="parent">
-    <div class="one">1</div>
-    <div class="two">2</div>
-    <div class="three">3</div>
-  </div>
+<div class="parent">
+  <div class="one">1</div>
+  <div class="two">2</div>
+  <div class="three">3</div>
+  <div class="four">4</div>
+</div>
 </body>
 
 </html>
