@@ -14,7 +14,8 @@
 
     .parent {
       display: flex;
-      flex-flow: row-reverse wrap-reverse;
+      flex-flow: column;
+      align-items: flex-end;
       justify-content: space-between;
       width: 600px;
       height: 300px;
@@ -24,34 +25,19 @@
     }
 
     .parent div {
-      width: calc(95% / 3);
-      background-color: rgb(69, 103, 167);
+      background-color: rgb(30, 160, 153);
       padding: 8px 0;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 5%;
+      height: calc(85% / 3);
     }
 
-    .one {
+    .parent .two {
       align-self: flex-start;
-      order: 1;
-    }
-    .two {
-      order: 2;
-    }
-    .three {
-      order: 5;
-      align-self: flex-end;
-    }
-    .four {
-      order: 4;
-    }
-    .five {
-      order: 3;
-    }
-    .six {
-      order: 6;
+      width: 30%;
     }
   </style>
 </head>
@@ -61,9 +47,6 @@
     <div class="one">1</div>
     <div class="two">2</div>
     <div class="three">3</div>
-    <div class="four">4</div>
-    <div class="five">5</div>
-    <div class="six">6</div>
   </div>
 </body>
 
