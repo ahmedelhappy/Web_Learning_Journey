@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>53 - 46 Assignments for CSS:</title>
+  <title>54 - 56 Assignments for CSS:</title>
   <style>
     * {
       box-sizing: border-box;
@@ -18,101 +18,49 @@
       --gap: 10px;
     }
 
-
-    .header,
-    .main-area,
-    .footer {
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    div div div {
-      padding: var(--paddin)
-    }
-
-    .page {
-      padding: var(--paddin);
-      background-color: #eeeeee;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 98vw;
-      height: 98vh;
+    div {
+      width: 600px;
+      margin: 50px auto;
+      background-color: #eee;
+      padding: 10px 0;
+      font-size: 30px;
+      text-align: center;
+      letter-spacing: 5px;
       font-weight: bold;
-      margin: 1vh 1vw;
+      border-left: red solid 8px;
+      border-right: red solid 8px;
+      position: relative;
     }
 
-    /*==================*/
-    .page .header {
-      flex-direction: row;
-      margin-bottom: var(--gap);
+    div::first-letter {
+      display: none;
+      color: red;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--bkg-clr);
-      width: 70px;
+    div::before {
+      content: "";
+      position: absolute;
+      width: calc(100% + 16px);
+      height: 8px;
+      background-image: linear-gradient(to right, red 20%, blue 20%, blue 40%, green 40%, green 60%, rgb(255, 0, 106) 60%, rgb(255, 0, 106) 80%, purple 80%);
+      top: -8px;
+      left: -8px;
     }
 
-    .links {
-      background-color: var(--bkg-clr);
-      list-style-type: none;
-      display: flex;
-      justify-content: flex-end;
-      width: calc(100% - (70px + var(--gap)));
-    }
-
-    li {
-      padding: var(--paddin);
-    }
-
-    /*==================*/
-
-    .main-area {
-      height: 85vh;
-      margin-bottom: var(--gap);
-    }
-
-    .content {
-      background-color: var(--bkg-clr);
-      width: calc(60% - var(--gap));
-    }
-
-    .sidebar {
-      background-color: var(--bkg-clr);
-      width: 40%;
-    }
-
-    /*==================*/
-
-    .footer {
-      background-color: var(--bkg-clr);
+    div::after {
+      content: "";
+      position: absolute;
+      width: calc(100% + 16px);
+      height: 8px;
+      background-image: linear-gradient(to right, red 20%, blue 20%, blue 40%, green 40%, green 60%, rgb(255, 0, 106) 60%, rgb(255, 0, 106) 80%, purple 80%);
+      bottom: -8px;
+      left: -8px;
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="header">
-      <div class="logo">Logo</div>
-      <ul class="links">
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Contact</li>
-      </ul>
-    </div>
-    <div class="main-area">
-      <div class="content">Content</div>
-      <div class="sidebar">Sidebar</div>
-    </div>
-    <div class="footer">
-      <div class="copyright">Copyright 2021</div>
-      <div class="design">Designed By Elzero</div>
-    </div>
-  </div>
+  <div>Elzero</div>
 </body>
 
 </html>
