@@ -12,57 +12,107 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .parent {
+    :root {
+      --bkg-clr: #cecece;
+      --paddin: 10px;
+      --gap: 10px;
+    }
+
+
+    .header,
+    .main-area,
+    .footer {
       display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
       justify-content: space-between;
-      width: 600px;
-      height: 300px;
-      margin: 0 auto;
-      padding: 10px;
-      background-color: #eee;
+    }
+    
+    div div div {
+      padding: var(--paddin)
     }
 
-    .parent div {
-      background-color: rgb(30, 160, 153);
-      padding: 8px 0;
-      color: white;
+    .page {
+      padding: var(--paddin);
+      background-color: #eeeeee;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: calc((100% / 2) - 20px);
-      width: calc(70%/4); 
-    }
-    .parent .one {
-      order: 2;
-      background-color: #ff9800;
-    }
-    .parent .two {
-      order: 3;
-      align-self: flex-end;
-      background-color: #8bc34a;
-    }
-    .parent .three {
-      order: 4;
-      background-color: #795548;
-    }
-    .parent .four {
-      order: 1;
-      align-self: flex-end;
-      background-color: #673ab7;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 98vw;
+      height: 98vh;
+      font-weight: bold;
+      margin: 1vh 1vw;
     }
 
+    /*==================*/
+    .page .header {
+      flex-direction: row;
+      margin-bottom: var(--gap);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bkg-clr);
+      width: 70px;
+    }
+
+    .links {
+      background-color: var(--bkg-clr);
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      width: calc(100% - (70px + var(--gap)));
+    }
+
+    li {
+      padding: var(--paddin);
+    }
+
+    /*==================*/
+
+    .main-area {
+      height: 85vh;
+      margin-bottom: var(--gap);
+    }
+
+    .content {
+      background-color: var(--bkg-clr);
+      width: calc(60% - var(--gap));
+    }
+
+    .sidebar {
+      background-color: var(--bkg-clr);
+      width: 40%;
+    }
+
+    /*==================*/
+
+    .footer {
+      background-color: var(--bkg-clr);
+    }
   </style>
 </head>
 
 <body>
-<div class="parent">
-  <div class="one">1</div>
-  <div class="two">2</div>
-  <div class="three">3</div>
-  <div class="four">4</div>
-</div>
+  <div class="page">
+    <div class="header">
+      <div class="logo">Logo</div>
+      <ul class="links">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="main-area">
+      <div class="content">Content</div>
+      <div class="sidebar">Sidebar</div>
+    </div>
+    <div class="footer">
+      <div class="copyright">Copyright 2021</div>
+      <div class="design">Designed By Elzero</div>
+    </div>
+  </div>
 </body>
 
 </html>
