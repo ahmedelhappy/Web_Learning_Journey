@@ -339,6 +339,14 @@ Globle Values
   unset -> inherit if inheritalbe, initial if not.
 
 
+Others
+  using gradiant with border
+    border-bottom: 5px solid ;
+    border-image-source: linear-gradient(to right, red 50%, blue 50%, blue 100%);
+    border-image-slice: 1;
+  psuedo element only supported on container elements
+  
+
 
 
 
