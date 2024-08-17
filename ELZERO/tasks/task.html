@@ -37,6 +37,7 @@
       border-right-color: transparent;
       border-radius: 50%;
       position: absolute;
+      transition: 0.5s;
     }
 
     div::after {
@@ -47,6 +48,14 @@
       height: 100%;
       border-radius: 50%;
       position: absolute;
+      transition: 0.5s;
+      transition-delay: 0.5s;
+    }
+    div:hover::after {
+      transform: rotate(360deg);
+    }
+    div:hover::before {
+      transform: rotate(1turn);
     }
   </style>
 </head>
