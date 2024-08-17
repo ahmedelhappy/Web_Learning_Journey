@@ -12,33 +12,210 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    .bold {
+      font-weight: bold;
+    }
+
+    .gray {
+      color: gray;
+    }
+
     .grid {
       background-color: #ddd;
       padding: 20px;
-      width: 800px;
-      height: 400px;
-      margin: 20px auto;
+      height: 100%;
+      margin: 0 auto;
+      width: 80%;
       display: grid;
-      grid-template-columns: auto auto;
-      grid-template-rows: auto auto;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
       align-content: space-between;
       gap: 15px;
+      font-size: 12px;
     }
+
     .grid div {
-      background-color: #f00a75;
+      background-color: white;
+      color: black;
+      padding: 8px;
+      border-bottom: 3px solid salmon;
+      position: relative;
+    }
+    .grid div::after {
+      content: "''";
+      color: rgba(128, 128, 128, 0.486);
+      position: absolute;
+      right: 10px;
+      bottom: -20px;
+      font-size: 40px;
+      transform: rotate(10deg);
+    } 
+
+    .grid div:nth-child(1) {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .grid div:nth-child(2) {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .grid div:nth-child(3) {
+      background-color: black;
       color: white;
-      font-weight: bold;
-      text-align: center;
+      grid-area: 1 / 4 / 4 / 5;
+    }
+
+    .grid div:nth-child(4) {
+      grid-area: 2 / 1 / 4 / 2;
+    }
+
+    .grid div:nth-child(5) {
+      background-color: black;
+      color: white;
+      grid-area: 2 / 2 / 3 / 4;
+    }
+
+    .grid div:nth-child(6) {
+      grid-area: 3 / 2 / 4 / 4;
+    }
+
+    .grid div:nth-child(8) {
+      background-color: black;
+      color: white;
     }
   </style>
 </head>
 
 <body>
   <div class="grid">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        provident aut eos incidunt distinctio tempora sapiente in? Qui eius asperiores laborum atque facere repellendus
+        quos doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minima beatae aliquam, ab, rem consequuntur
+        distinctio quasi accusantium at, exercitationem atque esse itaque veniam. Itaque tempore quam laboriosam quos
+        libero.</p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minima beatae aliquam, ab, rem consequuntur
+      </p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae excepturi aperiam eum quaerat esse
+        veritatis sed commodi vel. Fugiat velit voluptate modi sapiente quae ullam, est sequi error voluptatem. Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Id quidem perspiciatis sunt obcaecati assumenda reprehenderit
+        laboriosam provident nobis. Id beatae deleniti cupiditate hic enim atque eligendi in voluptatum, aliquid
+        doloremque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione accusamus reprehenderit
+        provident illo ut commodi excepturi natus laborum. Asperiores cumque laudantium beatae vitae placeat saepe eos
+        amet temporibus a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda minima beatae aliquam, ab,
+        rem consequuntur Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis iure cupiditate optio qui
+        aspernatur deserunt nesciunt culpa neque, aperiam possimus asperiores incidunt mollitia, magni dolorum
+        exercitationem dolores sequi delectus hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+        officiis quae totam amet labore commodi. Consectetur culpa velit recusandae possimus laudantium, natus commodi
+        nemo eos quis iste veniam, odio accusamus.
+      </p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae excepturi aperiam eum quaerat esse
+        veritatis sed commodi vel. Fugiat velit voluptate modi sapiente quae ullam, est sequi error voluptatem. Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Id quidem perspiciatis sunt obcaecati assumenda reprehenderit
+        laboriosam provident nobis. Id beatae deleniti cupiditate hic enim atque eligendi in voluptatum, aliquid
+        doloremque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione accusamus reprehenderit
+      </p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae excepturi aperiam eum quaerat esse
+        veritatis sed commodi vel. Fugiat velit voluptate modi sapiente quae ullam, est sequi error voluptatem. Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Id quidem perspiciatis sunt obcaecati assumenda reprehenderit
+        laboriosam provident nobis. Id beatae deleniti cupiditate hic enim atque eligendi in voluptatum, aliquid
+        doloremque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione accusamus reprehenderit
+      </p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae excepturi aperiam eum quaerat esse
+        veritatis sed commodi vel. Fugiat velit voluptate modi sapiente quae ullam, est sequi error voluptatem. Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Id quidem perspiciatis sunt obcaecati assumenda reprehenderit
+        laboriosam provident nobis. Id beatae deleniti cupiditate hic enim atque eligendi in voluptatum, aliquid
+        doloremque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ratione accusamus reprehenderit
+      </p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae excepturi aperiam eum quaerat esse
+        et consectetur adipisicing elit. Amet ratione accusamus reprehenderit
+      </p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae excepturi aperiam eum quaerat esse
+      </p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae excepturi aperiam eum quaerat esse
+        adipisicing elit. Amet ratione accusamus reprehenderit
+      </p>
+    </div>
+    <div>
+      <h3>Osama Mohamed</h3>
+      <p class="gray">Full-Stack Developer</p>
+      <br>
+      <p class="bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, maiores voluptatum quasi, dolores
+        doloribus.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae excepturi aperiam eum quaerat esse
+        sit amet consectetur adipisicing elit. Amet ratione accusamus reprehenderit
+      </p>
+    </div>
   </div>
 </body>
 
