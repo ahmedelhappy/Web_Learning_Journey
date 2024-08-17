@@ -345,6 +345,11 @@ Others
     border-image-source: linear-gradient(to right, red 50%, blue 50%, blue 100%);
     border-image-slice: 1;
   psuedo element only supported on container elements
+  you can use counter inside the element, to use it in "before" ; 
+    ->counter-increment: num; (in the div itself)
+      content: "type_smth " counter(num)
+  you can type multiple thing in the content ...
+
   
 
 
