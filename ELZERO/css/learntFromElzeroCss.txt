@@ -270,10 +270,10 @@ animation
       }
   animation-name => call it in the element
   animation-duration => in the element
-  animation-iteration-count 
+  animation-iteration-count => in the element
   animation-direction
   animation-timing-function
-  animation-delay
+  animation-delay => in the element
   animation-fill-mode
   (Shorthand)animation: example 5s linear 2s infinite alternate;
   -> loading animation kamd
