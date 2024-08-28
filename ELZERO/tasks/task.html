@@ -9,48 +9,97 @@
       box-sizing: border-box;
       padding: 0px;
       margin: 0px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    :root {
-      --width: 50px;
-      --height: 50px;
-    }
 
-    span {
-      background-image: url(./../images/myimg.jpg);
-      background-color: transparent;
-      width: 50px;
-      height: 50px;
-      display: block;
-      border-radius: 50%;
+    div {
+      background-color: rgb(198, 200, 202);
+      width: 250px;
+      height: 200px;
+      text-align: center;
+      align-content: center;
+      font-weight: bold;
+      color: rgb(56, 56, 56);
+      font-size: 170px;
       margin: 50px auto;
       position: relative;
     }
-    span::before {
+
+    div::before {
       content: "";
-      width: 100%;
-      height: 100%;
-      top: -3px;
-      left: -3px;
+      width: 15px;
+      height: 15px;
+      background-color: red;
       position: absolute;
-      border-radius: 50%;
-      border: 3px solid rebeccapurple;
-      border-bottom-color: transparent;
-      animation: rotateDiv 1s linear infinite;
+      top: 40px;
+      left: 98px;
+      animation: square 2s 2 alternate;
+    }
+
+    div::after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: red;
+      position: absolute;
+      bottom: 44px;
+      right: 25px;
+      animation: square2 1s 4s 2 alternate;
     }
 
 
-    @keyframes rotateDiv {
-      to {
-        transform: rotate(1turn);
+    @keyframes square {
+      16.66% {
+        top: 40px;
+        left: 34px;
+      }
+
+      33.33% {
+        top: 88px;
+        left: 34px;
+
+      }
+
+      50% {
+        left: 95px;
+        top: 88px;
+      }
+
+      66.66% {
+        left: 34px;
+        top: 88px;
+
+      }
+
+      83.33% {
+        left: 34px;
+        top: 141px;
+      }
+
+      100% {
+        left: 98px;
+        top: 141px;
       }
     }
 
+    @keyframes square2 {
+      45% {
+        right: 88px;
+        bottom: 44px;
+
+      }
+
+      100% {
+        bottom: 143px;
+        right: 88px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <span></span>
+  <div>EL</div>
 </body>
 
 </html>
