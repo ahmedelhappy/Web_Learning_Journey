@@ -293,21 +293,22 @@ CSS Selectors
     - Element + Other Element => [div + p] => (P) following div (Adjacent )
     - Element ~ Other Elements => [p ~ div] => All (divs) came after p (sibilings)
     - [Attribute] => All elements have this attribute -> [title]
-    - Element[Attribute] -> div [title] => only divs that have title attribute
+    - Element[Attribute] -> div[title] => only divs that have title attribute
     - [Attribute=Value] 
     - Element[Attribute=Value] => input[type="submit"]
     - [Attribute~=Value] => Contains A Word
     - [Attribute*=Value] => Contains A Atring
     - [Attribute^=Value] => Start With A String
   ===partThree===
-    - :first-child -> p:first-child => P whitch is The first child 
+    - :first-child -> p:first-child => P which is The first child 
                         =>(becasue no space between p and :first-child if it's p :first-child, it's the first child inside p)
     - :last-child
     - :first-of-type
     - :last-of-type
-    - :only-child -> p:only-child => (P) has no sibilings.
+    - :only-child -> p:only-child => (P) has no sibilings
     - :only-of-type
   ===partFour=== https://nthmaster.ru/
+  https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
     - :not(Selectors) -> p:not(:first-child) => All P that not (first child)
     - :nth-child(n) -> -number, -even -> p:nth-child(5) => p and must be 5th order (ordering is not just paragraphs)
     - :nth-last-child(n)
