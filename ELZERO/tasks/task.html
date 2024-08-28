@@ -35,6 +35,7 @@
       top: 40px;
       left: 98px;
       animation: square 2s 2 alternate;
+      visibility: hidden;
     }
 
     div::after {
@@ -45,11 +46,16 @@
       position: absolute;
       bottom: 44px;
       right: 25px;
+      visibility: hidden;
       animation: square2 1s 4s 2 alternate;
     }
 
 
     @keyframes square {
+      0% {
+        visibility: visible;
+      }
+
       16.66% {
         top: 40px;
         left: 34px;
@@ -58,7 +64,6 @@
       33.33% {
         top: 88px;
         left: 34px;
-
       }
 
       50% {
@@ -84,10 +89,13 @@
     }
 
     @keyframes square2 {
+      0% {
+        visibility: visible;
+      }
+
       45% {
         right: 88px;
         bottom: 44px;
-
       }
 
       100% {

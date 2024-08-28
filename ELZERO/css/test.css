@@ -1,263 +1,123 @@
-section,
-.two,
-.three {
-  margin: 50px auto;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+h1 {
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  width: 220px;
+  margin: 20px auto;
+  border: 3px solid;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* part1 */
+
+.part1,
+.part2,
+.part3,
+.part4,
+.part5,
+.part6,
+.part7,
+.part8 {
+  width: 500px;
+  height: fit-content;
+  border: 2px solid;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #eeeeee88;
-  width: 600px;
-  cursor: pointer;
-}
-section div {
-  width: 50px;
-  height: 50px;
-  border: 8px solid #e10a56;
-  border-left-color: transparent;
-  border-radius: 50%;
-  animation-name: rotation01;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  position: relative;
+  margin: 50px auto;
+  font-size: 2rem;
+  padding: 20px;
+  border: 1.5px solid red;
 }
 
-section div::before {
-  content: "";
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  border: 8px solid #2490f7;
-  border-right-color: transparent;
-  border-radius: 50%;
-  position: absolute;
-  left: -18px;
-  top: -18px;
+.part1 div.main.red {
+  color: red;
+  font-weight: bold;
 }
 
-section div::after {
-  content: "";
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
-  border: 8px solid #fcac00;
-  border-top-color: transparent;
-  border-radius: 50%;
-  position: absolute;
-  left: -28px;
-  top: -28px;
-}
-@keyframes rotation01 {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-section:hover div {
-  animation-play-state: paused;
+/* part 2 */
+
+/* solution 1 */
+
+.part2 .parent .child:nth-of-type(2) {
+  color: red;
+  font-weight: bold;
 }
 
-/* ---------------------------------------------- */
-.two .cr-2 {
-  width: 50px;
-  height: 50px;
-  border: 8px solid #2490f7;
-  border-bottom-color: transparent;
-  border-radius: 50%;
-  animation-name: rotation02;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: paused;
-  position: relative;
+/* solution 2 */
+
+.part2 .parent:first-child div:last-child {
+  color: red;
+  font-weight: bold;
 }
 
-.two .cr-2::before {
-  content: "";
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
-  border: 8px solid #fcac00;
-  border-left-color: transparent;
-  border-radius: 50%;
-  position: absolute;
-  left: -18px;
-  top: -18px;
+/* part 3 */
+
+.part3 .parent:nth-of-type(2) div:only-child {
+  color: red;
+  font-weight: bold;
 }
 
-.two .cr-2::after {
-  content: "";
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
-  border: 8px solid #000;
-  border-top-color: transparent;
-  border-radius: 50%;
-  position: absolute;
-  left: -28px;
-  top: -28px;
-}
-@keyframes rotation02 {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-.two:hover .cr-2 {
-  animation-play-state: running;
+/* part 4 */
+
+.part4 div[title]:not(.no-need, .parent div) {
+  color: red;
+  font-weight: bold;
 }
 
-/* ---------------------------------------------- */
-.three span {
-  display: block;
-  width: 50px;
-  height: 50px;
-  border: 6px solid #000;
-  border-left-color: transparent;
-  border-radius: 50%;
-  position: relative;
-  animation-name: rotating-circles-three;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: reverse;
-}
-@keyframes rotating-circles-three {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-.three:hover span {
-  animation-play-state: paused;
+/* part 5 */
+
+.part5 div:nth-of-type(2) > p + div {
+  color: red;
+  font-weight: bold;
 }
 
-/* ---------------------------------- */
+/* part 6 */
 
-.four div {
-  background-color: #323234;
-  padding: 40px;
+.part6 div > div:nth-last-of-type(2):not(.no-need div) {
+  color: red;
+  font-weight: bold;
 }
 
-.four .T1 {
-  grid-area: 2 / 1 / 11 / 1;
+/* part 7 */
+
+/* solution 1 */
+
+.part7 div:nth-of-type(1) > h3 + div:nth-of-type(2) {
+  color: red;
+  font-weight: bold;
 }
 
-.four .T2 {
-  grid-area: 2 / 2 / 2 / span 4;
+/* solution 2 */
+
+.part7 div:nth-child(1) > h3:last-of-type + div {
+  color: red;
+  font-weight: bold;
 }
 
-.four .T3 {
-  grid-area: 6 / 2 / 6 / span 4;
+/* part 8 */
+
+/* solution 1 */
+
+.part8 div :not(div:nth-child(1), div:nth-child(7), h3) {
+  color: red;
+  font-weight: bold;
 }
 
-.four .T4 {
-  grid-area: 10 / 2 / 10 / span 4;
-}
+/* solution 2 */
 
-.four .L1 {
-  grid-area: 2 / 7 / 11 / 7;
-}
-
-.four .L2 {
-  grid-area: 10 / 8 / 10 / span 4;
-}
-
-.four::before {
-  content: "";
-  position: absolute;
-  background-color: #fca200;
-  width: 60px;
-  height: 60px;
-  left: 265px;
-  top: 65px;
-  animation-name: form-e;
-  animation-duration: 2.5s;
-  animation-timing-function: linear;
-}
-.four::after {
-  content: "";
-  position: absolute;
-  background-color: #fca200;
-  width: 60px;
-  height: 60px;
-  left: 580px;
-  top: 495px;
-  opacity: 0;
-  animation-name: form-L;
-  animation-duration: 1.2s;
-  animation-delay: 2.5s;
-  animation-timing-function: linear;
-}
-
-@keyframes form-L {
-  0% {
-    left: 265px;
-    top: 65px;
-  }
-  10% {
-    left: 61px;
-    top: 65px;
-  }
-  20% {
-    left: 61px;
-    top: 280px;
-  }
-  30% {
-    left: 265px;
-    top: 280px;
-  }
-  40% {
-    left: 61px;
-    top: 280px;
-  }
-  50% {
-    left: 61px;
-    top: 495px;
-  }
-  60% {
-    left: 265px;
-    top: 495px;
-  }
-  70% {
-    left: 61px;
-    top: 495px;
-  }
-  80% {
-    left: 61px;
-    top: 280px;
-  }
-  90% {
-    left: 61px;
-    top: 65px;
-  }
-  100% {
-    left: 265px;
-    top: 65px;
-  }
-}
-
-@keyframes form-e {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  25% {
-    left: 375px;
-    top: 495px;
-  }
-  75% {
-    left: 375px;
-    top: 65px;
-    opacity: 1;
-  }
-  100% {
-    left: 375px;
-    top: 65px;
-    opacity: 0;
-  }
+.part8 div :not(div:nth-child(6n + 1), h3) {
+  color: red;
+  font-weight: bold;
 }
