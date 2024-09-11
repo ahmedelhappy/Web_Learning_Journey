@@ -1,90 +1,54 @@
 * {
   box-sizing: border-box;
+  margin: 0;
   padding: 0;
-  margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-hr {
-  margin-top: 50px;
-  height: 5px;
-  background-color: black;
-}
-
-.parent1,
-.parent2,
-.parent3 {
+body {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 50px;
+  flex-direction: column;
+  place-items: center;
 }
 
-.parent1 > div {
-  background-color: #eee;
-  width: 300px;
-  padding: 20px;
-  text-align: center;
+h1 {
+  margin: 30px;
 }
 
-@media print {
-  .parent1 > div {
-    font-size: 40px;
-  }
+.arrow {
+  background-color: rgba(203, 202, 202, 0.659);
+  margin: 20px;
+  width: 600px;
+  padding: 25px;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-/* part 2 */
-
-.parent2 div,
-.parent3 div {
-  width: calc(100% - 30px);
-  background-color: #eeeeee;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 15px;
-  text-transform: capitalize;
-  line-height: 1.7rem;
+.arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 20px solid rgba(203, 202, 202, 0.659);
 }
 
-.parent2 div span,
-.parent3 div span {
-  font-weight: bolder;
+.arrow.top::before {
+  top: calc(0% + -20px);
+  border-color: transparent transparent rgba(203, 202, 202, 0.659) transparent;
 }
 
-/* media part */
-
-@media (min-width: 768px) {
-  /* media for part 2 */
-  .parent2 div {
-    width: calc(50% - 25px);
-  }
-  .parent2 div span,
-  .parent3 div span {
-    color: red;
-  }
-  /* media for part 3 */
-  .parent3 div {
-    width: calc(33% - 15px);
-  }
-  .parent3 div:nth-of-type(1) {
-    width: calc(100% - 30px);
-  }
+.arrow.right::before {
+  border-color: transparent transparent transparent rgba(203, 202, 202, 0.659);
+  left: calc(100% + 20px);
 }
 
-@media (min-width: 992px) {
-  /* media for part 2 */
-  .parent2 div {
-    width: calc(25% - 20px);
-  }
-  .parent2 div span,
-  .parent3 div span {
-    color: #4cb2a8;
-  }
-  /* media for part 3 */
-  .parent3 div {
-    width: calc(50% - 20px);
-  }
-  .parent3 div:nth-of-type(4) {
-    width: calc(100% - 30px);
-  }
+.arrow.bottom::before {
+  top: calc(100% + 20px);
+  border-color: rgba(203, 202, 202, 0.659) transparent transparent transparent;
+}
+
+.arrow.left::before {
+  left: calc(0% + -20px);
+  border-color: transparent rgba(203, 202, 202, 0.659) transparent transparent;
 }
