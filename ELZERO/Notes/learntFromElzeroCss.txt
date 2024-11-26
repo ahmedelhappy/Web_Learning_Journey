@@ -1,0 +1,360 @@
+background-image: url (""), url ("");
+background stuff => repeat, scroll, cover, etc...
+
+padding or margin => auto 
+
+inline elements (span) doesn't respect padding top and bottom, height, width 
+display none vs visibility hidden
+visibility
+  -hidden
+  -collapse => for table raws (otherwise acts like hidden)
+width
+  -min 
+  -max 
+  -fit-content
+overflow
+  visible
+  x 
+  y 
+  auto 
+  hidden 
+text-shadow => x y blur color -> ie:   text-shadow:3px 3px 5px red;
+text align vs direction vs vertical-align
+text-decoration
+  underline
+  overline
+text-transformation
+  uppercase
+  lowercase
+letter-spacing 
+line-height
+word-spacing
+text-indent
+white-space => https://www.w3schools.com/cssref/tryit.php?filename=trycss_text_white-space
+  nowrap
+  pre
+word-break 
+  break-all
+  keep-all
+overflow
+  hidden
+  scroll
+  auto => scroll when needed 
+text-overflow
+  ellipsis
+  clip
+san-serif vs serif => san = Not (Edges)
+font-size units
+  -rem => Root em (browser default size (16px))
+  -em => same but for parent size not root 
+  -vw => 1vw is 1% of the viewport width, If the viewport is 1000px wide, 50vw equals 500px.
+font-variant
+  -smallcaps
+font-style
+  -italic
+font-weight
+cursor
+float: left 
+  this solves the problem of extra width when distributing elements horizontly by the inline-block method. 
+  when using float, the parent will be hidden, so use overflow:hidden in the parent.
+  now If there is another element after, will be included next to the floating elements, so need to reset the layout
+  create an element after the floating elemnet, use clear:both; in the css file to reset the layout.
+  kinda annoying ik );
+  I Think will watch a video, Or no need ? idk
+width:calc((100% - 120px ) / 5);
+opacity
+  =>0.5
+posision
+  -static (Default Value)
+  -relative (move relativly to itself)
+  -absulote (You Know Buddy)
+  -fixed (fixed haha)
+  -sticky (Sticky)
+z-index (any value | -1)
+LISTS STYLING -> Shorthand property => list-style: square inside url("sqpurple.gif");
+  list-style-type
+    -circle
+    -square
+    -upper-roman
+    -lower-alpha
+    -none => to remove Default Settings
+  list-style-image
+    -url('sqpurple.gif');
+  list-style-position
+    -outside (default)
+    -inside
+pseudo classes
+  -link
+  -active
+  -checked 
+  -visisted 
+  -focus 
+  -hover 
+  -empty
+TIP=> force state on chrome (select a state for an element to test & style)
+border => outline none 
+  border-style 
+    -solid
+    -dashed
+    -...
+  border-top-style: dotted;(specifying each side)
+  border-width
+  border-color
+    -red green blue yellow
+  Shourt Hand=> border: 5px solid red;
+  => you can specify -> border-left-color...
+pseudo elements
+  ::first-letter
+  ::first-line
+  ::selection
+  ::before
+  div::after
+    content => leave blank if not gonna use
+    put here the specific properties
+    .product1::after {
+    content: "";
+    position: absolute;
+    right: -19.5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent red;
+    }
+outline:5px solid red; => Doesn't Add Extra Margin.
+  outline-style (like the border)
+  outline-color
+  outline-width
+  outline-offset
+border-radius
+  (can add each corner independantly) 
+box-shadow: H-Shadow  V-Shadow  Blur  Spread  Color  Inset/outset
+box-sizing: border-box => This include Padding & border into The overall height & width
+  https://www.w3schools.com/css/css3_box-sizing.asp
+  (use * to apply for all elements)
+    * {
+    box-sizing: border-box;
+  }
+transition (we use it inside the main element not the hover) 
+  >>>>>>>>>>>>>>>>>>>>>>https://www.w3schools.com/css/css3_transitions.asp
+  duration
+  delay
+  property => choose which property to apply the transition on (default: all)
+  timing-function: ease, ease-in, ...
+  shorthand => propertyname duration delay (e.g: height 3s 1s ease) may seperate them with a comma (e.g: height 3s 1s, width 3s, 1)  
+important flag => to overwrite any css property even the inline one (!important) (highest priority)
+  >>>>>>>>>>>>>>>>>>>>>>https://www.w3schools.com/css/css_important.asp
+margin collapse => only vertical margin collapsing (bigger margin wins)
+CSS variables
+  globle variables => :root{--variableName: value, color, ...} eg: --blue: #6495ed;
+  local varibales  => same, but inside the selector you wanna use in.
+  To use them, call the var(--variableName)
+Flexbox -> block
+flex-inline -> Inline
+  >>>>>>>>>>>>>>>>>>>>>>https://www.w3schools.com/css/css3_flexbox.asp
+  flex-direction 
+    - row
+    - row-reverse 
+    - column
+    - column-reverse
+  flex-wrap
+    - nowrap
+    - wrap
+    - wrap-reverse
+  flex-flow
+    -> row nowrap
+  justify-content
+    - space-between
+    - space-around
+    - space-evenly
+    - Flex-start
+  align-items
+    - stretch
+    - flex-start
+    - center
+    - flex-end
+  align-content
+    - space-between
+    - space-around
+    - space-evenly
+    - Flex-start
+  NOTES:
+    when flex-direction is column, justify-content and align-content are interchanged 
+  child element properties
+    order => - 0 (default value)
+    flex-grow => - 0 (default value)
+    flex-shrink => - 1 (default value) -> make this element shrink more when need
+    flex-basis => - auto (default value) -> The difference btw width (This for height (when direction is column) as well not only the width)
+    flex (short hand for the last 3) => - 0 1 auto
+    align-self => - auto (default value) -> Like align-items but for the child itself (overrides align-items)
+filter
+  none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | invert() | opacity() | saturate()
+Gradient
+  linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  => can specify color stop with percent or pixels: ->  background-image:linear-gradient(to right,red 0%, red 20%, orange 20% , orange 40% ,red 40%, red 60%)
+caret-color (the typing cursor)
+  auto|color|initial|inherit;
+pointer-events (the pointer behaviour)
+  auto|none;
+grid
+  => grid system doesn't mean grid itself 
+     grid system is just guidelines
+  grid-template-columns: [Px, minmax, % , Auto, Repeat(), Fr, Mix]
+    =>"Auto Is Shy, Fruction Is Greedy" => Auto => just fits the content (resizes depends on the content)
+    ->grid-template-columns: repeat (5, 100px);
+    ->grid-template-columns: auto auto auto auto;
+    ->grid-template-columns: 80px 200px auto 40px;
+    ->grid-templete-columns: auto auto 1fr 2fr
+  grid-template-rows: [Px, % , Auto, Repeat(), Fr, Mix] (almost the same)
+  justify-content
+  align-content
+  grid-template-areas: "areas names per row..."  (parent)
+    ->  grid-template-areas: => (this is in the parent)
+        "logo logo nav nav nav nav nav nav nav nav"
+        "cont cont cont cont cont cont cont cont side side"
+        ". foot foot foot foot foot foot foot foot foot "; (put . to make that column empty)
+        NOTE: The no of areas must = the num of columns
+              IF You didn't specify columns num, it will generate automaticlly
+  grid-area: area name; (child)
+    ->grid-area: nav; => (this is in the child)
+  grid-column: [start/ end] => [1 / 7] (excluding the last index)
+               [span no] => [span 3] (3 columns)
+               [2 span 3] (start from 2 for 3 cells )
+  grid-row: [start/ end] => [1 / 7] (excluding the last index)
+               [span no] => [span 3] (3 columns)
+               [2 span 3] (start from 2 for 3 cells )    
+  grid-area (shorthand) for:
+    -> grid-area: 2 / 2 / 6 / 5;
+    grid-row-start 
+    grid-column-start
+    grid-row-end (excluding the last)
+    grid-column-end       
+responsive 
+  minmax 
+  repeat(auto-fill, minmax(200px, 1fr))
+==============================Review=========================
+transform 
+  -scaleX(2) (vs width) -> this stretches the padding & content while the width and height don't
+  -scaleY(1.2)
+  -scale(1.5)
+  -rotate(deg | turn | rad (90 deg = 100rad) | grad (PI))
+  -translate(px | % | rm ) ->   translate: 100px 20px;
+  skewX(deg | turn | rad | grad)
+  skewY()
+  skew()
+  => To use multible properties, -> transform: scale(1.3) rotate(5deg);
+  matrix(scaleX(), skewY(), scaleY(), translateX(), translateY(), skewX())=> numbers with no units (tan values)
+    =>https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/unit-circle-with-tangent-values-table-01-1634624360.png
+  transform-origin: left    top     0%  
+                    center  center  50%
+                    right   bottom  100%
+                    length  length  
+                    %       %
+                  -> transform-origin: right 50% 0
+  translate3d ( , , )
+    => to use it, put perespctive in the parent, set the perespctive-origin as well in the parent
+      ->perspective: 200px (parent)
+      ->perspective: center center (parent)
+      ->transform3d(0, 0, 100px) 
+*Card Flip 
+  =>https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+animation
+  @keyframes 
+    ->@keyframes change-color {
+        from {
+          background-color: blue;
+        }
+        to {
+          background-color: red;
+        }
+      }
+  animation-name => call it in the element
+  animation-duration => in the element
+  animation-iteration-count => in the element
+  animation-direction
+  animation-timing-function
+  animation-delay => in the element
+  animation-fill-mode
+  (Shorthand)animation: example 5s linear 2s infinite alternate;
+  -> loading animation kamd
+CSS Selectors
+  ===partOne===
+    - *
+    - Element => [p, div, h2]
+    - Element OtherElement => div p => p inside div
+    - .class-name
+    - #id-name
+    - .parent .child
+    - .class-one.class-two => element has class-one && class-two
+    - .class-name div, .class-name p
+    - Element.class-name => p.class-name
+    - .parent > .child => Direct Child
+  ===partTwo===
+    - Element + Other Element => [div + p] => (P) following div (Adjacent )
+    - Element ~ Other Elements => [p ~ div] => All (divs) came after p (sibilings)
+    - [Attribute] => All elements have this attribute -> [title]
+    - Element[Attribute] -> div[title] => only divs that have title attribute
+    - [Attribute=Value] 
+    - Element[Attribute=Value] => input[type="submit"]
+    - [Attribute~=Value] => Contains A Word
+    - [Attribute*=Value] => Contains A Atring
+    - [Attribute^=Value] => Start With A String
+  ===partThree===
+    - :first-child -> p:first-child => P which is The first child 
+                        =>(becasue no space between p and :first-child if it's p :first-child, it's the first child inside p)
+    - :last-child
+    - :first-of-type
+    - :last-of-type
+    - :only-child -> p:only-child => (P) has no sibilings
+    - :only-of-type
+  ===partFour=== https://nthmaster.ru/
+  https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+    - :not(Selectors) -> p:not(:first-child) => All P that not (first child)
+    - :nth-child(n) -> -number, -even -> p:nth-child(5) => p and must be 5th order (ordering is not just paragraphs)
+    - :nth-last-child(n)
+    - :nth-of-type(n)
+    - :nth-last-of-type(n)
+  ===partFive===
+    - :root
+    - :checked -> input[type="checkbox"]:checked + label
+    - :empty -> div:empty 
+    - :disabled -> input[type=""]:disabled + label (not sure)
+    - :required
+    - :focus
+    - ::selection
+    - ::placeholder
+Media Qurey
+  @media (condition) {
+    ...
+  }
+    ->@media (min-width: 1000px) and (max-width: 1400px) {
+      font-size: 50px;
+    }
+  to isolate the media outta the css file, use link element in html => add media attribute (the media condition)
+    -> <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    you can use it in the style tag as well.
+Globle Values
+  inherit
+  intial -> default values, which is not the same as user agent
+  revert -> to user agent
+  unset -> inherit if inheritalbe, initial if not.
+
+
+Others
+  using gradiant with border
+    border-bottom: 5px solid ;
+    border-image-source: linear-gradient(to right, red 50%, blue 50%, blue 100%);
+    border-image-slice: 1;
+  psuedo element only supported on container elements
+  you can use counter inside the element, to use it in "before" ; 
+    ->counter-increment: num; (in the div itself)
+      content: "type_smth " counter(num)
+  you can type multiple thing in the content ...
+
+  
+
+
+
+
+
+
