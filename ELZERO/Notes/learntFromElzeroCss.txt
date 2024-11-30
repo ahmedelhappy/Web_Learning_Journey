@@ -12,7 +12,7 @@ width
   -min 
   -max 
   -fit-content
-overflow
+overflow => https://www.w3schools.com/css/css_overflow.asp
   visible
   x 
   y 
@@ -33,7 +33,8 @@ text-indent
 white-space => https://www.w3schools.com/cssref/tryit.php?filename=trycss_text_white-space
   nowrap
   pre
-word-break 
+  normal
+word-break (newline case)
   break-all
   keep-all
 overflow
@@ -48,6 +49,7 @@ font-size units
   -rem => Root em (browser default size (16px))
   -em => same but for parent size not root 
   -vw => 1vw is 1% of the viewport width, If the viewport is 1000px wide, 50vw equals 500px.
+  -vh => viewport hieght 
 font-variant
   -smallcaps
 font-style
@@ -61,6 +63,7 @@ float: left
   create an element after the floating elemnet, use clear:both; in the css file to reset the layout.
   kinda annoying ik );
   I Think will watch a video, Or no need ? idk
+  display: flow-root => https://youtu.be/oJe8G5XT_v4?si=hHj7lcDbGmhcjF2l&t=220
 width:calc((100% - 120px ) / 5);
 opacity
   =>0.5
@@ -69,8 +72,8 @@ posision
   -relative (move relativly to itself)
   -absulote (You Know Buddy)
   -fixed (fixed haha)
-  -sticky (Sticky)
-z-index (any value | -1)
+  -sticky (Sticky) (needs to define "top" value)
+z-index (any value | -1) => auto is the default value
 LISTS STYLING -> Shorthand property => list-style: square inside url("sqpurple.gif");
   list-style-type
     -circle
