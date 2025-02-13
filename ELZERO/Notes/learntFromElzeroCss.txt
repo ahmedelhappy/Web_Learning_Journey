@@ -129,7 +129,7 @@ outline:5px solid red; => Doesn't Add Extra Margin.
   outline-offset
 border-radius
   (can add each corner independantly) 
-box-shadow: H-Shadow  V-Shadow  Blur  Spread  Color  Inset/outset
+box-shadow: H-Shadow  V-Shadow  Blur  Spread  Color  Inset
 box-sizing: border-box => This include Padding & border into The overall height & width
   https://www.w3schools.com/css/css3_box-sizing.asp
   (use * to apply for all elements)
@@ -180,7 +180,7 @@ flex-inline -> Inline
     - space-evenly
     - Flex-start
   NOTES:
-    when flex-direction is column, justify-content and align-content are interchanged 
+    when flex-direction is column, justify-content and align-content are switched 
   child element properties
     order => - 0 (default value)
     flex-grow => - 0 (default value)
@@ -197,7 +197,7 @@ caret-color (the typing cursor)
   auto|color|initial|inherit;
 pointer-events (the pointer behaviour)
   auto|none;
-grid
+grid => https://youtu.be/EiNiSFIPIQE?si=hDQ1puc25dfqPxe7
   => grid system doesn't mean grid itself 
      grid system is just guidelines
   grid-template-columns: [Px, minmax, % , Auto, Repeat(), Fr, Mix]
@@ -230,6 +230,9 @@ grid
     grid-column-start
     grid-row-end (excluding the last)
     grid-column-end       
+  grid-auto-raw: 100px; => this sets the width of the cell when implicitly a new cell is being created.
+  grid-auto column => the same.
+  grid-auto-flow => determins the implicit new cell be added in a new row or a new column (row by defualt ig)
 responsive 
   minmax 
   repeat(auto-fill, minmax(200px, 1fr))

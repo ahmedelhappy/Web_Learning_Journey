@@ -17,8 +17,12 @@ body {
 }
 
 img {
+  width: 40px;
   float: left;
-  position:static;
+  transition: 5s ease-in;
+}
+img:hover {
+  width: 300px;
 }
 
 p {

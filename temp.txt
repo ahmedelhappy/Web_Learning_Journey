@@ -1,0 +1,4 @@
+$ git ls-files => files in the index area (staged)
+$ git ls-files -s => show sha-1 & file name (staged)
+$ git log --oneline
+$ git show 85eea

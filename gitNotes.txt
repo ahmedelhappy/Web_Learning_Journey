@@ -1,0 +1,38 @@
+Review => line 18, 20
+git config --global user.name
+	global vs system vs (empty ig for only the project)
+$ git config --list => display config info
+$ git ls-files => files in the index area (staged)
+$ git ls-files -s => show sha-1 & file name (staged)
+$ find .git/objects/ -type f
+$ cd b7 => folder inside objects (the beginning of sha1 of the commit)
+$ ls
+aec520dec0a7516c18eb4c68b64ae1eb9b5a5e
+==========Get the type, size, content of a sha-1==========
+$ git cat-file -t b7aec520dec0a7516c18eb4c68b64ae1eb9b5a5e => show the sha-1 type
+blob
+$ git cat-file -s b7aec520dec0a7516c18eb4c68b64ae1eb9b5a5e => size
+11
+$ git cat-file -p b7aec520dec0a7516c18eb4c68b64ae1eb9b5a5e => content
+Hello, Git
+=>once committed => commit object (wrapper) => tells the multiple changes happened together
+		  tree object	blob object
+$ git status -s 
+$ git diff => compares WT with Index
+$ git diff --staged=> compares Repo with Index
+$ git log --oneline
+$ git show 85eea
+$ git diff 0612..85eea
+$ git rm --cached file.txt => remove from index
+$ git restore file.txt => restore curret WT to the previous one in the index
+$ git restore --staged file.txt => unstage
+$ git commit -am "4th line add" => stage + commit + msg
+$ git commit --amend => modify the last msg
+$ git reset --hard HEAD~1 => go back one commit (hard)
+$ git reflog => show reference logs (including moving head msg changing)
+$ git reset --hard HEAD@{3} => moving forward
+
+
+
+
+
