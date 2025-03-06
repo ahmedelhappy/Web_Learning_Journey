@@ -1,12 +1,11 @@
-
-:root {
-  font-size: 5px;
-}
-
-div {
+/* 
+.box {
   background-color: pink;
-  font-size: 20px;
-}
-p {
-  font-size: 1rem;
+  float: left;
+  width: 200px;
+  height: 100px;
+} */
+section {
+  background-color: aqua;
+
 }
