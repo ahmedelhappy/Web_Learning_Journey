@@ -19,10 +19,7 @@ overflow => https://www.w3schools.com/css/css_overflow.asp
   auto 
   hidden 
 text-shadow => x y blur color -> ie:   text-shadow:3px 3px 5px red;
-text align vs direction vs vertical-align
-text-decoration
-  underline
-  overline
+text align vs direction vs vertical-alignasfd
 text-transformation
   uppercase
   lowercase
