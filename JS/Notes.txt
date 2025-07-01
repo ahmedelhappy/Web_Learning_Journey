@@ -57,6 +57,140 @@ str.charCodeAt(0)     // 72                 str still "Hello World"
 // }
 
 
+=====================Arrow Function==================================
+// let sayHello7 = (name1, name2) => `Hello ${name1}, Hello ${name2}`;
+// console.log(sayHello7("Ahmed", "Mo"));
+=======================================================
+// WITHOUT let - Creates GLOBAL variable
+function badExample() {
+    myVar = 10;  // No let = Global variable! 
+}
+badExample();
+console.log(myVar);  // Output: 10 (Accessible globally!) 😱
+
+// WITH let - Creates LOCAL variable
+function goodExample() {
+    let myVar = 20;  // With let = Local to function
+}
+goodExample();
+console.log(myVar);  // Error: myVar is not defined ✅
+=======================Map================================
+let myarr = [1, 2, 3, 4, 5, 6];
+
+function add(num) {
+  return num + num;
+}
+let newArr = myarr.map(add)
+
+console.log(newArr);
+
+let func = (ele) => ele + ele;
+
+
+console.log(myarr.map(func))
+
+console.log(myarr.map(function(ele){return ele + ele;}))
+
+console.log(myarr.map(fun = (ele) => ele + ele))
+=======================================================
+.split => converts string to array.
+.join => joins the array into one string
+isNaN();
+parseInt();
+
+=======================================================
+const numbers = [1, 2, 3, 4, 5];
+
+// forEach - DO something with each element (no return)
+numbers.forEach(num => console.log(num));
+// Prints: 1, 2, 3, 4, 5
+// Returns: undefined
+
+// map - TRANSFORM each element (returns new array)
+const doubled = numbers.map(num => num * 2);
+// Returns: [2, 4, 6, 8, 10]
+
+// filter - KEEP some elements (returns new array)
+const evens = numbers.filter(num => num % 2 === 0);
+// Returns: [2, 4]
+
+// reduce - COMBINE into one value (returns single value)
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+// Returns: 15
+==========how to skip an iteration in the big 4==============
+  //A Higher-Order Function is a function that:
+
+  //Takes another function as an argument, OR
+  Returns a function
+
+  const numbers = [1, 2, 3, 4, 5];
+
+  // forEach - use return to skip
+  numbers.forEach(num => {
+      if (num === 3) return; // Skip this iteration
+      console.log(num);
+  });
+  // Output: 1, 2, 4, 5
+
+  // map - return a placeholder or filter later
+  const doubled = numbers.map(num => {
+      if (num === 3) return null; // Skip by returning null
+      return num * 2;
+  }).filter(Boolean); // Remove null values
+  console.log(doubled); // [2, 4, 8, 10]
+
+  // filter - just return false to skip
+  const filtered = numbers.filter(num => {
+      if (num === 3) return false; // Skip this element
+      return true;
+  });
+  console.log(filtered); // [1, 2, 4, 5]
+  review functions (specially the big fat arrow)
+========object creation=========
+  // 1. OBJECT LITERAL - Direct creation
+  const person1 = {
+      name: "John",
+      age: 30,
+      greet() { return `Hi, I'm ${this.name}`; }
+  };
+
+  // 2. NEW OBJECT() - Empty then add properties
+  const person2 = new Object();
+  person2.name = "John";
+  person2.age = 30;
+  person2.greet = function() { return `Hi, I'm ${this.name}`; };
+
+  // 3. OBJECT.CREATE() - Set prototype chain
+  const personPrototype = {
+      greet() { return `Hi, I'm ${this.name}`; }
+  };
+  const person3 = Object.create(personPrototype);
+  person3.name = "John";
+  person3.age = 30;
+  // person3.greet() inherited from prototype
+
+  // 4. OBJECT.ASSIGN() - Copy/merge objects
+  const person4 = Object.assign({}, 
+      { name: "John" },
+      { age: 30 },
+      { greet() { return `Hi, I'm ${this.name}`; } }
+  );
+  // Spread operator (easier!)
+  const person5 = { ...{ name: "John" }, ...{ age: 30 } };
+
+  // Quick Test - All create similar objects
+  console.log(person1);  // { name: "John", age: 30, greet: f }
+  console.log(person2);  // { name: "John", age: 30, greet: f }
+  console.log(person3);  // { name: "John", age: 30 } (greet in prototype)
+  console.log(person4);  // { name: "John", age: 30, greet: f }
+
+  // When to use which?
+  // {} literal        → 99% of the time (simplest)
+  // new Object()      → Almost never (verbose)
+  // Object.create()   → When you need prototype inheritance
+  // Object.assign()   → When copying/merging objects
+=======================================================
+=======================================================
 =======================================================
 =======================================================
 =======================================================
