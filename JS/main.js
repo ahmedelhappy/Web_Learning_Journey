@@ -1019,38 +1019,105 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(user.doubleAge2())
 
 //===============================
+// /*
+//   Object
+//   - Create Object With Create Method
+// */
+
+// let user = {
+//   age: 20,
+//   doubleAge: function () {
+//     return this.age * 2;
+//   },
+// };
+
+// console.log(user);
+// // console.log(user.age);
+// // console.log(user.doubleAge());
+
+// let obj = Object.create({});
+
+// // obj.a = 100;
+
+// // console.log(obj);
+
+// let copyObj = Object.create(user);
+
+// copyObj.age = 50;
+
+// console.log(copyObj);
+// console.log(copyObj.age);
+// console.log(copyObj.doubleAge());
+//===============================
+// /*
+//   DOM
+//   - What Is DOM
+//   - DOM Selectors
+//   --- Find Element By ID
+//   --- Find Element By Tag Name
+//   --- Find Element By Class Name
+//   --- Find Element By CSS Selectors
+//   --- Find Element By Collection
+//   ------ title
+//   ------ body
+//   ------ images
+//   ------ forms
+//   ------ links
+// */
+
+// let myIdElement = document.getElementById("my-div");
+// let myTagElements = document.getElementsByTagName("p");
+// let myClassElement = document.getElementsByClassName("my-span");
+// let myQueryElement = document.querySelector(".my-span");
+// let myQueryAllElement = document.querySelectorAll(".my-span");
+
+// console.log();
+// console.log(myTagElements[1]);
+// console.log(myClassElement[1]);
+// console.log(myQueryElement);
+// console.log(myQueryAllElement[1]);
+
+// console.log(document.title);
+// console.log(document.body);
+// console.log(document.forms[0].one.value);
+// console.log(document.links[1].href);
+//===============================
 /*
-  Object
-  - Create Object With Create Method
+  DOM [Get / Set Elements Content And Attributes]
+  - innerHTML
+  - textContent
+  - Change Attributes Directly
+  - Change Attributes With Methods
+  --- getAttribute
+  --- setAttribute
+
+  Search
+  - innerText
 */
 
-let user = {
-  age: 20,
-  doubleAge: function () {
-    return this.age * 2;
-  },
-};
+let myElement = document.querySelector(".js");
 
-console.log(user);
-// console.log(user.age);
-// console.log(user.doubleAge());
+console.log(myElement.innerHTML);
+console.log(myElement.textContent);
 
-let obj = Object.create({});
+myElement.innerHTML = "Text From <span>Main.js</span> File";
+myElement.textContent = "Text From <span>Main.js</span> File";
 
-// obj.a = 100;
+//Direct Access
+document.images[0].src = "https://google.com";
+document.images[0].alt = "Alternate";
+document.images[0].title = "Picture";
+document.images[0].id = "pic";
+document.images[0].className = "img";
 
-// console.log(obj);
+//Indirect Access
+let myLink = document.querySelector(".link");
 
-let copyObj = Object.create(user);
+console.log(myLink.getAttribute("class"));
+console.log(myLink.getAttribute("href"));
 
-copyObj.age = 50;
-
-console.log(copyObj);
-console.log(copyObj.age);
-console.log(copyObj.doubleAge());
-//===============================
-
-//===============================
+myLink.setAttribute("href", "https://twitter.com");
+myLink.setAttribute("title", "Twitter");
 //===============================
 //===============================
 //===============================
