@@ -189,7 +189,15 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
   // new Object()      → Almost never (verbose)
   // Object.create()   → When you need prototype inheritance
   // Object.assign()   → When copying/merging objects
-=======================================================
+========innerHTML VS textContent VS innerText==========
+  // innerHTML - When you need HTML
+  div.innerHTML = '<b>Bold</b> text';
+
+  // textContent - When you want ALL text (even hidden)
+  div.textContent = 'Just plain text';
+
+  // innerText - When you want VISIBLE text only
+  div.innerText = 'Visible text only';
 =======================================================
 =======================================================
 =======================================================

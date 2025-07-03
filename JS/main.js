@@ -1082,44 +1082,79 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(document.forms[0].one.value);
 // console.log(document.links[1].href);
 //===============================
-/*
-  DOM [Get / Set Elements Content And Attributes]
-  - innerHTML
-  - textContent
-  - Change Attributes Directly
-  - Change Attributes With Methods
-  --- getAttribute
-  --- setAttribute
+// /*
+//   DOM [Get / Set Elements Content And Attributes]
+//   - innerHTML
+//   - textContent
+//   - Change Attributes Directly
+//   - Change Attributes With Methods
+//   --- getAttribute
+//   --- setAttribute
 
-  Search
-  - innerText
-*/
+//   Search
+//   - innerText
+// */
 
-let myElement = document.querySelector(".js");
+// let myElement = document.querySelector(".js");
 
-console.log(myElement.innerHTML);
-console.log(myElement.textContent);
+// console.log(myElement.innerHTML);
+// console.log(myElement.textContent);
 
-myElement.innerHTML = "Text From <span>Main.js</span> File";
-myElement.textContent = "Text From <span>Main.js</span> File";
+// myElement.innerHTML = "Text From <span>Main.js</span> File";
+// myElement.textContent = "Text From <span>Main.js</span> File";
 
-//Direct Access
-document.images[0].src = "https://google.com";
-document.images[0].alt = "Alternate";
-document.images[0].title = "Picture";
-document.images[0].id = "pic";
-document.images[0].className = "img";
+// //Direct Access
+// document.images[0].src = "https://google.com";
+// document.images[0].alt = "Alternate";
+// document.images[0].title = "Picture";
+// document.images[0].id = "pic";
+// document.images[0].className = "img";
 
-//Indirect Access
-let myLink = document.querySelector(".link");
+// //Indirect Access
+// let myLink = document.querySelector(".linkkk");
 
-console.log(myLink.getAttribute("class"));
-console.log(myLink.getAttribute("href"));
+// console.log(myLink.getAttribute("class"));
+// console.log(myLink.getAttribute("href"));
+// console.log(myLink.getAttribute("id"));
 
-myLink.setAttribute("href", "https://twitter.com");
-myLink.setAttribute("title", "Twitter");
+// myLink.setAttribute("href", "https://twitter.com");
+// console.log(myLink.getAttribute("href"));
+// myLink.setAttribute("title", "Twitter");
 //===============================
+// /*
+//   DOM [Check Attributes]
+//   - Element.attributes
+//   - Element.hasAttribute
+//   - Element.hasAttributes
+//   - Element.removeAttribute
+// */
+
+// console.log(document.getElementsByTagName("p")[0].attributes);
+
+// let myP = document.getElementsByTagName("p")[0];
+
+// if (myP.hasAttribute("data-src")) {
+//   if (myP.getAttribute("data-src") === "") {
+//     myP.removeAttribute("data-src");
+//   } else {
+//     myP.setAttribute("data-src", "New Value");
+//   }
+// } else {
+//   console.log(`Not Found`);
+// }
+
+// if (myP.hasAttributes()) {
+//   console.log(`Has Attributes`);
+// }
+
+// if (document.getElementsByTagName("div")[0].hasAttributes()) {
+//   console.log(`Has Attributes`);
+// } else {
+//   console.log(`Div Has No Attributes`);
+// }
+
 //===============================
+
 //===============================
 
 
