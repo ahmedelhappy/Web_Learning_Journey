@@ -245,6 +245,9 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
     element.classList.item(2)  // returns null (if doesn't exist)
     element.classList.length  // number of classes
 
+  myElement.style.width = '500px';
+  myElement.style.fontSize = '50px'; // Note we use camelCase.
+  
 
 
 
