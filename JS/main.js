@@ -1230,41 +1230,52 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // myElement.style.width = '500px';
 // myElement.style.fontSize = '50px';
 
-const playground = document.querySelector("#playground");
 
-//myElement
-let myElement = document.createElement("div");
-playground.append(myElement);
-myElement.textContent = "Ancient wisdom lies within";
+// const playground = document.querySelector("#playground");
+// //myElement
+// let myElement = document.createElement("div");
+// playground.append(myElement);
+// myElement.textContent = "This is an ugly div, just for demo";
 
 // //myButton
 // let myButton = document.createElement("button");
 // myButton.innerText = "myButton";
 // document.body.append(myButton);
 
-//myList
-let myList = document.createElement("ul");
-document.body.append(myList);
+//----------------------------
+// //myList
+// let myList = document.createElement("ul");
+// document.body.append(myList);
 
-function addItem (item) {
-  let li1 = document.createElement("li");
-  li1.innerText = item;
-  myList.append(li1);
+// function addItem (item) {
+  //   let li1 = document.createElement("li");
+  //   li1.innerText = item;
+  //   myList.append(li1);
+  
+  //   //create element
+//   let removeButton = document.createElement("button");
+//   removeButton.innerText = "Remove";
+//   removeButton.addEventListener("click", () => li1.remove());
+//   removeButton.style.display = "block";
+//   li1.append(removeButton);
+// }
 
-  //create element
-  let removeButton = document.createElement("button");
-  removeButton.innerText = "Remove";
-  removeButton.addEventListener("click", () => li1.remove());
-  removeButton.style.display = "block";
-  li1.append(removeButton);
-}
+// addItem("Ahmed");
+// addItem("Ahmed");
+// addItem("Ahmed");
+// addItem("Ahmed");
+// addItem("Ahmed");
+//----------------------------
 
-addItem("Ahmed");
-addItem("Ahmed");
-addItem("Ahmed");
-addItem("Ahmed");
-addItem("Ahmed");
-
+const playground = document.querySelector("#playground");
+//myElement
+let myElement = document.createElement("div");
+playground.append(myElement);
+myElement.textContent = "This is an ugly div, just for demo";
+console.log(myElement.parentNode);
+console.log(myElement.firstChild);
+console.log(myElement.nextSibling);
+console.log(myElement.previousSibling);
 
 
 //===============================
