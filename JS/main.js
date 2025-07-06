@@ -1227,15 +1227,25 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(Array.isArray(myarr));
 // console.log(Array.isArray(myElement.classList));
 
+// myElement.style.width = '500px';
+// myElement.style.fontSize = '50px';
 
 const playground = document.querySelector("#playground");
 let myElement = document.createElement("div");
 playground.append(myElement);
 myElement.textContent = "Ancient wisdom lies within"
 
-myElement.style.width = '500px';
-myElement.style.fontSize = '50px';
+let myButton = document.createElement("button");
+myButton.innerText = "myButton";
+document.body.append(myButton);
 
+myButton.addEventListener('mousemove', function(event) {
+    // event = automatic parameter with info about the event
+    console.log(event.type)        // 'click'
+    console.log(event.target)      // element that was clicked
+    console.log(event.clientX)     // mouse X position
+    console.log(event.clientY)     // mouse Y position
+})
 //===============================
 
 
