@@ -1154,6 +1154,56 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // }
 
 //===============================
+/*
+  DOM [Create Elements]
+  - createElement
+  - createComment
+  - createTextNode
+  - createAttribute
+  - appendChild
+*/
+
+// let myElement = document.createElement("div");
+// let myAttribute = document.createAttribute("dataCustom");
+// myElement.className = "Product";
+// myElement.style.color = 'red';
+
+// let myAttr = document.createAttribute("data-custom");
+// let myText = document.createTextNode("Product One");
+// console.log(myElement);
+// let myComment = document.createComment("This Is Div");
+
+// myElement.className = "product";
+// myElement.setAttributeNode(myAttr);
+// myElement.setAttribute("data-test", "Testing");
+
+// // Append Comment To Element
+// myElement.appendChild(myComment);
+
+// // Append Text To Element
+// myElement.appendChild(myText);
+
+// // Append Element To Body
+// document.body.appendChild(myElement);
+
+
+
+//===================Beau Carnes DOM tutorial===================
+const playground = document.querySelector("#playground");
+
+// const magical0rb = document.createElement('div');
+// magical0rb.textContent = 'Emoji';
+// playground.append(magical0rb, "Some Text", "AnotherText");
+// playground.appendChild(magical0rb); //will work as it's a node child
+
+let myP1 = document.createElement("p");
+playground.append(myP1);
+// myP1.innerText = "Ancient wisdom lies within"
+myP1.textContent = "Ancient wisdom lies within"
+console.log(myP1.textContent)
+
+
+
 
 //===============================
 

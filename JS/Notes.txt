@@ -198,7 +198,15 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 
   // innerText - When you want VISIBLE text only
   div.innerText = 'Visible text only';
-=======================================================
+================DOM Beau Carnes=================
+myElement.append(anyNodeHere, 'anyStringHere')
+myElement.appendChild(Some node, not string)
+
+myElement.textContent = "Bla Bla"
+myElement.innerText = "Bla Bla"
+//They are the same when setting some text, however
+console.log(myElement.innerText); //Only displays the rendered (visible) Text.
+console.log(myElement.textContent); //Displays any text inside the element, even if some are hidden somehow
 =======================================================
 =======================================================
 =======================================================
