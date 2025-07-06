@@ -18,6 +18,7 @@ arr.reduce((a,b) => a+b) // Returns single value
 
 Strings, Numbers, Booleans = Immutable
 Arrays, Objects = Mutable
+Array.isArray(myArray) ===> boolean
 
 
 =======================================================
@@ -223,6 +224,31 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
   <div data-name-of-the-user="Ahmed">Ancient wisdom lies within</div> ===> will appear like that in the HTML
   console.log(myElement.dataset.nameOfTheUser) ====> can be accessed with its name normally in JS.
   
+  myElement.classList.add('box', 'creature', 'pad-20');
+  myElement.classList.remove('creature');
+  console.log(playground.className) ===> string
+  console.log(playground.classList) ===> object
+  console.log(myElement.classList.contains("box")); // boolean.
+  myElement.classList.toggle('box'); ===> enable/disable.
+  myElement.classList.toggle('box', (condition true/false));
+
+  Ai summary
+      // DOMTokenList methods
+    element.classList.add('active')
+    element.classList.remove('hidden')
+    element.classList.toggle('dark-mode')
+    element.classList.contains('active')  // returns true/false
+    element.classList.replace('old', 'new')
+    
+    // Access like array
+    element.classList[2]  // returns undefined (if doesn't exist)
+    element.classList.item(2)  // returns null (if doesn't exist)
+    element.classList.length  // number of classes
+
+
+
+
+
 =======================================================
 =======================================================
 =======================================================

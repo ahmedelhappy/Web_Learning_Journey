@@ -1189,27 +1189,47 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 
 //===================Beau Carnes DOM tutorial===================
-const playground = document.querySelector("#playground");
+// const playground = document.querySelector("#playground");
 
 // const magical0rb = document.createElement('div');
 // magical0rb.textContent = 'Emoji';
 // playground.append(magical0rb, "Some Text", "AnotherText");
 // playground.appendChild(magical0rb); //will work as it's a node child
 
-let myElement = document.createElement("div");
-playground.append(myElement);
+// let myElement = document.createElement("div");
+// playground.append(myElement);
 // myElement.innerText = "Ancient wisdom lies within"
-myElement.textContent = "Ancient wisdom lies within"
-myElement.dataset.nameOfTheUser = 'Ahmed';
+// myElement.textContent = "Ancient wisdom lies within"
+// myElement.dataset.nameOfTheUser = 'Ahmed';
 
-console.log(myElement.dataset.nameOfTheUser)
+// console.log(myElement.dataset.nameOfTheUser)
 // console.log(myElement.textContent)
 // myElement.remove(); //Note js still has access to "myElement".
 
+const playground = document.querySelector("#playground");
+let myElement = document.createElement("div");
+playground.append(myElement);
+myElement.textContent = "Ancient wisdom lies within"
 
-
-
-
+myElement.classList.add('box', 'creature', 'pad-20');
+myElement.classList.remove('creature');
+console.log(myElement.className);
+console.log(typeof(myElement.className));
+console.log(myElement.classList)
+console.log(typeof(myElement.classList));
+console.log(myElement.classList.contains("box")); // boolean.
+myElement.classList.toggle('box');
+console.log(myElement.classList.contains("box")); // boolean.
+myElement.classList.toggle('box');
+console.log(myElement.classList.contains("box")); // boolean.
+myElement.classList.replace('box', 'box-1');
+console.log(`Test: ${myElement.classList.item(0)}`)
+console.log(`Test: ${myElement.classList[2]}`)
+console.log(`Test: ${myElement.classList.item(2)}`)
+console.log(`Test: ${myElement.classList.item(2)}`)
+let myarr = [1, 2, 3, 4, 5, 6];
+console.log(Array.isArray(myarr));
+console.log(Array.isArray(myElement.classList));
 
 //===============================
 
