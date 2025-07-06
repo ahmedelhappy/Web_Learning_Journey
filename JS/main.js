@@ -1201,6 +1201,7 @@ playground.append(myP1);
 // myP1.innerText = "Ancient wisdom lies within"
 myP1.textContent = "Ancient wisdom lies within"
 console.log(myP1.textContent)
+myP1.remove(); //Note js still has access to "myP1".
 
 
 
