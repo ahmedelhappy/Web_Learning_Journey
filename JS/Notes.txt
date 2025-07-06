@@ -58,9 +58,21 @@ str.charCodeAt(0)     // 72                 str still "Hello World"
 // }
 
 
-=====================Arrow Function==================================
-// let sayHello7 = (name1, name2) => `Hello ${name1}, Hello ${name2}`;
-// console.log(sayHello7("Ahmed", "Mo"));
+=====================Functions=======================
+
+  function func1(name) { //this one is hoisted
+    return (`Hello ${name}`);
+  }
+
+  let func2 = function greet2(name) {
+    return (`shoot ${name}`);
+  }
+
+  let func3 = (name) => {
+    return (`arrow ${name}`);
+  }
+
+  let func4 = (name) => `arrow ${name}`;
 =======================================================
 // WITHOUT let - Creates GLOBAL variable
 function badExample() {
@@ -268,16 +280,17 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
     console.log(event.target)      // element that was clicked
     console.log(event.clientX)     // mouse X position
     console.log(event.clientY)     // mouse Y position
-  })
+    })
 
-  element.addEventListener('click', handler)      // single click
-  element.addEventListener('dblclick', handler)   // double click
-  element.addEventListener('mouseenter', handler) // mouse enters element
-  element.addEventListener('mouseleave', handler) // mouse leaves element
-  element.addEventListener('mousemove', handler)  // mouse moves over element
+    element.addEventListener('click', handler)      // single click
+    element.addEventListener('dblclick', handler)   // double click
+    element.addEventListener('mouseenter', handler) // mouse enters element
+    element.addEventListener('mouseleave', handler) // mouse leaves element
+    element.addEventListener('mousemove', handler)  // mouse moves over element
 
-  Keyboard Events
-  Form Events
+    Keyboard Events
+    Form Events
+
 
 
 

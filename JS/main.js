@@ -1231,21 +1231,42 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // myElement.style.fontSize = '50px';
 
 const playground = document.querySelector("#playground");
+
+//myElement
 let myElement = document.createElement("div");
 playground.append(myElement);
-myElement.textContent = "Ancient wisdom lies within"
+myElement.textContent = "Ancient wisdom lies within";
 
-let myButton = document.createElement("button");
-myButton.innerText = "myButton";
-document.body.append(myButton);
+// //myButton
+// let myButton = document.createElement("button");
+// myButton.innerText = "myButton";
+// document.body.append(myButton);
 
-myButton.addEventListener('mousemove', function(event) {
-    // event = automatic parameter with info about the event
-    console.log(event.type)        // 'click'
-    console.log(event.target)      // element that was clicked
-    console.log(event.clientX)     // mouse X position
-    console.log(event.clientY)     // mouse Y position
-})
+//myList
+let myList = document.createElement("ul");
+document.body.append(myList);
+
+function addItem (item) {
+  let li1 = document.createElement("li");
+  li1.innerText = item;
+  myList.append(li1);
+
+  //create element
+  let removeButton = document.createElement("button");
+  removeButton.innerText = "Remove";
+  removeButton.addEventListener("click", () => li1.remove());
+  removeButton.style.display = "block";
+  li1.append(removeButton);
+}
+
+addItem("Ahmed");
+addItem("Ahmed");
+addItem("Ahmed");
+addItem("Ahmed");
+addItem("Ahmed");
+
+
+
 //===============================
 
 
