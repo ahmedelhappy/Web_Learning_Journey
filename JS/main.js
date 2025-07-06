@@ -1196,12 +1196,17 @@ const playground = document.querySelector("#playground");
 // playground.append(magical0rb, "Some Text", "AnotherText");
 // playground.appendChild(magical0rb); //will work as it's a node child
 
-let myP1 = document.createElement("p");
-playground.append(myP1);
-// myP1.innerText = "Ancient wisdom lies within"
-myP1.textContent = "Ancient wisdom lies within"
-console.log(myP1.textContent)
-myP1.remove(); //Note js still has access to "myP1".
+let myElement = document.createElement("div");
+playground.append(myElement);
+// myElement.innerText = "Ancient wisdom lies within"
+myElement.textContent = "Ancient wisdom lies within"
+myElement.dataset.nameOfTheUser = 'Ahmed';
+
+console.log(myElement.dataset.nameOfTheUser)
+// console.log(myElement.textContent)
+// myElement.remove(); //Note js still has access to "myElement".
+
+
 
 
 

@@ -216,6 +216,12 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
     fruitBasket.removeChild(fruitBasket.firstChild);
   }
 
+  myElement.setAttribute('id', 'myP1'); //more generic
+  myElement.id = 'myP1'; // simpler, but limited.
+
+  myElement.dataset.nameOfTheUser = 'Ahmed';
+  <div data-name-of-the-user="Ahmed">Ancient wisdom lies within</div> ===> will appear like that in the HTML
+  console.log(myElement.dataset.nameOfTheUser) ====> can be accessed with its name normally in JS.
   
 =======================================================
 =======================================================
