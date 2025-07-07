@@ -1277,14 +1277,14 @@ myElement.textContent = "This is an ugly div, just for demo";
 // console.log(myElement.nextSibling);
 // console.log(myElement.previousSibling);
 
-//Fragment
-const fragment = document.createDocumentFragment();
-for (let i = 1; i <= 5; i++) {
-  const li = document.createElement("li");
-  li.textContent = `Item ${i}`;
-  fragment.appendChild(li);
-}
-document.querySelector("ul").appendChild(fragment);
+// //Fragment
+// const fragment = document.createDocumentFragment();
+// for (let i = 1; i <= 5; i++) {
+//   const li = document.createElement("li");
+//   li.textContent = `Item ${i}`;
+//   fragment.appendChild(li);
+// }
+// document.querySelector("ul").appendChild(fragment);
 
 
 //===============================

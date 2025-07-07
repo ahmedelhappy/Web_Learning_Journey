@@ -296,6 +296,28 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 
   Fragment => myElement.createDocumnetFragment();
 
+  ==========Templates(notClear)=========
+    <div id="container"></div>
+
+    <template id="my-template">
+      <div class="card">
+        <h2 class="title"></h2>
+        <p class="desc"></p>
+      </div>
+    </template>
+
+    <script>
+      const container = document.getElementById("container");
+      const template = document.getElementById("my-template");
+
+      const clone = template.content.cloneNode(true);
+      clone.querySelector(".title").textContent = "Hello, Ahmed!";
+      clone.querySelector(".desc").textContent = "This is your description.";
+
+      container.appendChild(clone);
+    </script>
+
+
 
 
 
