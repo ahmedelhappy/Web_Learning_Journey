@@ -1272,10 +1272,19 @@ const playground = document.querySelector("#playground");
 let myElement = document.createElement("div");
 playground.append(myElement);
 myElement.textContent = "This is an ugly div, just for demo";
-console.log(myElement.parentNode);
-console.log(myElement.firstChild);
-console.log(myElement.nextSibling);
-console.log(myElement.previousSibling);
+// console.log(myElement.parentNode);
+// console.log(myElement.firstChild);
+// console.log(myElement.nextSibling);
+// console.log(myElement.previousSibling);
+
+//Fragment
+const fragment = document.createDocumentFragment();
+for (let i = 1; i <= 5; i++) {
+  const li = document.createElement("li");
+  li.textContent = `Item ${i}`;
+  fragment.appendChild(li);
+}
+document.querySelector("ul").appendChild(fragment);
 
 
 //===============================

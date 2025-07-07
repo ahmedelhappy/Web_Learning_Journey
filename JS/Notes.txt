@@ -294,7 +294,9 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
   console.log(myElement.parentNode);
   console.log(myElement.firstChild);
 
-  
+  Fragment => myElement.createDocumnetFragment();
+
+
 
 
 
