@@ -234,7 +234,7 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 
   myElement.dataset.nameOfTheUser = 'Ahmed';
   <div data-name-of-the-user="Ahmed">Ancient wisdom lies within</div> ===> will appear like that in the HTML
-  console.log(myElement.dataset.nameOfTheUser) ====> can be accessed with its name normally in JS.
+  console.log(myElement.dataset.nameOfTheUser) ==(string)==> can be accessed with its name normally in JS.
   
   myElement.classList.add('box', 'creature', 'pad-20');
   myElement.classList.remove('creature');
@@ -295,6 +295,18 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
   console.log(myElement.firstChild);
 
   Fragment => myElement.createDocumnetFragment();
+    //Append everything at once for better performance
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 1; i <= 3; i++) {
+      const li = document.createElement("li");
+      li.textContent = `Item ${i}`;
+      fragment.appendChild(li);
+    }
+
+    document.querySelector("ul").appendChild(fragment);
+
+
 
   ==========Templates(notClear)=========
     <div id="container"></div>
@@ -316,7 +328,7 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 
       container.appendChild(clone);
     </script>
-
+================DOM With Elzero cont.===========
 
 
 

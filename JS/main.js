@@ -1267,11 +1267,11 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // addItem("Ahmed");
 //----------------------------
 
-const playground = document.querySelector("#playground");
-//myElement
-let myElement = document.createElement("div");
-playground.append(myElement);
-myElement.textContent = "This is an ugly div, just for demo";
+// const playground = document.querySelector("#playground");
+// //myElement
+// let myElement = document.createElement("div");
+// playground.append(myElement);
+// myElement.textContent = "This is an ugly div, just for demo";
 // console.log(myElement.parentNode);
 // console.log(myElement.firstChild);
 // console.log(myElement.nextSibling);
@@ -1288,6 +1288,14 @@ myElement.textContent = "This is an ugly div, just for demo";
 
 
 //===============================
+const playground = document.querySelector("#playground");
+//myElement
+let myElement = document.createElement("div");
+myElement.textContent = "This is an ugly div, just for demo";
+document.body.append(myElement, "hello");
+let myId = myElement.setAttribute("iddd", "ele");
+myElement.dataset.nameOfTheUser = "Ahmed";
+
 
 
 
