@@ -329,6 +329,8 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
       container.appendChild(clone);
     </script>
 ================DOM With Elzero cont.===========
+  let myText = createTextNode("This is text");
+  let myComment = document.createComment("This Is myComment");
 
 
 

@@ -1291,10 +1291,17 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 const playground = document.querySelector("#playground");
 //myElement
 let myElement = document.createElement("div");
-myElement.textContent = "This is an ugly div, just for demo";
-document.body.append(myElement, "hello");
-let myId = myElement.setAttribute("iddd", "ele");
+myElement.textContent = "This is myElement";
+document.body.append(myElement);
+// let myId = myElement.setAttribute("iddd", "ele");
+
 myElement.dataset.nameOfTheUser = "Ahmed";
+
+let myText = document.createTextNode("This is text");
+myElement.append(myText);
+
+let myComment = document.createComment("This Is myComment");
+myElement.append(myComment);
 
 
 
