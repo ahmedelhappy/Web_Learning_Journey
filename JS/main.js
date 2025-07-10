@@ -1320,36 +1320,65 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // let fragment = document.createDocumentFragment();
 
 // for(let i = 0; i < 100; i++) {
-//   let clone = myElement.cloneNode(true);
-//   fragment.appendChild(clone);
+  //   let clone = myElement.cloneNode(true);
+  //   fragment.appendChild(clone);
 // }
 // document.body.append(fragment);
 
-let userInput = document.querySelector("[name = username]");
-let ageInput = document.querySelector("[name = age]");
+// let userInput = document.querySelector("[name = username]");
+// let ageInput = document.querySelector("[name = age]");
 
-document.forms[0].addEventListener("submit", function(event) {
-  // console.log(event);
-  // event.preventDefault();
-  // console.log(userInput.value);
-  if(userInput.value.length > 10 || userInput.value === ""|| ageInput.value === "") {
-    event.preventDefault();
-    console.log("Invalid");
-  }
-  else {
-    console.log("Valid");
-  }
-})
+// document.forms[0].addEventListener("submit", function(event) {
+  //   // console.log(event);
+  //   // event.preventDefault();
+//   // console.log(userInput.value);
+//   if(userInput.value.length > 10 || userInput.value === ""|| ageInput.value === "") {
+//     event.preventDefault();
+//     console.log("Invalid");
+//   }
+//   else {
+//     console.log("Valid");
+//   }
+// })
 
 // document.forms[0].onsubmit = function(e) {
-//   let userValid = false;
-//   let ageValid = false;
-//   if(userValid === false || ageValid === false) {
-//     e.preventDefault();
-//   }
-// }
+  //   let userValid = false;
+  //   let ageValid = false;
+  //   if(userValid === false || ageValid === false) {
+    //     e.preventDefault();
+    //   }
+    // }
+    
+//============================
+// let element = document.createElement("div");
+// element.append("This is Div");
+// document.body.append(element);
 
+// element.addEventListener("click", function() {
+//   element.classList.toggle("ahmed");
+// })
 
+/*
+  DOM [CSS]
+  - style
+  - cssText
+  - removeProperty(propertyName) [Inline, Stylesheet]
+  - setProperty(propertyName, value, priority)
+*/
+
+let element = document.getElementById("my-div");
+
+element.style.color = "red";
+element.style.fontWeight = "bold";
+
+//add multiple properties.
+element.style.cssText = "font-weight: bold; opacity: 0.9";
+
+element.style.removeProperty("color"); // remove from inline.
+element.style.setProperty("font-size", "40px", "important"); // add to inline.
+
+document.styleSheets[0].rules[0].style.removeProperty("line-height");
+document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
 
 
 
