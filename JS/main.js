@@ -1302,31 +1302,52 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 // let myComment = document.createComment("This Is myComment");
 // myElement.append(myComment);
-//===============Elzero Product Challenge================
-let myElement = document.createElement("div");
-myElement.style.backgroundColor = "lightblue";
+// //===============Elzero Product Challenge================
+// let myElement = document.createElement("div");
+// myElement.style.backgroundColor = "lightblue";
 
-//creating h3 & paragraph inside my element.
-let myH3 = document.createElement("h3");
-let myH3Text = document.createTextNode("This Is Product!");
-myH3.appendChild(myH3Text);
-myElement.append(myH3);
+// //creating h3 & paragraph inside my element.
+// let myH3 = document.createElement("h3");
+// let myH3Text = document.createTextNode("This Is Product!");
+// myH3.appendChild(myH3Text);
+// myElement.append(myH3);
 
-let myP = document.createElement("p");
-myP.append("This Is Description");
-myElement.append(myP);
+// let myP = document.createElement("p");
+// myP.append("This Is Description");
+// myElement.append(myP);
 
-//=============Creating Fragment to append the products to==============
-let fragment = document.createDocumentFragment();
+// //=============Creating Fragment to append the products to==============
+// let fragment = document.createDocumentFragment();
 
-for(let i = 0; i < 100; i++) {
-  let clone = myElement.cloneNode(true);
-  fragment.appendChild(clone);
-}
-document.body.append(fragment);
+// for(let i = 0; i < 100; i++) {
+//   let clone = myElement.cloneNode(true);
+//   fragment.appendChild(clone);
+// }
+// document.body.append(fragment);
 
+let userInput = document.querySelector("[name = username]");
+let ageInput = document.querySelector("[name = age]");
 
+document.forms[0].addEventListener("submit", function(event) {
+  // console.log(event);
+  // event.preventDefault();
+  // console.log(userInput.value);
+  if(userInput.value.length > 10 || userInput.value === ""|| ageInput.value === "") {
+    event.preventDefault();
+    console.log("Invalid");
+  }
+  else {
+    console.log("Valid");
+  }
+})
 
+// document.forms[0].onsubmit = function(e) {
+//   let userValid = false;
+//   let ageValid = false;
+//   if(userValid === false || ageValid === false) {
+//     e.preventDefault();
+//   }
+// }
 
 
 

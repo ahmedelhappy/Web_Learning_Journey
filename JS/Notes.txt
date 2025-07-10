@@ -343,6 +343,9 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 
   firstChild VS firstElementChild, same concept above.
 
+  document.forms[0].addEventListener("submit", function(someEvent) {
+    someEvent.preventDefault();
+  })
 
 
 
