@@ -1358,28 +1358,56 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   element.classList.toggle("ahmed");
 // })
 
+// /*
+//   DOM [CSS]
+//   - style
+//   - cssText
+//   - removeProperty(propertyName) [Inline, Stylesheet]
+//   - setProperty(propertyName, value, priority)
+// */
+
+// let element = document.getElementById("my-div");
+
+// element.style.color = "red";
+// element.style.fontWeight = "bold";
+
+// //add multiple properties.
+// element.style.cssText = "font-weight: bold; opacity: 0.9";
+
+// element.style.removeProperty("color"); // remove from inline.
+// element.style.setProperty("font-size", "40px", "important"); // add to inline.
+
+// document.styleSheets[0].rules[0].style.removeProperty("line-height");
+// document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
+
+// /*
+//   DOM [Deal With Elements]
+//   - before [Element || String]
+//   - after [Element || String]
+//   - append [Element || String]
+//   - prepend [Element || String]
+//   - remove
+// */
+
+// let element = document.getElementById("my-div");
+// let createdP = document.createElement("p");
+
+// // element.remove();
+
 /*
-  DOM [CSS]
-  - style
-  - cssText
-  - removeProperty(propertyName) [Inline, Stylesheet]
-  - setProperty(propertyName, value, priority)
+  DOM [Traversing]
+  - nextSibling
+  - previousSibling
+  - nextElementSibling
+  - previousElementSibling
+  - parentElement
 */
 
-let element = document.getElementById("my-div");
+let span = document.querySelector(".two");
 
-element.style.color = "red";
-element.style.fontWeight = "bold";
+console.log(span.parentElement);
 
-//add multiple properties.
-element.style.cssText = "font-weight: bold; opacity: 0.9";
-
-element.style.removeProperty("color"); // remove from inline.
-element.style.setProperty("font-size", "40px", "important"); // add to inline.
-
-document.styleSheets[0].rules[0].style.removeProperty("line-height");
-document.styleSheets[0].rules[0].style.setProperty("background-color", "red", "important");
-
-
-
+span.onclick = function () {
+  span.parentElement.remove();
+}
 
