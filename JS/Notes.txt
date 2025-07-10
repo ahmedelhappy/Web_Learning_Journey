@@ -296,15 +296,20 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
 
   Fragment => myElement.createDocumnetFragment();
     //Append everything at once for better performance
-    const fragment = document.createDocumentFragment();
 
-    for (let i = 1; i <= 3; i++) {
-      const li = document.createElement("li");
-      li.textContent = `Item ${i}`;
-      fragment.appendChild(li);
+    let fragment = document.createDocumentFragment();
+    for(let i = 0; i < 100; i++) {
+      let clone = myElement.cloneNode(true);
+
+      //=============Note=================
+        //cloneNode(true)	Clones the element + all descendants
+        //cloneNode(false)	Clones the element only, no children
+        //==================================
+
+      fragment.appendChild(clone);
     }
+    document.body.append(fragment);
 
-    document.querySelector("ul").appendChild(fragment);
 
 
 

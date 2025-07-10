@@ -1288,20 +1288,44 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 
 //===============================
-const playground = document.querySelector("#playground");
-//myElement
+// const playground = document.querySelector("#playground");
+// //myElement
+// let myElement = document.createElement("div");
+// myElement.textContent = "This is myElement";
+// document.body.append(myElement);
+// // let myId = myElement.setAttribute("iddd", "ele");
+
+// myElement.dataset.nameOfTheUser = "Ahmed";
+
+// let myText = document.createTextNode("This is text");
+// myElement.append(myText);
+
+// let myComment = document.createComment("This Is myComment");
+// myElement.append(myComment);
+//===============Elzero Product Challenge================
 let myElement = document.createElement("div");
-myElement.textContent = "This is myElement";
-document.body.append(myElement);
-// let myId = myElement.setAttribute("iddd", "ele");
+myElement.style.backgroundColor = "lightblue";
 
-myElement.dataset.nameOfTheUser = "Ahmed";
+//creating h3 & paragraph inside my element.
+let myH3 = document.createElement("h3");
+let myH3Text = document.createTextNode("This Is Product!");
+myH3.appendChild(myH3Text);
+myElement.append(myH3);
 
-let myText = document.createTextNode("This is text");
-myElement.append(myText);
+let myP = document.createElement("p");
+myP.append("This Is Description");
+myElement.append(myP);
 
-let myComment = document.createComment("This Is myComment");
-myElement.append(myComment);
+//=============Creating Fragment to append the products to==============
+let fragment = document.createDocumentFragment();
+
+for(let i = 0; i < 100; i++) {
+  let clone = myElement.cloneNode(true);
+  fragment.appendChild(clone);
+}
+document.body.append(fragment);
+
+
 
 
 
