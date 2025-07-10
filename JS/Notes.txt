@@ -337,8 +337,11 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
   let myText = createTextNode("This is text");
   let myComment = document.createComment("This Is myComment");
 
+  myElement.children VS myElement.childNodes
+  Use .children for clean HTML elements.
+  Use .childNodes when you care about all node types. including elements, text nodes, comment nodes, etc.
 
-
+  firstChild VS firstElementChild, same concept above.
 
 
 
