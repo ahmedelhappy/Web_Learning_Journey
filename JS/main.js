@@ -1479,5 +1479,22 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 // console.log(promptMsg);
 
-//================================================
+//===============setTimeout==================
+let msg;
+let count = setTimeout(_ => msg = console.log("Msg"), 2000);
+let btn = document.createElement("button");
+btn.append("Stop");
+document.body.appendChild(btn);
+btn.addEventListener("click", function(){
+  clearTimeout(count);
+});
+
+
+
+
+
+
+//===============setTimeout==================
+//===============setTimeout==================
+
 
