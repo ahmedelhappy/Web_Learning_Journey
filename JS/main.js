@@ -1480,20 +1480,83 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(promptMsg);
 
 //===============setTimeout==================
-let msg;
-let count = setTimeout(_ => msg = console.log("Msg"), 2000);
-let btn = document.createElement("button");
-btn.append("Stop");
-document.body.appendChild(btn);
-btn.addEventListener("click", function(){
-  clearTimeout(count);
-});
+// let msg;
+// let count = setTimeout(_ => msg = console.log("Msg"), 2000);
+// let btn = document.createElement("button");
+// btn.append("Stop");
+// document.body.appendChild(btn);
+// btn.addEventListener("click", function(){
+//   clearTimeout(count);
+// });
+
+// func = function () {
+//   console.log("hellooo func")
+// }
 
 
 
+//===============setInterval==================
+/*
+  BOM [Browser Object Model]
+  - setInterval(Function, Millseconds, Additional Params)
+  - clearInterval(Identifier)
+*/
+
+// setInterval(function () {
+//   console.log(`Msg`);
+// }, 1000);
+
+// function sayMsg() {
+//   console.log(`Iam Message`);
+// }
+
+// setInterval(sayMsg, 1000);
 
 
+// setInterval(sayMsg, 1000, "Osama", 38);
 
+// function sayMsg(user, age) {
+//   console.log(`Iam Message For ${user} His Age Is: ${age}`);
+// }
+
+// let div = document.querySelector("div");
+
+// function countdown() {
+//   div.innerText -= 1;
+//   if (div.innerText === "0") {
+//     clearInterval(counter);
+//   }
+// }
+
+// let counter = setInterval(countdown, 1000);
+// console.log(counter);
+
+//===============Location==================
+// /*
+//   BOM [Browser Object Model]
+//   - location Object
+//   --- href Get / Set [URL || Hash || File || Mail]
+//   --- host => 
+//   --- hash => 
+//   --- protocol => https
+//   --- reload()
+//   --- replace() => clear from history
+//   --- assign() => doesn't replace from history
+// */
+
+// console.log(location);
+// console.log(location.href);
+
+// // location.href = "https://google.com";
+// // location.href = "/#sec02";
+// // location.href = "https://developer.mozilla.org/en-US/docs/Web/JavaScript#reference";
+
+// // console.log(location.host);
+// // console.log(location.hostname);
+
+// // console.log(location.protocol);
+
+// // console.log(location.hash);
 //===============setTimeout==================
 //===============setTimeout==================
 

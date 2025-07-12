@@ -352,6 +352,17 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
   - confirm(Message) => Need Response And Return A Boolean
   - prompt(Message, Default Message) => Collect Data
 
-  
+  //===============Location==================
+    // /*
+    //   BOM [Browser Object Model]
+    //   - location Object
+    //   --- href Get / Set [URL || Hash || File || Mail]
+    //   --- host => 
+    //   --- hash => 
+    //   --- protocol => https
+    //   --- reload()
+    //   --- replace() => clear from history
+    //   --- assign() => doesn't replace from history
+    // */
 =======================================================
 =======================================================
