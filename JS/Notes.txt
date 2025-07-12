@@ -347,6 +347,10 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
     someEvent.preventDefault();
   })
 
+  this is fixed to where you attached the handler (myP in the first case, document in the second).
+
+  e.target is always the original element that was clicked, regardless of where the listener sits in the DOM tree.
+
 
 
 
