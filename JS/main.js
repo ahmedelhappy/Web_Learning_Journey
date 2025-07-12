@@ -1557,7 +1557,67 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // // console.log(location.protocol);
 
 // // console.log(location.hash);
-//===============setTimeout==================
+//===============WindowOpen==================
+/*
+  BOM [Browser Object Model]
+  - open(URL [Opt], Window Name Or Target Attr [Opt], Win Features [Opt], History Replace [Opt])
+  - close()
+  - Window Features
+  --- left [Num]
+  --- top [Num]
+  --- width [Num]
+  --- height [Num]
+  --- menubar [yes || no]
+
+  Search
+  - Window.Open Window Features
+*/
+
+// setTimeout(function () {
+//   window.open("", "_self", "", false);
+// }, 2000);
+
+// setTimeout(function () {
+//   window.open("https://google.com", "_blank", "width=400,height=400,left=200,top=10");
+// }, 2000);
+
+
+//===============History==================
+/*
+  BOM [Browser Object Model]
+  - History API
+  --- Properties
+  ------ length
+  --- Methods
+  ------ back()
+  ------ forward()
+  ------ go(Delta) => Position In History
+
+  Search [For Advanced Knowledge]
+  - pushState() + replaceState()
+*/
+
+// console.log(history);
+
+//===============Scroll|Print|focus==================
+/*
+  BOM [Browser Object Model]
+  - stop() => myWindow.stop() to close the window.
+  - print()
+  - focus() => myWindow.focus()
+  - scrollTo(x, y || Options) 
+  - scroll(x, y || Options)
+  - scrollBy(x, y || Options)
+*/
+
+// let myNewWindow = window.open("https://google.com", "", "width=500,height=500");
+
+// window.scrollTo({
+//   left: 500,
+//   top: 200,
+//   behavior: "smooth"
+// });
+
 //===============setTimeout==================
 
 
