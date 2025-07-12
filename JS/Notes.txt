@@ -310,9 +310,6 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
     }
     document.body.append(fragment);
 
-
-
-
   ==========Templates(notClear)=========
     <div id="container"></div>
 
@@ -350,10 +347,11 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
   this is fixed to where you attached the handler (myP in the first case, document in the second).
 
   e.target is always the original element that was clicked, regardless of where the listener sits in the DOM tree.
+========================BOM=====================
+  - alert(Message) => Need No Response Only Ok Available
+  - confirm(Message) => Need Response And Return A Boolean
+  - prompt(Message, Default Message) => Collect Data
 
-
-
-
-=======================================================
+  
 =======================================================
 =======================================================
