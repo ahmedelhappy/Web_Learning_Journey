@@ -1618,6 +1618,40 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   behavior: "smooth"
 // });
 
-//===============setTimeout==================
+//===============Scroll practice==================
+// /*
+//   BOM [Browser Object Model]
+//   - Practice => Scroll To Top
+//   - scrollX [Alias => PageXOffset]
+//   - scrollY [Alias => PageYOffset]
+// */
+
+// // console.log(window.scrollX === window.pageXOffset);
+
+// //The HTML
+  // <button style="
+  // position: fixed;
+  // bottom: 20px;
+  // right: 20px;
+  // ">UP</button>
+
+
+// let btn = document.querySelector("button");
+// //in the css make the element fixed, display none
+// window.onscroll = function () {
+//   if (window.scrollY >= 600) {
+//     btn.style.display = "block";
+//   } else {
+//     btn.style.display = "none";
+//   }
+// };
+
+// btn.onclick = function () {
+//   window.scrollTo({
+//     left: 0,
+//     top: 0,
+//     behavior: "smooth",
+//   });
+// };
 
 
