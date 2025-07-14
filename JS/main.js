@@ -1693,5 +1693,31 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(window.localStorage);
 // console.log(typeof window.localStorage);
 
+//=================sessionStorage===================
+/*
+  BOM [Browser Object Model]
+  Session Storage
+  - setItem
+  - getItem
+  - removeItem
+  - clear
+  - key
 
+  Info
+  - New Tab = New Session
+  - Duplicate Tab = Copy Session
+  - New Tab With Same Url = New Session
+*/
+
+// window.localStorage.setItem("color", "red");
+// window.sessionStorage.setItem("color", "blue");
+let myForm = document.querySelector(".name");
+
+if(window.sessionStorage.getItem("input-name")){
+  myForm.value = window.sessionStorage.getItem("input-name");
+}
+
+myForm.addEventListener("blur", function () {
+  window.sessionStorage.setItem("input-name", this.value);
+});
 
