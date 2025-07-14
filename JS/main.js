@@ -1823,41 +1823,69 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 
 //======================
+// /*
+//   Destructuring
+//   - Destructuring Object
+//   --- Naming The Variables
+//   --- Add New Property
+//   --- Nested Object
+//   --- Destructuring The Nested Object Only
+// */
+
+// const user = {
+//   theName: "Osama",
+//   theAge: 39,
+//   theTitle: "Developer",
+//   theCountry: "Egypt",
+//   theColor: "Black",
+//   skills: {
+//     html: 70,
+//     css: 80,
+//   },
+// };
+
+// const {
+//   theName,
+//   theAge: a, // if you wanna change the variable name, to different from the property name, put : myNewName
+//   theCountry,
+//   theColor: co = "Red",
+//   skills: {html: h, css },
+// } = user;
+// console.log(theName);
+// console.log(a);
+// console.log(theCountry);
+// console.log(co);
+// console.log(`My HTML Skill Progress Is ${h}`);
+// console.log(`My CSS Skill Progress Is ${css}`);
+
+// const { html: skillOne, css: skillTwo } = user.skills;
+// console.log(`My HTML Skill Progress Is ${skillOne}`);
+// console.log(`My CSS Skill Progress Is ${skillTwo}`);
+
 /*
   Destructuring
-  - Destructuring Object
-  --- Naming The Variables
-  --- Add New Property
-  --- Nested Object
-  --- Destructuring The Nested Object Only
+  - Destructuring Function Parameters
 */
 
 const user = {
   theName: "Osama",
   theAge: 39,
-  theTitle: "Developer",
-  theCountry: "Egypt",
-  theColor: "Black",
   skills: {
     html: 70,
     css: 80,
   },
 };
 
-const {
-  theName,
-  theAge: a, // if you wanna change the variable name, to different from the property name, put : myNewName
-  theCountry,
-  theColor: co = "Red",
-  skills: {html: h, css },
-} = user;
-console.log(theName);
-console.log(a);
-console.log(theCountry);
-console.log(co);
-console.log(`My HTML Skill Progress Is ${h}`);
-console.log(`My CSS Skill Progress Is ${css}`);
+showDetails(user);
 
-const { html: skillOne, css: skillTwo } = user.skills;
-console.log(`My HTML Skill Progress Is ${skillOne}`);
-console.log(`My CSS Skill Progress Is ${skillTwo}`);
+// function showDetails(obj) {
+//   console.log(`Your Name Is ${obj.theName}`);
+//   console.log(`Your Age Is ${obj.theAge}`);
+//   console.log(`Your CSS Skill Progress Is ${obj.skills.css}`);
+// }
+
+function showDetails({ theName: n, theAge: a, skills: { css: c } } = user) {
+  console.log(`Your Name Is ${n}`);
+  console.log(`Your Age Is ${a}`);
+  console.log(`Your CSS Skill Progress Is ${c}`);
+}
