@@ -347,6 +347,8 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
   this is fixed to where you attached the handler (myP in the first case, document in the second).
 
   e.target is always the original element that was clicked, regardless of where the listener sits in the DOM tree.
+  Use e.target to know what the user interacted with.
+  Use e.currentTarget (or this) to refer to where your listener is attached—handy in delegated
 ========================BOM=====================
   - alert(Message) => Need No Response Only Ok Available
   - confirm(Message) => Need Response And Return A Boolean
