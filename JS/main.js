@@ -1694,30 +1694,60 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(typeof window.localStorage);
 
 //=================sessionStorage===================
-/*
-  BOM [Browser Object Model]
-  Session Storage
-  - setItem
-  - getItem
-  - removeItem
-  - clear
-  - key
+// /*
+//   BOM [Browser Object Model]
+//   Session Storage
+//   - setItem
+//   - getItem
+//   - removeItem
+//   - clear
+//   - key
 
-  Info
-  - New Tab = New Session
-  - Duplicate Tab = Copy Session
-  - New Tab With Same Url = New Session
+//   Info
+//   - New Tab = New Session
+//   - Duplicate Tab = Copy Session
+//   - New Tab With Same Url = New Session
+// */
+
+// // window.localStorage.setItem("color", "red");
+// // window.sessionStorage.setItem("color", "blue");
+// let myForm = document.querySelector(".name");
+
+// if(window.sessionStorage.getItem("input-name")){
+//   myForm.value = window.sessionStorage.getItem("input-name");
+// }
+
+// myForm.addEventListener("blur", function () {
+//   window.sessionStorage.setItem("input-name", this.value);
+// });
+
+//===================Destructuring=====================
+/*
+  Destructuring
+  " is a JavaScript expression that allows us to extract data from arrays,
+    objects, and maps and set them into new, distinct variables. "
+  - Destructuring Array
 */
 
-// window.localStorage.setItem("color", "red");
-// window.sessionStorage.setItem("color", "blue");
-let myForm = document.querySelector(".name");
+let a = 1;
+let b = 2;
+let c = 3;
+let d = 4;
 
-if(window.sessionStorage.getItem("input-name")){
-  myForm.value = window.sessionStorage.getItem("input-name");
-}
+let myFriends = ["Ahmed", "Sayed", "Ali", "Maysa"];
 
-myForm.addEventListener("blur", function () {
-  window.sessionStorage.setItem("input-name", this.value);
-});
+[a = "A", b, c, d, e = "Osama"] = myFriends;
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+
+// console.log(myFriends[4]);
+
+let [, y, , z] = myFriends;
+
+console.log(y);
+console.log(z);
 
