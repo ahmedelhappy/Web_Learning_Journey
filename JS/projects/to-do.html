@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  
+  <style>
+  body {
+    box-sizing: border-box;
+  }
+
+  div {
+    background-color: #eee;
+  }
+  </style>
+</head>
+<body>
+  <div class="input">
+    <input class="task-input" type="text">
+    <input class="btn" type="submit" value="Add Task">
+  </div>
+
+  <div class="task-pool">
+  </div>
+
+  <script>
+    // once you add task to the storage, present it down in tasksPool
+    let btn = document.querySelector(".btn");
+    let inputt = document.querySelector(".task-input");
+    let taskPool = document.querySelector(".task-pool");
+
+
+    btn.addEventListener("click", function(){
+      window.localStorage.setItem("task", inputt.value);
+      newTask.innerText = window.localStorage.getItem("task");
+      taskPool.append(newTask);
+      inputt.value = "";
+    })
+
+
+    let newTask = document.createElement("div");
+    newTask.innerText = window.localStorage.getItem("task");
+    taskPool.append(newTask);
+
+    //Start Point => https://youtu.be/ylsFXMHpFUQ?si=DzC1HBajxFUhonlX&t=1111
+
+  </script>
+</body>
+</html>
