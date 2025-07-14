@@ -1768,22 +1768,58 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(b); // Gamal
 
 //===============================
+// /*
+//   Destructuring
+//   - Destructuring Array => Swapping Variables
+// */
+
+// let book = "Video";
+// let video = "Book";
+
+// // // Normal way
+// // let temp = book; 
+// // book = video; 
+// // video = temp;
+
+// //Destructuring Way
+// [book, video] = [video, book];
+
+// console.log(book);
+// console.log(video);
+//===============================
 /*
   Destructuring
-  - Destructuring Array => Swapping Variables
+  - Destructuring Object
 */
 
-let book = "Video";
-let video = "Book";
+const user = {
+  theName: "Osama",
+  theAge: 39,
+  theTitle: "Developer",
+  theCountry: "Egypt",
+};
 
-// // Normal way
-// let temp = book; 
-// book = video; 
-// video = temp;
+// console.log(user.theName);
+// console.log(user.theAge);
+// console.log(user.theTitle);
+// console.log(user.theCountry);
 
-//Destructuring Way
-[book, video] = [video, book];
+// let theName = user.theName;
+// let theAge = user.theAge;
+// let theTitle = user.theTitle;
+// let theCountry = user.theCountry;
 
-console.log(book);
-console.log(video);
-//===============================
+// console.log(theName);
+// console.log(theAge);
+// console.log(theTitle);
+// console.log(theCountry);
+
+// ({ theName, theAge, theTitle, theCountry } = user);
+const { theName, theAge, theCountry } = user;
+
+console.log(theName);
+console.log(theAge);
+console.log(theCountry);
+
+
+//================
