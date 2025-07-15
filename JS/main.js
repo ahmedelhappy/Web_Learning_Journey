@@ -123,7 +123,6 @@ Template Literals (Template Strings)
 // let c = "And";
 // let d = "Programming";
 
-
 // console.log(`${a} "" '' \\ ${b}
 // ${c} ${d}`);
 
@@ -408,7 +407,6 @@ Template Literals (Template Strings)
 
 // console.log(`Last Name Is ${last}`);
 
-
 //===============================
 // /*
 //   Arrays Methods [Slicing]
@@ -557,7 +555,6 @@ Template Literals (Template Strings)
 //   console.log(`Hello Ahmed`);
 // };
 
-
 // let sayHello2 = () => {
 //   return `Hello Ahmed`;
 // }
@@ -665,7 +662,6 @@ Template Literals (Template Strings)
 
 // let func = (ele) => ele + ele;
 
-
 // console.log(myarr.map(func))
 
 // console.log(myarr.map(function(ele){return ele + ele;}))
@@ -705,36 +701,35 @@ Template Literals (Template Strings)
 // // let sw = swappingCases
 // //   .split("")
 // //   .map(function (ele) {
-  // //     // Condition ? True : False
-  // //     return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
-  // //   })
-  // //   .join("");
-  
-  // // Arrow Function Version
-  
-  // let sw = swappingCases
-  //   .split("")
-  //   .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
-  //   .join("");
-  
-  // console.log(sw);
-  
-  // let inv = invertedNumbers.map(function (ele) {
-    //   return -ele;
-    // });
-    
-    // console.log(inv);
-    
-    // let ign = ignoreNumbers
-    //   .split("")
-    //   .map(function (ele) {
-      //     return isNaN(parseInt(ele)) ? ele : "";
-      //   })
-      //   .join("");
-      
-      // console.log(ign);
-      
-      
+// //     // Condition ? True : False
+// //     return ele === ele.toUpperCase() ? ele.toLowerCase() : ele.toUpperCase();
+// //   })
+// //   .join("");
+
+// // Arrow Function Version
+
+// let sw = swappingCases
+//   .split("")
+//   .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
+//   .join("");
+
+// console.log(sw);
+
+// let inv = invertedNumbers.map(function (ele) {
+//   return -ele;
+// });
+
+// console.log(inv);
+
+// let ign = ignoreNumbers
+//   .split("")
+//   .map(function (ele) {
+//     return isNaN(parseInt(ele)) ? ele : "";
+//   })
+//   .join("");
+
+// console.log(ign);
+
 //===============================
 /*
   - Filter
@@ -817,9 +812,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // }, 5);
 
 // console.log(add);
-
-
-
 
 //===============================
 // /*
@@ -937,8 +929,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   Object
 //   - Create With New Keyword new Object();
 // */
-
-
 
 // let user = new Object({
 //   age: 20,
@@ -1186,8 +1176,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // // Append Element To Body
 // document.body.appendChild(myElement);
 
-
-
 //===================Beau Carnes DOM tutorial===================
 // const playground = document.querySelector("#playground");
 
@@ -1205,7 +1193,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(myElement.dataset.nameOfTheUser)
 // console.log(myElement.textContent)
 // myElement.remove(); //Note js still has access to "myElement".
-
 
 // myElement.classList.add('box', 'creature', 'pad-20');
 // myElement.classList.remove('creature');
@@ -1230,7 +1217,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // myElement.style.width = '500px';
 // myElement.style.fontSize = '50px';
 
-
 // const playground = document.querySelector("#playground");
 // //myElement
 // let myElement = document.createElement("div");
@@ -1248,11 +1234,11 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // document.body.append(myList);
 
 // function addItem (item) {
-  //   let li1 = document.createElement("li");
-  //   li1.innerText = item;
-  //   myList.append(li1);
-  
-  //   //create element
+//   let li1 = document.createElement("li");
+//   li1.innerText = item;
+//   myList.append(li1);
+
+//   //create element
 //   let removeButton = document.createElement("button");
 //   removeButton.innerText = "Remove";
 //   removeButton.addEventListener("click", () => li1.remove());
@@ -1285,7 +1271,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   fragment.appendChild(li);
 // }
 // document.querySelector("ul").appendChild(fragment);
-
 
 //===============================
 // const playground = document.querySelector("#playground");
@@ -1320,8 +1305,8 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // let fragment = document.createDocumentFragment();
 
 // for(let i = 0; i < 100; i++) {
-  //   let clone = myElement.cloneNode(true);
-  //   fragment.appendChild(clone);
+//   let clone = myElement.cloneNode(true);
+//   fragment.appendChild(clone);
 // }
 // document.body.append(fragment);
 
@@ -1329,8 +1314,8 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // let ageInput = document.querySelector("[name = age]");
 
 // document.forms[0].addEventListener("submit", function(event) {
-  //   // console.log(event);
-  //   // event.preventDefault();
+//   // console.log(event);
+//   // event.preventDefault();
 //   // console.log(userInput.value);
 //   if(userInput.value.length > 10 || userInput.value === ""|| ageInput.value === "") {
 //     event.preventDefault();
@@ -1342,13 +1327,13 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // })
 
 // document.forms[0].onsubmit = function(e) {
-  //   let userValid = false;
-  //   let ageValid = false;
-  //   if(userValid === false || ageValid === false) {
-    //     e.preventDefault();
-    //   }
-    // }
-    
+//   let userValid = false;
+//   let ageValid = false;
+//   if(userValid === false || ageValid === false) {
+//     e.preventDefault();
+//   }
+// }
+
 //============================
 // let element = document.createElement("div");
 // element.append("This is Div");
@@ -1452,8 +1437,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   }
 // });
 
-
-
 //======================BOM==========================
 /*
   BOM [Browser Object Model]
@@ -1493,8 +1476,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   console.log("hellooo func")
 // }
 
-
-
 //===============setInterval==================
 /*
   BOM [Browser Object Model]
@@ -1511,7 +1492,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // }
 
 // setInterval(sayMsg, 1000);
-
 
 // setInterval(sayMsg, 1000, "Osama", 38);
 
@@ -1536,8 +1516,8 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   BOM [Browser Object Model]
 //   - location Object
 //   --- href Get / Set [URL || Hash || File || Mail]
-//   --- host => 
-//   --- hash => 
+//   --- host =>
+//   --- hash =>
 //   --- protocol => https
 //   --- reload()
 //   --- replace() => clear from history
@@ -1580,7 +1560,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // setTimeout(function () {
 //   window.open("https://google.com", "_blank", "width=400,height=400,left=200,top=10");
 // }, 2000);
-
 
 //===============History==================
 /*
@@ -1629,12 +1608,11 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // // console.log(window.scrollX === window.pageXOffset);
 
 // //The HTML
-  // <button style="
-  // position: fixed;
-  // bottom: 20px;
-  // right: 20px;
-  // ">UP</button>
-
+// <button style="
+// position: fixed;
+// bottom: 20px;
+// right: 20px;
+// ">UP</button>
 
 // let btn = document.querySelector("button");
 // //in the css make the element fixed, display none
@@ -1777,8 +1755,8 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // let video = "Book";
 
 // // // Normal way
-// // let temp = book; 
-// // book = video; 
+// // let temp = book;
+// // book = video;
 // // video = temp;
 
 // //Destructuring Way
@@ -1820,7 +1798,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(theName);
 // console.log(theAge);
 // console.log(theCountry);
-
 
 //======================
 // /*
@@ -1890,29 +1867,65 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   console.log(`Your CSS Skill Progress Is ${c}`);
 // }
 
+// /*
+//   Destructuring
+//   - Destructuring Mixed Content
+// */
+
+// const user = {
+//   theName: "Osama",
+//   theAge: 39,
+//   skills: ["HTML", "CSS", "JavaScript"],
+//   addresses: {
+//     egypt: "Cairo",
+//     ksa: "Riyadh",
+//   },
+// };
+
+// const {
+//   theName: n,
+//   theAge: a,
+//   skills: [, , three],
+//   addresses: { egypt: e },
+// } = user;
+
+// console.log(`Your Name Is: ${n}`);
+// console.log(`Your Age Is: ${a}`);
+// console.log(`Your Last Skill Is: ${three}`);
+// console.log(`Your Live In: ${e}`);
+
+//==============destructuringChallenge================
+
+
+
+
+
 /*
   Destructuring
-  - Destructuring Mixed Content
+  - Challenge
 */
 
-const user = {
-  theName: "Osama",
-  theAge: 39,
-  skills: ["HTML", "CSS", "JavaScript"],
-  addresses: {
-    egypt: "Cairo",
-    ksa: "Riyadh",
-  },
-};
+let chosen = 2;
 
-const {
-  theName: n,
-  theAge: a,
-  skills: [, , three],
-  addresses: { egypt: e },
-} = user;
+let myFriends = [
+  { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+  { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+  { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+];
 
-console.log(`Your Name Is: ${n}`);
-console.log(`Your Age Is: ${a}`);
-console.log(`Your Last Skill Is: ${three}`);
-console.log(`Your Live In: ${e}`);
+let title, age, available, skills, skill;
+
+if (chosen === 1) {
+  ([{title, age, available, skills: [ ,skill]}] = myFriends);
+}
+if (chosen === 2) {
+  ([, {title, age, available, skills: [ ,skill]}] = myFriends);
+}
+if (chosen === 3) {
+  ([, , {title, age, available, skills:[ ,skill]}] = myFriends);
+}
+
+console.log(title);
+console.log(age);
+console.log(available? "Available" : "Unavailable");
+console.log(skill);
