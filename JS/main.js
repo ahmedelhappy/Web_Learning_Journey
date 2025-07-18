@@ -1977,3 +1977,38 @@ myUniqueData.clear();
 
 console.log(myUniqueData);
 console.log(myUniqueData.size);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  ======================TUTORIAL=========================
+  => Start Point
+  - Quick Review From Sets On.
+  - Review Weak Set, and their use cases.
+  - https://youtu.be/FKrfis1W1tk?si=c3ql2hmU-3xmqA8E&t=8422
+  => wondering
+  - [ ]  add event listener (e VS this VS e.target VS e.currentTarget) I know them all, but e, just the e itself can be used for what?
+  - [ ]  is the local storage property added for the whole project? like I have 2 opened js files, when I set the color property to red, it’s updated in the 2 files
+*/
+
+
