@@ -2135,44 +2135,76 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(myMap.size);
 //==================================
 
+// /*
+//   - Map vs WeakMap
+//   "
+//     WeakMap Allows Garbage Collector To Do Its Task But Not Map.
+//   "
+//   --
+//   Map     => Key Can Be Anything
+//   WeakMap => Key Can Be Object Only
+//   --
+// */
+
+// let mapUser = { theName: "Elzero" };
+
+// let myMap = new Map();
+
+// myMap.set(mapUser, "Object Value");
+
+// mapUser = null; // Override The Reference
+
+// console.log(myMap);
+
+// console.log("#".repeat(20));
+
+// let wMapUser = { theName: "Elzero" };
+
+// let myWeakMap = new WeakMap();
+
+// myWeakMap.set(wMapUser, "Object Value");
+
+// wMapUser = null; // Override The Reference
+
+// console.log(myWeakMap);
+
+//================================
 /*
-  - Map vs WeakMap
-  "
-    WeakMap Allows Garbage Collector To Do Its Task But Not Map.
-  "
-  --
-  Map     => Key Can Be Anything
-  WeakMap => Key Can Be Object Only
-  --
+  Array Methods
+  - Array.from(Iterable, MapFunc, This)
+  --- Variable
+  --- String Numbers
+  --- Set
+  --- Using The Map Function
+  --- Arrow Function
+  --- Shorten The Method + Use arguments
 */
 
-let mapUser = { theName: "Elzero" };
+//There are many different ways to form an array, here are some:
+// [1]
+console.log(Array.from("Osama"));
+console.log(
+  Array.from("12345", function (n) {
+    return +n + +n;
+  })
+);
+console.log(Array.from("12345", (n) => +n + +n));
 
-let myMap = new Map();
+// [2] if you want unique values only
+let myArray = [1, 1, 1, 2, 3, 4];
 
-myMap.set(mapUser, "Object Value");
+let mySet = new Set(myArray);
 
-mapUser = null; // Override The Reference
+// [3] in the future
+console.log(Array.from(mySet));
+// console.log([...new Set(myArray)]); // Future
 
-console.log(myMap);
+// [4] through arguments keyword
+function af() {
+  return Array.from(arguments);
+}
 
-console.log("#".repeat(20));
-
-let wMapUser = { theName: "Elzero" };
-
-let myWeakMap = new WeakMap();
-
-myWeakMap.set(wMapUser, "Object Value");
-
-wMapUser = null; // Override The Reference
-
-console.log(myWeakMap);
-
-
-
-
-
-
+console.log(af("Osama", "Ahmed", "sayed", 1, 2, 3));
 
 
 
