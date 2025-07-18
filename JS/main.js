@@ -1905,6 +1905,7 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
   - Challenge
 */
 
+// a little practice on destructuring, based on chosen number, will print the corresponding data.
 let chosen = 2;
 
 let myFriends = [

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuring Challenge</title>
+</head>
+<body>
+  
+  <script>
+
+
+/*
+  Destructuring
+  - Challenge
+*/
+
+// a little practice on destructuring, based on chosen number, will print the corresponding data.
+let chosen = 2;
+
+let myFriends = [
+  { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+  { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+  { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+];
+
+let title, age, available, skills, skill;
+
+if (chosen === 1) {
+  ([{title, age, available, skills: [ ,skill]}] = myFriends);
+}
+if (chosen === 2) {
+  ([, {title, age, available, skills: [ ,skill]}] = myFriends);
+}
+if (chosen === 3) {
+  ([, , {title, age, available, skills:[ ,skill]}] = myFriends);
+}
+
+console.log(title);
+console.log(age);
+console.log(available? "Available" : "Unavailable");
+console.log(skill);
+
+  </script>
+</body>
+</html>
