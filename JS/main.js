@@ -2379,30 +2379,59 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 //==============================================
 
+// /*
+//   Regular Expression Intro
+//   - Email
+//   - IP
+//   - Phone
+//   - URL
+// */
+
+// let str1 = '10 20 100 1000 5000';
+// let str2 = 'Os1 Os12 Os123 Os123Os Os12312Os123';
+
+// let invalidEmail = 'Osama@@@gmail....com';
+// let validEmail = 'o@nn.sa';
+
+// let ip = '192.168.2.1'; // IPv4
+
+// let url = 'elzero.org';
+// url = 'elzero.org/';
+// url = 'http://elzero.org/';
+// url = 'http://www.elzero.org/';
+// url = 'https://.elzero.org/';
+// url = 'https://www.elzero.org/';
+// url = 'https://www.elzero.org/?facebookid=asdasdasd';
+
+//====================
 /*
-  Regular Expression Intro
-  - Email
-  - IP
-  - Phone
-  - URL
+  Regular Expression
+
+  Syntax
+  /pattern/modifier(s);
+  new RegExp("pattern", "modifier(s)")
+
+  Modifiers => Flags
+  i => case-insensitive
+  g => global
+  m => Multilines
+
+  Search Methods
+  - match(Pattern)
+
+  Match
+  -- Matches A String Against a Regular Expression Pattern
+  -- Returns An Array With The Matches
+  -- Returns null If No Match Is Found.
 */
 
-let str1 = '10 20 100 1000 5000';
-let str2 = 'Os1 Os12 Os123 Os123Os Os12312Os123';
+let myString = "Hello Elzero Web School I Love elzero";
 
-let invalidEmail = 'Osama@@@gmail....com';
-let validEmail = 'o@nn.sa';
+let regex = /elzero/ig;
+let regex2 = new RegExp("elzero", "ig");
 
-let ip = '192.168.2.1'; // IPv4
-
-let url = 'elzero.org';
-url = 'elzero.org/';
-url = 'http://elzero.org/';
-url = 'http://www.elzero.org/';
-url = 'https://.elzero.org/';
-url = 'https://www.elzero.org/';
-url = 'https://www.elzero.org/?facebookid=asdasdasd';
-
+console.log(myString.match(regex));
+console.log(myString.match(regex2));
 
 
 /*
