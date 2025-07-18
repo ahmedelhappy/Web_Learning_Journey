@@ -1900,33 +1900,80 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 
 
+// /*
+//   Destructuring
+//   - Challenge
+// */
+
+// // a little practice on destructuring, based on chosen number, will print the corresponding data.
+// let chosen = 2;
+
+// let myFriends = [
+//   { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+//   { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+//   { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+// ];
+
+// let title, age, available, skills, skill;
+
+// if (chosen === 1) {
+//   ([{title, age, available, skills: [ ,skill]}] = myFriends);
+// }
+// if (chosen === 2) {
+//   ([, {title, age, available, skills: [ ,skill]}] = myFriends);
+// }
+// if (chosen === 3) {
+//   ([, , {title, age, available, skills:[ ,skill]}] = myFriends);
+// }
+
+// console.log(title);
+// console.log(age);
+// console.log(available? "Available" : "Unavailable");
+// console.log(skill);
+
+//==============================================
 /*
-  Destructuring
-  - Challenge
+  - Set Data Type
+  Syntax: new Set(Iterable)
+  -- Object To Store Unique Values
+  -- Cannot Access Elements By Index
+
+  Properties:
+  - size
+
+  Methods:
+  - add
+  - delete
+  - clear
+  - has
 */
 
-// a little practice on destructuring, based on chosen number, will print the corresponding data.
-let chosen = 2;
+let myData = [1, 1, 1, 2, 3, "A"];
+// let myUniqueData = new Set([1, 1, 1, 2, 3]);
+// let myUniqueData = new Set(myData);
+// let myUniqueData = new Set().add(1).add(1).add(1).add(2).add(3);
+let myUniqueData = new Set();
 
-let myFriends = [
-  { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
-  { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
-  { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
-];
+myUniqueData.add(1).add(1).add(1);
+myUniqueData.add(2).add(3).add("A");
 
-let title, age, available, skills, skill;
+console.log(`Is Set Has => A ${myUniqueData.has("a".toUpperCase())}`);
 
-if (chosen === 1) {
-  ([{title, age, available, skills: [ ,skill]}] = myFriends);
-}
-if (chosen === 2) {
-  ([, {title, age, available, skills: [ ,skill]}] = myFriends);
-}
-if (chosen === 3) {
-  ([, , {title, age, available, skills:[ ,skill]}] = myFriends);
-}
+console.log(myData);
+console.log(myUniqueData);
 
-console.log(title);
-console.log(age);
-console.log(available? "Available" : "Unavailable");
-console.log(skill);
+console.log(myUniqueData.size);
+
+console.log(myData[0]);
+console.log(myUniqueData[0]);
+
+// myUniqueData.delete(2);
+console.log(myUniqueData.delete(2));
+
+console.log(myUniqueData);
+console.log(myUniqueData.size);
+
+myUniqueData.clear();
+
+console.log(myUniqueData);
+console.log(myUniqueData.size);
