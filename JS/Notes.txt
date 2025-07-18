@@ -367,4 +367,42 @@ const sum = numbers.reduce((acc, num) => acc + num, 0);
     //   --- assign() => doesn't replace from history
     // */
 =======================================================
+  Mutating Vs Non-mutating Methods
+    Mutating = aggressive verbs: push, pop, sort, reverse — these feel like “doing” things.
+
+    Non-mutating = logic verbs: map, filter, find — these “ask” or “describe” things.
+
+
+
+    | Method         | What it does                     |
+    | -------------- | -------------------------------- |
+    | `push()`       | Adds to the end                  |
+    | `pop()`        | Removes from the end             |
+    | `shift()`      | Removes from the beginning       |
+    | `unshift()`    | Adds to the beginning            |
+    | `splice()`     | Add/remove anywhere              |
+    | `sort()`       | Sorts the array (can be tricky!) |
+    | `reverse()`    | Reverses the array               |
+    | `fill()`       | Fills with static values         |
+    | `copyWithin()` | Copies part of array to another  |
+
+
+
+
+
+    | Method                        | What it does                        |
+    | ----------------------------- | ----------------------------------- |
+    | `map()`                       | Transforms each element             |
+    | `filter()`                    | Filters elements based on condition |
+    | `slice()`                     | Cuts out part of the array          |
+    | `concat()`                    | Merges arrays                       |
+    | `flat()`                      | Flattens nested arrays              |
+    | `includes()`                  | Checks existence (returns boolean)  |
+    | `indexOf()` / `lastIndexOf()` | Finds index                         |
+    | `join()`                      | Joins into string (returns string)  |
+    | `some()` / `every()`          | Test conditions (boolean)           |
+    | `find()` / `findIndex()`      | Find elements or indices            |
+
+
+
 =======================================================
