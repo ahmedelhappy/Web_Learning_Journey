@@ -2089,51 +2089,84 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 //===============================================
 
-/*
-  - Map Data Type
-  Methods
-  --- set
-  --- get
-  --- delete
-  --- clear
-  --- has
+// /*
+//   - Map Data Type
+//   Methods
+//   --- set
+//   --- get
+//   --- delete
+//   --- clear
+//   --- has
 
-  Properties
-  --- size
+//   Properties
+//   --- size
+// */
+
+
+// let myMap = new Map([
+//   [10, "Number"],
+//   ["Name", "String"],
+//   [false, "Boolean"],
+// ]);
+
+// // myMap.set(10, "Number");
+// // myMap.set("Name", "String");
+
+// console.log(myMap);
+
+// console.log(myMap.get(10));
+// console.log(myMap.get("Name"));
+// console.log(myMap.get(false));
+
+// console.log("####");
+
+// console.log(myMap.has("Name"));
+
+// console.log("####");
+
+// console.log(myMap.size);
+
+// console.log(myMap.delete("Name"));
+
+// console.log(myMap.size);
+
+// myMap.clear();
+
+// console.log(myMap.size);
+//==================================
+
+/*
+  - Map vs WeakMap
+  "
+    WeakMap Allows Garbage Collector To Do Its Task But Not Map.
+  "
+  --
+  Map     => Key Can Be Anything
+  WeakMap => Key Can Be Object Only
+  --
 */
 
+let mapUser = { theName: "Elzero" };
 
-let myMap = new Map([
-  [10, "Number"],
-  ["Name", "String"],
-  [false, "Boolean"],
-]);
+let myMap = new Map();
 
-// myMap.set(10, "Number");
-// myMap.set("Name", "String");
+myMap.set(mapUser, "Object Value");
+
+mapUser = null; // Override The Reference
 
 console.log(myMap);
 
-console.log(myMap.get(10));
-console.log(myMap.get("Name"));
-console.log(myMap.get(false));
+console.log("#".repeat(20));
 
-console.log("####");
+let wMapUser = { theName: "Elzero" };
 
-console.log(myMap.has("Name"));
+let myWeakMap = new WeakMap();
 
-console.log("####");
+myWeakMap.set(wMapUser, "Object Value");
 
-console.log(myMap.size);
+wMapUser = null; // Override The Reference
 
-console.log(myMap.delete("Name"));
-
-console.log(myMap.size);
-
-myMap.clear();
-
-console.log(myMap.size);
-
+console.log(myWeakMap);
 
 
 
