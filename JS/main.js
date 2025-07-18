@@ -2292,40 +2292,90 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(checkNumberInRange);
 //===================================
 
+// /*
+//   Array Methods
+//   - Array.every(CallbackFunc(Element, Index, Array), This Argument)
+//   --- CallbackFunc => Function To Run On Every Element On The Given Array
+//   ------ Element => The Current Element To Process
+//   ------ Index => Index Of Current Element
+//   ------ Array => The Current Array Working With
+//   --- This Argument => Value To Use As This When Executing CallbackFunc
+//   --
+// */
+
+// const locations = {
+//   20: "Place 1",
+//   30: "Place 2",
+//   50: "Place 3",
+//   40: "Place 4",
+// };
+
+// let mainLocation = 15;
+
+// let locationsArray = Object.keys(locations);
+
+// console.log(locationsArray);
+
+// let locationArrayNumbers = locationsArray.map((n) => +n);
+
+// console.log(locationArrayNumbers);
+
+// let check = locationArrayNumbers.every(function (e) {
+//   return e > this;
+// }, mainLocation);
+
+// console.log(check);
+//=======================================
 /*
-  Array Methods
-  - Array.every(CallbackFunc(Element, Index, Array), This Argument)
-  --- CallbackFunc => Function To Run On Every Element On The Given Array
-  ------ Element => The Current Element To Process
-  ------ Index => Index Of Current Element
-  ------ Array => The Current Array Working With
-  --- This Argument => Value To Use As This When Executing CallbackFunc
-  --
+  Spread Operator => ...Iterable
+  "Allow Iterable To Expand In Place"
 */
 
-const locations = {
-  20: "Place 1",
-  30: "Place 2",
-  50: "Place 3",
-  40: "Place 4",
+// Spread With String => Expand String
+
+console.log("Osama");
+console.log(..."Osama");
+console.log([..."Osama"]);
+
+// Concatenate Arrays
+
+let myArray1 = [1, 2, 3];
+let myArray2 = [4, 5, 6];
+
+let allArrays = [...myArray1, ...myArray2];
+console.log(allArrays);
+
+// Copy Array
+
+let copiedArray = [...myArray1];
+console.log(copiedArray);
+
+// Push Inside Array
+
+let allFriends = ["Osama", "Ahmed", "Sayed"];
+let thisYearFriends = ["Sameh", "Mahmoud"];
+
+allFriends.push(...thisYearFriends);
+
+console.log(allFriends);
+
+// Use With Math Object
+
+let myNums = [10, 20, -100, 100, 1000, 500];
+console.log(Math.max(...myNums));
+
+// Spread With Objects => Merge Objects
+
+let objOne = {
+  a: 1,
+  b: 2,
+};
+let objTwo = {
+  c: 3,
+  d: 4,
 };
 
-let mainLocation = 15;
-
-let locationsArray = Object.keys(locations);
-
-console.log(locationsArray);
-
-let locationArrayNumbers = locationsArray.map((n) => +n);
-
-console.log(locationArrayNumbers);
-
-let check = locationArrayNumbers.every(function (e) {
-  return e > this;
-}, mainLocation);
-
-console.log(check);
-
+console.log({ ...objOne, ...objTwo, e: 5 });
 
 
 
