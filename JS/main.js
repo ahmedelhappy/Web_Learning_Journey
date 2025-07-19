@@ -2404,34 +2404,89 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // url = 'https://www.elzero.org/?facebookid=asdasdasd';
 
 //====================
+// /*
+//   Regular Expression
+
+//   Syntax
+//   /pattern/modifier(s);
+//   new RegExp("pattern", "modifier(s)")
+
+//   Modifiers => Flags
+//   i => case-insensitive
+//   g => global
+//   m => Multilines
+
+//   Search Methods
+//   - match(Pattern)
+
+//   Match
+//   -- Matches A String Against a Regular Expression Pattern
+//   -- Returns An Array With The Matches
+//   -- Returns null If No Match Is Found.
+// */
+
+// let myString = "Hello Elzero Web School I Love elzero";
+
+// let regex = /elzero/ig;
+// let regex2 = new RegExp("elzero", "ig");
+
+// console.log(myString.match(regex));
+// console.log(myString.match(regex2));
+//===========================================
+
 /*
   Regular Expression
 
-  Syntax
-  /pattern/modifier(s);
-  new RegExp("pattern", "modifier(s)")
+  Ranges
 
-  Modifiers => Flags
-  i => case-insensitive
-  g => global
-  m => Multilines
+  - Part 1
+  (X|Y) => X Or Y
+  [0-9] => 0 To 9
+  [^0-9] => Any Character Not 0 To 9
+  Practice
 
-  Search Methods
-  - match(Pattern)
+  - Part 2
+  [a-z]
+  [^a-z]
+  [A-Z]
+  [^A-Z]
+  [abc]
+  [^abc]
 
-  Match
-  -- Matches A String Against a Regular Expression Pattern
-  -- Returns An Array With The Matches
-  -- Returns null If No Match Is Found.
 */
 
-let myString = "Hello Elzero Web School I Love elzero";
+let tld = "Com Net Org Info Code Io";
+let tldRe = /(info|org|io)/ig;
+console.log(tld.match(tldRe));
 
-let regex = /elzero/ig;
-let regex2 = new RegExp("elzero", "ig");
+let nums = "12345678910";
+let numsRe = /[0-2]/g;
+console.log(nums.match(numsRe));
 
-console.log(myString.match(regex));
-console.log(myString.match(regex2));
+let notNums = "12345678910";
+let notNsRe = /[^0-2]/g;
+console.log(notNums.match(notNsRe));
+
+let specialNums = "1!2@3#4$5%678910";
+let specialNumsRe = /[^0-9]/g;
+console.log(specialNums.match(specialNumsRe));
+
+let practice = "Os1 Os1Os Os2 Os8 Os8Os";
+let practiceRe = /Os[5-9]Os/g;
+console.log(practice.match(practiceRe));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -2439,10 +2494,14 @@ console.log(myString.match(regex2));
   => Start Point
   - Quick Review From Sets On.
   - Review Weak Set, and their use cases.
-  - https://youtu.be/FKrfis1W1tk?si=c3ql2hmU-3xmqA8E&t=8422
+  - https://youtu.be/FKrfis1W1tk?si=pxyc9wY05YwdgWP0&t=12864
   => wondering
   - [ ]  add event listener (e VS this VS e.target VS e.currentTarget) I know them all, but e, just the e itself can be used for what?
   - [ ]  is the local storage property added for the whole project? like I have 2 opened js files, when I set the color property to red, it’s updated in the 2 files
+  - [ ]  add event listener (e VS this VS e.target VS e.currentTarget) I know them all, but e… just the e itself can be used?
+  - [ ]  is the local storage property added for the whole project? like I have 2 opened js files, when I set the color property to red, it’s updated in the 2 files
+  - [ ]  m => Multilines
+
 */
 
 
