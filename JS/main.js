@@ -2876,8 +2876,46 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 //=================
 //=================
+// /*
+//   Encapsulation
+//   - Class Fields Are Public By Default
+//   - Guards The Data Against Illegal Access.
+//   - Helps To Achieve The Target Without Revealing Its Complex Details.
+//   - Will Reduce Human Errors.
+//   - Make The App More Flexible And Manageable.
+//   - Simplifies The App.
+// */
 
+// class User {
+//   // Private Property
+//   #e;
+//   constructor(id, username, eSalary) {
+//     this.i = id;
+//     this.u = username;
+//     this.#e = eSalary;
+//   }
+//   getSalary() {
+//     return parseInt(this.#e);
+//   }
+// }
 
+// class Driven extends User {
+//   constructor(id, username, eSalary, sex) {
+//     super(id, username, eSalary);
+//     this.sex = sex;
+//   }
+// }
+
+// let userOne = new User(100, "Elzero", "5000 Gneh");
+// let userTwo = new Driven(100, "Ahmed", "50020 Gneh", "M");
+
+// console.log(userOne.u);
+// console.log(userOne.getSalary() * 0.3);
+// console.log(userOne.i);
+// console.log("#########")
+// console.log(userTwo.u);
+// console.log(userTwo.getSalary());
+// console.log(userTwo.sex);
 
 
 
