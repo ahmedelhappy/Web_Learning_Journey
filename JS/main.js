@@ -2576,56 +2576,56 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // let urlsRe = /(https?:\/\/)?(www.)?\w+.\w+/ig;
 // console.log(urls.match(urlsRe));
 //==============================
-/*
-  Regular Expression
+// /*
+//   Regular Expression
 
-  Quantifiers
-  n{x}   => Number of
-  n{x,y} => Range
-  n{x,}  => At Least x
-*/
+//   Quantifiers
+//   n{x}   => Number of
+//   n{x,y} => Range
+//   n{x,}  => At Least x
+// */
 
-let serials = "S100S S3000S S50000S S950000S";
+// let serials = "S100S S3000S S50000S S950000S";
 
-console.log(serials.match(/s\d{3}s/gi)); // S[Three Number]S
-console.log(serials.match(/s\d{4,5}s/gi)); // S[Four Or Five Number]S
-console.log(serials.match(/s\d{4,}s/gi)); // S[At Least Four]S
+// console.log(serials.match(/s\d{3}s/gi)); // S[Three Number]S
+// console.log(serials.match(/s\d{4,5}s/gi)); // S[Four Or Five Number]S
+// console.log(serials.match(/s\d{4,}s/gi)); // S[At Least Four]S
 //===========================
-/*
-  Regular Expression
+// /*
+//   Regular Expression
 
-  Quantifiers
-  $  => End With Something
-  ^  => Start With Something
-  ?= => Followed By Something
-  ?! => Not Followed By Something
-*/
+//   Quantifiers
+//   $  => End With Something
+//   ^  => Start With Something
+//   ?= => Followed By Something
+//   ?! => Not Followed By Something
+// */
 
-let myString = "We Love Programming";
-let names = "1OsamaZ 2AhmedZ 3Mohammed 4MoustafaZ 5GamalZ";
+// let myString = "We Love Programming";
+// let names = "1OsamaZ 2AhmedZ 3Mohammed 4MoustafaZ 5GamalZ";
 
-console.log(/ing$/gi.test(myString));
-console.log(/^we/gi.test(myString));
-console.log(/lz$/gi.test(names));
-console.log(/^\d/gi.test(names));
+// console.log(/ing$/gi.test(myString));
+// console.log(/^we/gi.test(myString));
+// console.log(/lz$/gi.test(names));
+// console.log(/^\d/gi.test(names));
 
-console.log(names.match(/\d\w{5}(?=Z)/gi));
-console.log(names.match(/\d\w{8}(?!Z)/gi));
+// console.log(names.match(/\d\w{5}(?=Z)/gi));
+// console.log(names.match(/\d\w{8}(?!Z)/gi));
 
 //=================================
-/*
-  Regular Expression
+// /*
+//   Regular Expression
 
-  - replace
-  - replaceAll
-*/
+//   - replace
+//   - replaceAll
+// */
 
-let txt = "We Love Programming And @ Because @ Is Amazing";
-console.log(txt.replace("@", "JavaScript"));
-console.log(txt.replaceAll("@", "JavaScript"));
-let re = /@/gi;
-console.log(txt.replaceAll(re, "JavaScript"));
-console.log(txt.replaceAll(/@/gi, "JavaScript"));
+// let txt = "We Love Programming And @ Because @ Is Amazing";
+// console.log(txt.replace("@", "JavaScript"));
+// console.log(txt.replaceAll("@", "JavaScript"));
+// let re = /@/gi;
+// console.log(txt.replaceAll(re, "JavaScript"));
+// console.log(txt.replaceAll(/@/gi, "JavaScript"));
 //======================
 //<form id="register" action="" method="get">
 //<input type="text" id="phone" name="the-phone" maxlength="15" />
@@ -2647,54 +2647,72 @@ console.log(txt.replaceAll(/@/gi, "JavaScript"));
 // }
 
 //===================================
+// /*
+//   Constructor Function
+// */
+
+// function User(id, username, salary) {
+//   this.i = id;
+//   this.u = username;
+//   this.s = salary + 1000;
+// }
+
+// let userOne = new User(100, "Elzero", 5000);
+// let userTwo = new User(101, "Hassan", 6000);
+// let userThree = new User(102, "Sayed", 7000);
+
+// console.log(userOne.i);
+// console.log(userOne.u);
+// console.log(userOne.s);
+
+// console.log(userTwo.i);
+// console.log(userTwo.u);
+// console.log(userTwo.s);
+
+// console.log(userThree.i);
+// console.log(userThree.u);
+// console.log(userThree.s);
+
+// // const userOne = {
+// //   id: 100,
+// //   username: "Elzero",
+// //   salary: 5000,
+// // };
+
+// // const userTwo = {
+// //   id: 101,
+// //   username: "Hassan",
+// //   salary: 6000,
+// // };
+
+// // const userThree = {
+// //   id: 102,
+// //   username: "Sayed",
+// //   salary: 7000,
+// // };
+
+//=================================
 /*
   Constructor Function
+  - New Syntax
 */
 
-function User(id, username, salary) {
-  this.i = id;
-  this.u = username;
-  this.s = salary + 1000;
+class User {
+  constructor(id, username, salary) {
+    this.i = id;
+    this.u = username;
+    this.s = salary + 1000;
+  }
 }
 
 let userOne = new User(100, "Elzero", 5000);
-let userTwo = new User(101, "Hassan", 6000);
-let userThree = new User(102, "Sayed", 7000);
 
 console.log(userOne.i);
 console.log(userOne.u);
 console.log(userOne.s);
 
-console.log(userTwo.i);
-console.log(userTwo.u);
-console.log(userTwo.s);
-
-console.log(userThree.i);
-console.log(userThree.u);
-console.log(userThree.s);
-
-// const userOne = {
-//   id: 100,
-//   username: "Elzero",
-//   salary: 5000,
-// };
-
-// const userTwo = {
-//   id: 101,
-//   username: "Hassan",
-//   salary: 6000,
-// };
-
-// const userThree = {
-//   id: 102,
-//   username: "Sayed",
-//   salary: 7000,
-// };
-
-
-
-
-
+console.log(userOne instanceof User);
+console.log(userOne.constructor === User);
 
 
 
