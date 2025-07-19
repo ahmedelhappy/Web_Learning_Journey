@@ -1896,10 +1896,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 //==============destructuringChallenge================
 
-
-
-
-
 // /*
 //   Destructuring
 //   - Challenge
@@ -2101,7 +2097,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   Properties
 //   --- size
 // */
-
 
 // let myMap = new Map([
 //   [10, "Number"],
@@ -2475,7 +2470,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // let practiceRe = /Os[5-9]Os/g;
 // console.log(practice.match(practiceRe));
 
-
 //=================
 // /*
 //   Regular Expression
@@ -2539,7 +2533,6 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(email.match(word));
 // console.log(email.match(valid));
 
-
 //==========================================
 // /*
 //   Regular Expression
@@ -2594,9 +2587,9 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 let serials = "S100S S3000S S50000S S950000S";
 
-console.log(serials.match(/s\d{3}s/ig)); // S[Three Number]S
-console.log(serials.match(/s\d{4,5}s/ig)); // S[Four Or Five Number]S
-console.log(serials.match(/s\d{4,}s/ig)); // S[At Least Four]S
+console.log(serials.match(/s\d{3}s/gi)); // S[Three Number]S
+console.log(serials.match(/s\d{4,5}s/gi)); // S[Four Or Five Number]S
+console.log(serials.match(/s\d{4,}s/gi)); // S[At Least Four]S
 //===========================
 /*
   Regular Expression
@@ -2611,13 +2604,13 @@ console.log(serials.match(/s\d{4,}s/ig)); // S[At Least Four]S
 let myString = "We Love Programming";
 let names = "1OsamaZ 2AhmedZ 3Mohammed 4MoustafaZ 5GamalZ";
 
-console.log(/ing$/ig.test(myString));
-console.log(/^we/ig.test(myString));
-console.log(/lz$/ig.test(names));
-console.log(/^\d/ig.test(names));
+console.log(/ing$/gi.test(myString));
+console.log(/^we/gi.test(myString));
+console.log(/lz$/gi.test(names));
+console.log(/^\d/gi.test(names));
 
-console.log(names.match(/\d\w{5}(?=Z)/ig));
-console.log(names.match(/\d\w{8}(?!Z)/ig)); 
+console.log(names.match(/\d\w{5}(?=Z)/gi));
+console.log(names.match(/\d\w{8}(?!Z)/gi));
 
 //=================================
 /*
@@ -2630,9 +2623,79 @@ console.log(names.match(/\d\w{8}(?!Z)/ig));
 let txt = "We Love Programming And @ Because @ Is Amazing";
 console.log(txt.replace("@", "JavaScript"));
 console.log(txt.replaceAll("@", "JavaScript"));
-let re = /@/ig;
+let re = /@/gi;
 console.log(txt.replaceAll(re, "JavaScript"));
-console.log(txt.replaceAll(/@/ig, "JavaScript"));
+console.log(txt.replaceAll(/@/gi, "JavaScript"));
+//======================
+//<form id="register" action="" method="get">
+//<input type="text" id="phone" name="the-phone" maxlength="15" />
+//<input type="submit" value="Register" />
+//</form>
+/*
+  Regular Expression
+  - Input Form Validation Practice
+*/
+
+// document.getElementById("register").onsubmit = function () {
+//   let phoneInput = document.getElementById("phone").value;
+//   let phoneRe = /\(\d{4}\)\s\d{3}-\d{4}/; // (1234) 567-8910
+//   let validationResult = phoneRe.test(phoneInput);
+//   if (validationResult === false) {
+//     return false;
+//   }
+//   return true;
+// }
+
+//===================================
+/*
+  Constructor Function
+*/
+
+function User(id, username, salary) {
+  this.i = id;
+  this.u = username;
+  this.s = salary + 1000;
+}
+
+let userOne = new User(100, "Elzero", 5000);
+let userTwo = new User(101, "Hassan", 6000);
+let userThree = new User(102, "Sayed", 7000);
+
+console.log(userOne.i);
+console.log(userOne.u);
+console.log(userOne.s);
+
+console.log(userTwo.i);
+console.log(userTwo.u);
+console.log(userTwo.s);
+
+console.log(userThree.i);
+console.log(userThree.u);
+console.log(userThree.s);
+
+// const userOne = {
+//   id: 100,
+//   username: "Elzero",
+//   salary: 5000,
+// };
+
+// const userTwo = {
+//   id: 101,
+//   username: "Hassan",
+//   salary: 6000,
+// };
+
+// const userThree = {
+//   id: 102,
+//   username: "Sayed",
+//   salary: 7000,
+// };
+
+
+
+
+
+
 
 
 
@@ -2644,6 +2707,13 @@ console.log(txt.replaceAll(/@/ig, "JavaScript"));
   - Quick Review From Sets On.
   - Review Weak Set, and their use cases.
   - https://youtu.be/FKrfis1W1tk?si=pxyc9wY05YwdgWP0&t=12864
+
+  => To-Dos
+  -Do the validation form using regx. Find (validationResult).
+
+
+
+
   => wondering
   - [ ]  add event listener (e VS this VS e.target VS e.currentTarget) I know them all, but e, just the e itself can be used for what?
   - [ ]  is the local storage property added for the whole project? like I have 2 opened js files, when I set the color property to red, it’s updated in the 2 files
@@ -2652,5 +2722,3 @@ console.log(txt.replaceAll(/@/ig, "JavaScript"));
   - [ ]  m => Multilines
 
 */
-
-
