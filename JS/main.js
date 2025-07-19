@@ -2692,32 +2692,80 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // // };
 
 //=================================
-/*
-  Constructor Function
-  - New Syntax
-*/
+// /*
+//   Constructor Function
+//   - New Syntax
+// */
 
-class User {
-  constructor(id, username, salary) {
-    this.i = id;
-    this.u = username;
-    this.s = salary + 1000;
-  }
-}
+// class User {
+//   constructor(id, username, salary) {
+//     this.i = id;
+//     this.u = username;
+//     this.s = salary + 1000;
+//   }
+// }
 
-let userOne = new User(100, "Elzero", 5000);
+// let userOne = new User(100, "Elzero", 5000);
 
-console.log(userOne.i);
-console.log(userOne.u);
-console.log(userOne.s);
+// console.log(userOne.i);
+// console.log(userOne.u);
+// console.log(userOne.s);
 
-console.log(userOne instanceof User);
-console.log(userOne.constructor === User);
+// console.log(userOne instanceof User);
+// console.log(userOne.constructor === User);
+
+//================
+//================
+//================
+
+
+
+// /*
+//   Constructor Function
+//   - Deal With Properties And Methods
+// */
+
+// class User {
+  //   constructor(id, username, salary) {
+//     // Properties
+//     this.i = id;
+//     this.u = username || "Unknown";
+//     this.s = salary < 6000 ? salary + 500 : salary;
+//     this.msg = function () {
+//       return `Hello ${this.u} Your Salary Is ${this.s}`;
+//     };
+//   }
+//   // Methods
+//   writeMsg() {
+  //     return `Hello ${this.u} Your Salary Is ${this.s}`;
+  //   }
+  // }
+
+  // let userOne = new User(100, "Elzero", 5000);
+// let userTwo = new User(101, "", 6000);
+
+// console.log(userOne.u);
+// console.log(userOne.s);
+// console.log(userOne.msg());
+// console.log(userOne.writeMsg());
+
+// console.log(userTwo.u);
+// console.log(userTwo.s);
+// console.log(userTwo.msg); // Native Code
+// console.log(userTwo.writeMsg); // Native Code
+//=================
+//=================
 
 
 
 
 
+
+
+
+
+//=================
+//=================
 
 /*
   ======================TUTORIAL=========================
@@ -2734,9 +2782,19 @@ console.log(userOne.constructor === User);
 
   => wondering
   - [ ]  add event listener (e VS this VS e.target VS e.currentTarget) I know them all, but e, just the e itself can be used for what?
-  - [ ]  is the local storage property added for the whole project? like I have 2 opened js files, when I set the color property to red, it’s updated in the 2 files
-  - [ ]  add event listener (e VS this VS e.target VS e.currentTarget) I know them all, but e… just the e itself can be used?
-  - [ ]  is the local storage property added for the whole project? like I have 2 opened js files, when I set the color property to red, it’s updated in the 2 files
-  - [ ]  m => Multilines
 
+  - [ ]  is the local storage property added for the whole project? like I have 2 opened js files, when I set the color property to red, it’s updated in the 2 files
+
+  - [ ]  add event listener (e VS this VS e.target VS e.currentTarget) I know them all, but e… just the e itself can be used?
+
+  - [ ]  is the local storage property added for the whole project? like I have 2 opened js files, when I set the color property to red, it’s updated in the 2 files
+
+  - [Done]  m => Multilines
+
+  - [ ]  this.msg = function () { //this is inside the constructor (property not a method!)
+        return `Hello ${this.u} Your Salary Is ${this.s}`;
+      };
+
+  - [ ]
+  - [ ]
 */
