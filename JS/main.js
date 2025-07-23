@@ -3276,41 +3276,69 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
       // }
 //=================
 //=================
-/*
-  Generators
-  - Delegate Generator
-*/
+// /*
+//   Generators
+//   - Delegate Generator
+// */
 
-function* generateNums() {
-  yield 1;
-  yield 2;
-  yield 3;
-}
+// function* generateNums() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+// }
 
-function* generateLetters() {
-  yield "A";
-  yield "B";
-  yield "C";
-}
+// function* generateLetters() {
+//   yield "A";
+//   yield "B";
+//   yield "C";
+// }
 
-function* generateAll() {
-  yield* generateNums();
-  yield* generateLetters();
-  yield* [4, 5, 6];
-}
+// function* generateAll() {
+//   yield* generateNums();
+//   yield* generateLetters();
+//   yield* [4, 5, 6];
+// }
 
-let generator = generateAll();
+// let generator = generateAll();
 
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.return("Z"));
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.return("Z"));
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+//=================
+//=================
+// /*
+//   Generators
+//   - Generate Infinite Numbers
+//   - Use Return Inside Generators
+// */
+
+// function* generateNumbers() {
+//   // yield 1;
+//   // yield 2;
+//   // return "A";
+//   // yield 3;
+//   // yield 4;
+//   let index = 0;
+
+//   while (true) {
+//     yield index++;
+//   }
+// }
+
+// let generator = generateNumbers();
+
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
 
 //=================
 //=================
