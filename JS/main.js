@@ -3024,36 +3024,104 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 //=================
 //=================
+// /*
+//   Object Meta Data And Descriptor
+//   - Define Multiple Properties
+//   - Check Descriptors
+// */
+
+// const myObject = {
+//   a: 1,
+//   b: 2,
+// };
+
+// Object.defineProperties(myObject, {
+//   c: {
+//     configurable: true,
+//     value: 3,
+//   },
+//   d: {
+//     configurable: true,
+//     value: 4,
+//   },
+//   e: {
+//     configurable: true,
+//     value: 5,
+//   },
+// });
+
+// console.log(myObject);
+
+// console.log(Object.getOwnPropertyDescriptor(myObject, "d"));
+// console.log(Object.getOwnPropertyDescriptors(myObject));
+//=================
+//=================
+// /*
+//   Date And Time
+//   - Date Constructor
+
+//   Static Methods
+//   - Date.now()
+
+//   - To Track Time You Need Starting Point
+//   - Epoch Time Or Unix Time In Computer Science Is The Number of Seconds Since January 1, 1970.
+//   - Why 1970 [829 Days To 136 Years]
+
+//   Search For
+//   - Year 2038 Problem in Computer Science.
+// */
+
+// let dateNow = new Date();
+
+// console.log(dateNow);
+
+// console.log(Date.now()); // 1000 Mill = 1 Second
+
+// let seconds = Date.now() / 1000; // Number Of Seconds
+// console.log(`Seconds ${seconds}`);
+
+// let minutes = seconds / 60; // Number Of Minutes
+// console.log(`Minutes ${minutes}`);
+
+// let hours = minutes / 60; // Number Of Hours
+// console.log(`Hours ${hours}`);
+
+// let days = hours / 24; // Number Of Days
+// console.log(`Days ${days}`);
+
+// let years = days / 365; // Number Of Years
+// console.log(`Years ${years}`);
+//=================
+//=================
 /*
-  Object Meta Data And Descriptor
-  - Define Multiple Properties
-  - Check Descriptors
+  Date And Time
+  - getTime() => Number Of Milliseconds
+  - getDate() => Day Of The Month
+  - getFullYear()
+  - getMonth() => Zero Based
+  - getDay() => Day Of The Week
+  - getHours()
+  - getMinutes()
+  - getSeconds()
 */
 
-const myObject = {
-  a: 1,
-  b: 2,
-};
+let dateNow = new Date();
+let birthday = new Date("1, jan, 2004");
+let dateDiff = dateNow - birthday;
 
-Object.defineProperties(myObject, {
-  c: {
-    configurable: true,
-    value: 3,
-  },
-  d: {
-    configurable: true,
-    value: 4,
-  },
-  e: {
-    configurable: true,
-    value: 5,
-  },
-});
+console.log(dateDiff);
+console.log(dateDiff / 1000 / 60 / 60 / 24 / 365);
 
-console.log(myObject);
+console.log(dateNow);
+console.log(dateNow.getTime());
+console.log(dateNow.getDate());
+console.log(dateNow.getFullYear());
+console.log(dateNow.getMonth());
+console.log(dateNow.getDay());
+console.log(dateNow.getHours());
+console.log(dateNow.getMinutes());
+console.log(dateNow.getSeconds());
 
-console.log(Object.getOwnPropertyDescriptor(myObject, "d"));
-console.log(Object.getOwnPropertyDescriptors(myObject));
 //=================
 //=================
 
@@ -3068,7 +3136,7 @@ console.log(Object.getOwnPropertyDescriptors(myObject));
   => Start Point
   - Quick Review From Sets On.
   - Review Weak Set, and their use cases.
-  - https://youtu.be/FKrfis1W1tk?si=pxyc9wY05YwdgWP0&t=12864
+  - https://youtu.be/FKrfis1W1tk?si=FLFRNnUbm2-eL6Yk&t=20304
 
   => To-Dos
   -Do the validation form using regx. Find (validationResult).
@@ -3092,5 +3160,14 @@ console.log(Object.getOwnPropertyDescriptors(myObject));
       };
 
   - [ ]  Prototypes are a bit vague...
+
+  - [ ]  Need some practice about Object Meta Data And Descriptor
+
+  - [ ]
+  
   - [ ]
 */
+
+
+
+
