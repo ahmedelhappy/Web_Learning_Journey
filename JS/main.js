@@ -3640,32 +3640,77 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // console.log(req);
 // ==========================
 // ==========================
-/*
-  Ajax
-  Loop On Data
+// /*
+//   Ajax
+//   Loop On Data
 
-  Search
-  - Cross Origin API [CORS]
-  - API Authentication
+//   Search
+//   - Cross Origin API [CORS]
+//   - API Authentication
+// */
+
+// let myRequest = new XMLHttpRequest();
+// myRequest.open("GET", "https://api.github.com/users/elzerowebschool/repos");
+// myRequest.send();
+// myRequest.onreadystatechange = function () {
+//   if (this.readyState === 4 && this.status === 200) {
+//     // console.log(this.responseText);
+//     let jsData = JSON.parse(this.responseText);
+//     // console.log(jsData);
+//     for (let i = 0; i < jsData.length; i++) {
+//       let div = document.createElement("div");
+//       let repoName = document.createTextNode(jsData[i].full_name);
+//       div.appendChild(repoName);
+//       document.body.appendChild(div);
+//     }
+//   }
+// };
+
+// ==========================
+// ==========================
+
+/*
+  To Understand Ajax, Fetch, Promises
+
+  Pyramid Of Doom || Callback Hell
+
+  - What Is Callback
+  - Callback Hell Example
+
+  What Is Callback
+  - A Function That Is Passed Into Another One As An Argument To Be Executed Later
+  - Function To Handle Photos
+  --- [1] Download Photo From URL
+  --- [2] Resize Photo
+  --- [3] Add Logo To The Photo
+  --- [4] Show The Photo In Website
 */
 
-let myRequest = new XMLHttpRequest();
-myRequest.open("GET", "https://api.github.com/users/elzerowebschool/repos");
-myRequest.send();
-myRequest.onreadystatechange = function () {
-  if (this.readyState === 4 && this.status === 200) {
-    // console.log(this.responseText);
-    let jsData = JSON.parse(this.responseText);
-    // console.log(jsData);
-    for (let i = 0; i < jsData.length; i++) {
-      let div = document.createElement("div");
-      let repoName = document.createTextNode(jsData[i].full_name);
-      div.appendChild(repoName);
-      document.body.appendChild(div);
-    }
-  }
-};
+function makeItRed(e) {
+  e.target.style.color = "red";
+}
 
+let p = document.querySelector(".test");
+p.addEventListener("click", makeItRed);
+
+function iamACallback() {
+  console.log("Iam A Callback Function");
+}
+
+setTimeout(iamACallback, 2000);
+
+setTimeout(() => {
+  console.log("Download Photo From URL");
+  setTimeout(() => {
+    console.log("Resize Photo");
+    setTimeout(() => {
+      console.log("Add Logo To The Photo");
+      setTimeout(() => {
+        console.log("Show The Photo In Website");
+      }, 1000);
+    }, 1000);
+  }, 1000);
+}, 1000);
 // ==========================
 // ==========================
 
