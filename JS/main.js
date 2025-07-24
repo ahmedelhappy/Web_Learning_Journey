@@ -3582,40 +3582,89 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 // ==========================
 // ==========================
+// /*
+//   To Understand Ajax, Fetch, Promises
+
+//   Event Loop + Callback Queue
+
+//   Story
+//   - JavaScript Is A Single Threaded Language "All Operations Executed in Single Thread"
+//   - Call Stack Track All Calls
+//   - Every Function Is Done Its Poped Out
+//   - When You Call Asynchronous Function It Sent To Browser API
+//   - Asynchronous Function Like Settimeout Start Its Own Thread
+//   - Browser API Act As A Second Thread
+//   - API Finish Waiting And Send Back The Function For Processing
+//   - Browser API Add The Callback To Callback Queue
+//   - Event Loop Wait For Call Stack To Be Empty
+//   - Event Loop Get Callback From Callback Queue And Add It To Call Stack
+//   - Callback Queue Follow FIFO "First In First Out" Rule
+// */
+
+// console.log("One");
+// setTimeout(() => {
+//   console.log("Three");
+// }, 0);
+// setTimeout(() => {
+//   console.log("Four");
+// }, 0);
+// console.log("Two");
+
+// setTimeout(() => {
+//   console.log(myVar); //there is no error, although the variable is decalred below, that's because the variable is called before the setTimeOut Function.
+// }, 0);
+
+// let myVar = 100;
+// myVar += 100;
+
+// ==========================
+// ==========================
+// /*
+//   AJAX
+//   - Asynchronous JavaScript And XML
+//   - Approach To Use Many Technologies Together [HTML, CSS, Js, DOM]
+//   - It Use "XMLHttpRequest" Object To Interact With The Server
+//   - You Can Fetch Data Or Send Data Without Page Refresh
+//   - Examples
+//   --- Youtube Studio
+//   --- Google Drive
+//   --- Upload Article Photo
+//   --- Form Check Name
+
+//   Test new XMLHttpRequest();
+//   Request And Response
+//   Status Code
+// */
+
+// let req = new XMLHttpRequest();
+// console.log(req);
+// ==========================
+// ==========================
 /*
-  To Understand Ajax, Fetch, Promises
+  Ajax
+  Loop On Data
 
-  Event Loop + Callback Queue
-
-  Story
-  - JavaScript Is A Single Threaded Language "All Operations Executed in Single Thread"
-  - Call Stack Track All Calls
-  - Every Function Is Done Its Poped Out
-  - When You Call Asynchronous Function It Sent To Browser API
-  - Asynchronous Function Like Settimeout Start Its Own Thread
-  - Browser API Act As A Second Thread
-  - API Finish Waiting And Send Back The Function For Processing
-  - Browser API Add The Callback To Callback Queue
-  - Event Loop Wait For Call Stack To Be Empty
-  - Event Loop Get Callback From Callback Queue And Add It To Call Stack
-  - Callback Queue Follow FIFO "First In First Out" Rule
+  Search
+  - Cross Origin API [CORS]
+  - API Authentication
 */
 
-console.log("One");
-setTimeout(() => {
-  console.log("Three");
-}, 0);
-setTimeout(() => {
-  console.log("Four");
-}, 0);
-console.log("Two");
-
-setTimeout(() => {
-  console.log(myVar); //there is no error, although the variable is decalred below, that's because the variable is called before the setTimeOut Function.
-}, 0);
-
-let myVar = 100;
-myVar += 100;
+let myRequest = new XMLHttpRequest();
+myRequest.open("GET", "https://api.github.com/users/elzerowebschool/repos");
+myRequest.send();
+myRequest.onreadystatechange = function () {
+  if (this.readyState === 4 && this.status === 200) {
+    // console.log(this.responseText);
+    let jsData = JSON.parse(this.responseText);
+    // console.log(jsData);
+    for (let i = 0; i < jsData.length; i++) {
+      let div = document.createElement("div");
+      let repoName = document.createTextNode(jsData[i].full_name);
+      div.appendChild(repoName);
+      document.body.appendChild(div);
+    }
+  }
+};
 
 // ==========================
 // ==========================
@@ -3664,7 +3713,7 @@ myVar += 100;
 
   - [ ]  Need some practice about Object Meta Data And Descriptor
 
-  - [ ]
+  - [ ]  XMLHttpRequest
   
   - [ ]
 */
