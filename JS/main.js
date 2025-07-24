@@ -3469,30 +3469,116 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
   - Preview Github API
 */
 //==========================
-/*
-  JSON
-  - JSON.parse => Convert Text Data To JS Object
-  - JSON.stringify => Convert JS Object To JSON
-*/
+// /*
+//   JSON
+//   - JSON.parse => Convert Text Data To JS Object
+//   - JSON.stringify => Convert JS Object To JSON
+// */
 
-// Get From Server
-const myJsonObjectFromServer = '{"Username": "Osama", "Age": 39}';
-console.log(typeof myJsonObjectFromServer);
-console.log(myJsonObjectFromServer);
+// // Get From Server
+// const myJsonObjectFromServer = '{"Username": "Osama", "Age": 39}';
+// console.log(typeof myJsonObjectFromServer);
+// console.log(myJsonObjectFromServer);
 
-// Convert To JS Object
-const myJsObject = JSON.parse(myJsonObjectFromServer);
-console.log(typeof myJsObject);
-console.log(myJsObject);
+// // Convert To JS Object
+// const myJsObject = JSON.parse(myJsonObjectFromServer);
+// console.log(typeof myJsObject);
+// console.log(myJsObject);
 
-// Update Data
-myJsObject["Username"] = "Elzero";
-myJsObject["Age"] = 40;
+// // Update Data
+// myJsObject["Username"] = "Elzero";
+// myJsObject["Age"] = 40;
 
-// Send To Server
-const myJsonObjectToServer = JSON.stringify(myJsObject);
-console.log(typeof myJsonObjectToServer);
-console.log(myJsonObjectToServer);
+// // Send To Server
+// const myJsonObjectToServer = JSON.stringify(myJsObject);
+// console.log(typeof myJsonObjectToServer);
+// console.log(myJsonObjectToServer);
+
+// ==========================
+// ==========================
+// /*
+//   To Understand Ajax, Fetch, Promises
+
+//   Asynchronous vs Synchronous Programming
+//   - Meaning
+
+//   Synchronous
+//   - Operations Runs in Sequence
+//   - Each Operation Must Wait For The Previous One To Complete
+//   - Story From Real Life
+
+//   Asynchronous
+//   - Operations Runs In Parallel
+//   - This Means That An Operation Can Occur while Another One Is Still Being Processed
+//   - Story From Real Life
+
+//   - Facebook As Example
+//   - Simulation
+
+//   Search
+//   - JavaScript Is A Single-Threaded
+//   - Multi Threaded Languages
+// */
+
+// // Synchronous
+
+// // console.log("1");
+// // console.log("2");
+// // window.alert("Operation");
+// // console.log("3");
+
+// // Asynchronous
+// console.log("1");
+// console.log("2");
+// setTimeout(() => console.log("Operation"), 3000);
+// console.log("3");
+// ==========================
+// ==========================
+// /*
+//   To Understand Ajax, Fetch, Promises
+
+//   Call Stack || Stack Trace
+//   -- JavaScript Engine Uses A Call Stack To Manage Execution Contexts
+//   -- Mechanism To Make The Interpreter Track Your Calls
+//   -- When Function Called It Added To The Stack
+//   -- When Function Executed It Removed From The Stack
+//   -- After Function Is Finished Executing The Interpreter Continue From The Last Point
+//   -- Work Using LIFO Principle => Last In First Out
+//   -- Code Execution Is Synchronous.
+//   -- Call Stack Detect Web API Methods And Leave It To The Browser To Handle It
+
+//   Web API
+//   -- Methods Available From The Environment => Browser
+// */
+
+// setTimeout(() => { // API function will be called later in the stack (setTimeout is a web API).
+//   console.log("Web API");
+// }, 0);
+
+// function one() {
+//   console.log("One");
+// }
+// function two() {
+//   one();
+//   console.log("Two");
+// }
+// function three() {
+//   two();
+//   console.log("Three");
+// }
+
+// three();
+
+
+// ==========================
+// ==========================
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+}, 0);
+
+console.log("C");
 
 // ==========================
 // ==========================
