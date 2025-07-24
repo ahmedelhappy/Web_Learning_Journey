@@ -3572,13 +3572,50 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 // ==========================
 // ==========================
-console.log("A");
+// console.log("A");
+
+// setTimeout(() => {
+//   console.log("B");
+// }, 0);
+
+// console.log("C");
+
+// ==========================
+// ==========================
+/*
+  To Understand Ajax, Fetch, Promises
+
+  Event Loop + Callback Queue
+
+  Story
+  - JavaScript Is A Single Threaded Language "All Operations Executed in Single Thread"
+  - Call Stack Track All Calls
+  - Every Function Is Done Its Poped Out
+  - When You Call Asynchronous Function It Sent To Browser API
+  - Asynchronous Function Like Settimeout Start Its Own Thread
+  - Browser API Act As A Second Thread
+  - API Finish Waiting And Send Back The Function For Processing
+  - Browser API Add The Callback To Callback Queue
+  - Event Loop Wait For Call Stack To Be Empty
+  - Event Loop Get Callback From Callback Queue And Add It To Call Stack
+  - Callback Queue Follow FIFO "First In First Out" Rule
+*/
+
+console.log("One");
+setTimeout(() => {
+  console.log("Three");
+}, 0);
+setTimeout(() => {
+  console.log("Four");
+}, 0);
+console.log("Two");
 
 setTimeout(() => {
-  console.log("B");
+  console.log(myVar); //there is no error, although the variable is decalred below, that's because the variable is called before the setTimeOut Function.
 }, 0);
 
-console.log("C");
+let myVar = 100;
+myVar += 100;
 
 // ==========================
 // ==========================
