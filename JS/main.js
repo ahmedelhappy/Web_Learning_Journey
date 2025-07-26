@@ -3845,53 +3845,100 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 // ==========================
 // ==========================
-/*
-  Fetch API
-  - Return A Representation Of the Entire HTTP Response
-*/
+// /*
+//   Fetch API
+//   - Return A Representation Of the Entire HTTP Response
+// */
 
-fetch("https://api.github.com/users/elzerowebschool/repos")
-  .then((result) => {
-    console.log(result);
-    let myData = result.json();
-    console.log(myData);
-    return myData;
-  })
-  .then((full) => {
-    full.length = 10;
-    return full;
-  })
-  .then((ten) => {
-    console.log(ten[0].name);
-  });
-
-// const getData = (apiLink) => {
-//   return new Promise((resolve, reject) => {
-//     let myRequest = new XMLHttpRequest();
-//     myRequest.onload = function () {
-//       if (this.readyState === 4 && this.status === 200) {
-//         resolve(JSON.parse(this.responseText));
-//       } else {
-//         reject(Error("No Data Found"));
-//       }
-//     };
-
-//     myRequest.open("GET", apiLink);
-//     myRequest.send();
-//   });
-// };
-
-// getData("https://api.github.com/users/elzerowebschool/repos")
+// fetch("https://api.github.com/users/elzerowebschool/repos")
 //   .then((result) => {
-//     result.length = 10;
-//     return result;
+//     console.log(result);
+//     let myData = result.json();
+//     console.log(myData);
+//     return myData;
 //   })
-//   .then((result) => console.log(result[0].name))
-//   .catch((rej) => console.log(rej));
+//   .then((full) => {
+//     full.length = 10;
+//     return full;
+//   })
+//   .then((ten) => {
+//     console.log(ten[0].name);
+//   });
+
+// // const getData = (apiLink) => {
+// //   return new Promise((resolve, reject) => {
+// //     let myRequest = new XMLHttpRequest();
+// //     myRequest.onload = function () {
+// //       if (this.readyState === 4 && this.status === 200) {
+// //         resolve(JSON.parse(this.responseText));
+// //       } else {
+// //         reject(Error("No Data Found"));
+// //       }
+// //     };
+
+// //     myRequest.open("GET", apiLink);
+// //     myRequest.send();
+// //   });
+// // };
+
+// // getData("https://api.github.com/users/elzerowebschool/repos")
+// //   .then((result) => {
+// //     result.length = 10;
+// //     return result;
+// //   })
+// //   .then((result) => console.log(result[0].name))
+// //   .catch((rej) => console.log(rej));
 
 // ==========================
 // ==========================
+// /*
+//   Promise
+//   - All
+//   - All Settled
+//   - Race
+// */
 
+// const myFirstPromise = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("Iam The First Promise");
+//   }, 5000);
+// });
+
+// const mySecondPromise = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     rej("Iam The Second Promise");
+//   }, 1000);
+// });
+
+// const myThirdPromise = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("Iam The Third Promise");
+//   }, 2000);
+// });
+
+// // Promise.all([myFirstPromise, mySecondPromise, myThirdPromise]).then(
+// //   (resolvedValues) => console.log(resolvedValues),
+// //   (rejectedValue) => console.log(`Rejected: ${rejectedValue}`)
+// // );
+
+// // Promise.allSettled([myFirstPromise, mySecondPromise, myThirdPromise]).then(
+// //   (resolvedValues) => console.log(resolvedValues),
+// //   (rejectedValue) => console.log(`Rejected: ${rejectedValue}`)
+// // );
+
+// Promise.race([myFirstPromise, mySecondPromise, myThirdPromise]).then(
+//   (resolvedValues) => console.log(resolvedValues),
+//   (rejectedValue) => console.log(`Rejected: ${rejectedValue}`)
+// );
+
+// /*
+// | Method               | Waits For All? | Fails on First Reject? | Returns                        |
+// | -------------------- | -------------- | ---------------------- | ------------------------------ |
+// | `Promise.all`        | ✅ Yes          | ❌ Yes                  | Array of ordered results or First error      |
+// | `Promise.allSettled` | ✅ Yes          | ✅ No                   | Array of status+result/reason                |
+// | `Promise.race`       | ❌ No           | ✅ No                   | First resolved/rejected result               |
+
+// */
 // ==========================
 // ==========================
 
