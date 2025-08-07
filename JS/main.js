@@ -237,9 +237,9 @@ Template Literals (Template Strings)
 */
 
 // console.log((100).toString());
-// console.log(100.1.toString());
+// console.log((100.1).toString());
 
-// console.log(100.554555.toFixed(2)); //string
+// console.log(100.554555.toFixed(3)); //string
 
 // console.log(Number("100 Osama"));
 // console.log(+"100 Osama");
@@ -289,7 +289,7 @@ Template Literals (Template Strings)
   - Chain Methods
 */
 
-// let theName = "  Ahmed  ";
+let theName = "  Ahmed  ";
 
 // console.log(theName);
 // console.log(theName[1]);
@@ -446,7 +446,9 @@ Template Literals (Template Strings)
 
 // let allFriends = myFriends.concat(myNewFriends, schoolFriends, "Gameel", [1, 2]);
 
+// console.log(myFriends);
 // console.log(allFriends);
+// console.log(myFriends);
 
 // console.log(allFriends.join());
 // console.log(allFriends.join(""));
@@ -742,14 +744,15 @@ Template Literals (Template Strings)
   - Array => The Current Array
 */
 
-// Get Friends With Name Starts With A
-let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
+// // Get Friends With Name Starts With A
+// let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 // let filterdFriends = friends.filter(function (el) {
 //   return el.startsWith("A") ? true : false;
 // });
 
 // console.log(filterdFriends);
+// console.log(friends);
 
 // // Get Even Numbers Only
 // let numbers = [11, 20, 2, 5, 17, 10];
@@ -812,6 +815,7 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // }, 5);
 
 // console.log(add);
+// console.log(nums);
 
 //===============================
 // /*
@@ -873,7 +877,7 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // let myVar = "country";
 
 // let user = {
-//   theName: "Osama",
+//   theName: "Ahmed",
 //   country: "Egypt",
 //   "the age": 21,
 // };
@@ -1001,11 +1005,26 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 // let user = {
 //   age: 40,
 //   doubleAge: function() {
-//     return user.age * 2;
+//     return this.age * 2;
+//   },  
+//   doubleAge2: () => { //"this" won't work with the arrow function
+//     return this.age * 2; //this refers to the outer scope (window here), use user.age
 //   },
-//   doubleAge2: _ => user.age * 2,
+//   doubleAge3: function() { 
+//     let arrow = () => { //however if we use it in nested function will refer to the outer scope, so it's working here fine
+//       return this.age * 2;
+//     }
+//     return arrow();
+//   }
+//   // doubleAge2: function() {
+//   //   function sec() {
+//   //     return user.age * 2;
+//   //   }
+//   //   return sec();
+//   // }
 // }
 
+// console.log(user.doubleAge())
 // console.log(user.doubleAge2())
 
 //===============================
@@ -1374,10 +1393,12 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   - remove
 // */
 
-// let element = document.getElementById("my-div");
+// // let element = document.getElementById("my-div");
 // let createdP = document.createElement("p");
+// document.body.appendChild(createdP);
+// console.log(createdP.before)
 
-// // element.remove();
+// element.remove();
 
 // /*
 //   DOM [Traversing]
@@ -1554,7 +1575,7 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 */
 
 // setTimeout(function () {
-//   window.open("", "_self", "", false);
+//   window.open("https://www.google.com", "_self", "", false);
 // }, 2000);
 
 // setTimeout(function () {
@@ -1605,7 +1626,7 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 //   - scrollY [Alias => PageYOffset]
 // */
 
-// // console.log(window.scrollX === window.pageXOffset);
+// console.log(window.scrollX === window.pageXOffset);
 
 // //The HTML
 // <button style="
@@ -4022,44 +4043,44 @@ let friends = ["Ahmed", "Sameh", "Sayed", "Asmaa", "Amgad", "Israa"];
 
 // ==========================
 // ==========================
-/*
-  Async & Await With Try, Catch, Finally
-*/
+// /*
+//   Async & Await With Try, Catch, Finally
+// */
 
-const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Iam The Good Promise");
-  }, 3000);
-});
+// const myPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Iam The Good Promise");
+//   }, 3000);
+// });
 
-// async function readData() {
-//   console.log("Before Promise");
+// // async function readData() {
+// //   console.log("Before Promise");
+// //   try {
+// //     console.log(await myPromise);
+// //   } catch (reason) {
+// //     console.log(`Reason: ${reason}`);
+// //   } finally {
+// //     console.log("After Promise");
+// //   }
+// // }
+
+// // readData();
+
+// // "https://api.github.com/users/elzerowebschool/repos"
+
+// async function fetchData() {
+//   console.log("Before Fetch");
 //   try {
-//     console.log(await myPromise);
+//     let myData = await fetch("https://api.github.com/users/elzerowebschool/repos");
+//     console.log(await myData.json());
 //   } catch (reason) {
 //     console.log(`Reason: ${reason}`);
 //   } finally {
-//     console.log("After Promise");
+//     console.log("After Fetch");
 //   }
 // }
 
-// readData();
-
-// "https://api.github.com/users/elzerowebschool/repos"
-
-async function fetchData() {
-  console.log("Before Fetch");
-  try {
-    let myData = await fetch("https://api.github.com/users/elzerowebschool/repos");
-    console.log(await myData.json());
-  } catch (reason) {
-    console.log(`Reason: ${reason}`);
-  } finally {
-    console.log("After Fetch");
-  }
-}
-
-fetchData();
+// fetchData();
 // ==========================
 // ==========================
 
@@ -4109,9 +4130,8 @@ fetchData();
 
   - [ ]  XMLHttpRequest
   
-  - [ ]  Promise, Then.
+  - [ ]  Promise, Then to the End -_-
 */
-
 
 
 
