@@ -6,7 +6,7 @@
 // console.log(String(obj));        // "[object Object]"
 // console.log(obj.toString());     // "[object Object]"
 // Number(a) //convert to num
-// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(Number.MAX_SAFE_INTEGER); 
 // console.log(Number.MAX_VALUE);
 // console.log((100.1).toString());
 // console.log(100.554555.toFixed(3)); //string
