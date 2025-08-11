@@ -1,0 +1,11 @@
+Starting This Course ISA, will write any notes here or code snippets.
+
+npm create vite@latest 
+  Creates a new Vite project by downloading the latest Vite project generator,
+npm install 
+  Installs all dependencies and devDependencies listed in package.json 
+  into the node_modules folder and generates package-lock.json to lock versions.  
+npm run dev
+  starts the local development server, watches files for changes, 
+
+
