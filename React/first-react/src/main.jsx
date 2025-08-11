@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+// import { createElement } from "react"
+import {createRoot} from "react-dom/client"
+const root = createRoot(document.querySelector("#root"))
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// root.render(<h1>Hello</h1>)
+// const createEle = createElement("h1", null, "Hi From createElement!")
+// root.render(createEle);
+// console.log(createEle) //js object
+// //createElement wasn't the best when it comes to nested elements
+
+//JSX Syntax
+const createEle = <h1>Hi From <span>Nested Span</span> JSX!</h1>
+root.render(createEle);
+
+
+
