@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+    <div class="product-container"></div>
+
+
+
+
+    <!-- Libraries Start -->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script> 
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+    <!-- Libraries End-->
+
+    
+    <script type="text/babel">
+      /*
+      const container = document.querySelector('.js-container');
+      const root = ReactDOM.createRoot(container);
+      const productContainer = document.querySelector('.product-container');
+      const productContainerRoot = ReactDOM.createRoot(productContainer);
+      
+      root.render(
+        <div>
+          <button>Good job!</button>
+          <p>My Name Is Ahmed</p>
+          <hr></hr>
+
+          <div>
+            <p>Cotton Socks</p>  
+            <p>Price is: $10</p>  
+          </div>
+        </div>
+      )
+      
+      let Tshirt = 8;
+      let socks = 10;
+
+      let productCost = socks + 2 * Tshirt;
+      console.log(productCost);
+      
+      productContainerRoot.render(
+        <div>
+          <hr></hr>
+          <p>Product Cost is: $ {productCost}</p>
+        </div>
+      )
+      */
+
+      //Challenge Exercises
+      /*1f
+      const container = document.querySelector(".js-container");
+      const root = ReactDOM.createRoot(container);
+
+
+      let Tshirt = 8;
+      let socks = 10;
+      let shippingCost = 5;
+
+
+      let productCost = socks + 2 * Tshirt;
+      console.log(productCost);
+      
+      root.render(
+        <div>
+          <hr></hr>
+          <p>Product Cost is: $ {productCost}</p>
+          <p>Shipping Cost is: $ {shippingCost}</p>
+          <p>Total Cost is: $ {productCost + shippingCost}</p>
+        </div>
+      )
+      */
+
+      //1e
+      /*
+      const container = document.querySelector(".js-container");
+      const root = ReactDOM.createRoot(container);
+
+      root.render(
+        <div>
+          Today Is: {dayjs().format('HH:mm:ss')}
+        </div>
+      )
+      
+      console.log(dayjs().format('MMMM D'));
+      */
+      
+      //1i
+      const container = document.querySelector(".js-container");
+      const root = ReactDOM.createRoot(container);
+
+      function time() {
+        root.render(
+        <div>
+          Current Time Is: {dayjs().format('HH:mm:ss')}
+        </div>
+      )
+      }
+      setInterval(time, 1000)
+    </script>
+    
+  </body>
+</html>
