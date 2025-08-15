@@ -1,6 +1,25 @@
 //====================Day1================================
-// function createElementFactory(type, text, color) {
-//   // Private variables (can't be accessed directly from outside)
+// //Factory Function
+
+// //Basic Example
+
+// function CreatePerson (name) {
+//   return {
+//     name,
+//     talk: () => `${name} talking`,
+//   }
+// }
+
+// const user1 = CreatePerson("Ahmed")
+// const user2 = CreatePerson("Mo")
+
+// console.log(user1.talk())
+// console.log(user2.talk())
+// console.log(`############`)
+
+// //Example 2
+
+// function createDomElementFactory(type, text, color) {
 //   const element = document.createElement(type);
 //   element.innerText = text;
 //   element.style.color = color;
@@ -8,6 +27,7 @@
 
 //   //Returning an object to be a reference to the DOM element just created above
 //   //So yes this is an object
+
 //   return {
 //     // Public property
 //     element: element,
@@ -23,21 +43,23 @@
 //   };
 // }
 
-
-// let el2 = createElementFactory(
+// let h1 = createDomElementFactory(
 //   "h1",
-//   "Hi, This is h1 from createElementFactory",
+//   "Hi, This is h1 from createDomElementFactory",
 //   "blue"
 // );
 
-// el2.updateText("Updated h1 text");
-// el2.updateColor("red"); 
-// el2.updateColor("green"); 
+// let div = createDomElementFactory(
+//   "div",
+//   "Hi, This is div from createDomElementFactory",
+//   "green"
+// );
 
-// const testElePrint = document.querySelector(".root");
-// console.log(el2)
-// console.log(testElePrint)
+// h1.updateText("Updated h1 text");
+// div.updateColor("lightgreen");
 
+// console.log(h1) //object that contain (properties of (name, methods...))
+// console.log(h1.element) //the DOM element itself
 //==================Tip===============
 // //short hand for creating objects
 // let name = "Ahmed";
@@ -58,6 +80,8 @@
 
 
 //=================Day2==================
+//Constructor Function
+
 
 
 
