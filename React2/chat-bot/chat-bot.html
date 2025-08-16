@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Chat Bot</title>
+</head>
+
+<body>
+  <div class="js-container"></div>
+
+
+  <!-- Libraries Start -->
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+  <!-- Libraries End-->
+
+
+  <script type="text/babel">
+    const container = document.querySelector('.js-container');
+    const root = ReactDOM.createRoot(container);
+
+    function ChatInput() {
+      return (
+        <>
+          <input
+            className="input" 
+            placeholder="Send Message To Chatbot" 
+            size="30" 
+          />
+          <button className="send">Send</button>
+        </>
+      );
+    }
+
+
+    function ChatMessage({ message: msg, sender }) {
+      // //the above param is a shortcut of the next 3 lines.
+      // let message = props.message;
+      // let sender = props.sender;
+      // let {message, sender} = props //Destructuring
+
+
+      /*
+      if (sender === "user") { 
+        return (
+          <div>
+            {msg}
+            <img src="imgs/user.png" alt="user img" width="50px" />
+          </div>
+        )
+      }
+      
+      if (sender === "robot") {
+        return (
+          <div>
+            <img src="imgs/robot.png" alt="robot img" width="50px" / >
+            {msg}
+          </div>
+        )
+      }
+      */
+      // This next code is a shortcut for the previous code.
+      return (
+        <div>
+          {sender === "robot" && <img src="imgs/robot.png" alt="robot img" width="50px" />}
+          {msg}
+          {sender === "user" && <img src="imgs/user.png" alt="user img" width="50px" />}
+        </div>
+      )
+      
+    }
+
+
+
+    function App() {
+      return (
+        <>
+          <ChatInput />
+          <ChatMessage 
+            message="hello chatbot" 
+            sender="user" 
+          />
+          <ChatMessage 
+            message="Hello, how can I help you?" 
+            sender="robot" 
+          />
+          <ChatMessage 
+            message="What time is it?" 
+            sender="user" 
+          />
+          <ChatMessage 
+            message="5:30PM" 
+            sender="robot" 
+          />
+        </>
+      )
+    }
+
+
+    root.render(<App />)
+
+
+
+
+  </script>
+</body>
+
+</html>
