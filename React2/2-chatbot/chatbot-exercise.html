@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Lesson 2 exercise</title>
-  </head>
-  <body>
-    <div class="js-container"></div>
+
+<head>
+  <title>Lesson 2 exercise</title>
+</head>
+
+<body>
+  <div class="js-container"></div>
 
 
 
 
-    <!-- Libraries Start -->
-    <script src="https://unpkg.com/supersimpledev/react.js"></script> 
-    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
-    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
-    <!-- Libraries End-->
+  <!-- Libraries Start -->
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+  <!-- Libraries End-->
 
+  <!-- ========================================================================= -->
+
+  <script type="text/babel">
     
-    <script type="text/babel">
-      const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+    // Exercises From 2a => 2c
+    /*
+    const container = document.querySelector('.js-container');
+    const root = ReactDOM.createRoot(container)
 
+    function LoginForm() {
+      return (
+        <>
+          <div><input type="email" placeholder="Email" /></div>
+          <div><input type="password" placeholder="Password"/></div>
+          <button>Login</button>
+          <button>Sign up</button>
+        </>
+      )
+    }
 
+    function App() {
+      return (
+        <>
+          {<LoginForm />}
+          <p>Hello, welcome to my website</p>
+        </>
+      )
+    }
 
+    root.render(<App />)
+    */
 
+    //====================================================================
+    // Exercises From 2e => 2j
+    const container = document.querySelector(".js-container")
+    const root = ReactDOM.createRoot(container);
 
+    function ProductDetails({ product, price, discountPrice, imageSrc }) {
+      return (
+        <div>
+          <img
+            src={imageSrc}
+            alt={product + "image"}
+            width="100px"
+          />
+          <p>{product}</p>
+          {discountPrice ? (
+            <>
+              <del><p>Price: ${price}</p></del>
+              <p>Discount Price: ${discountPrice}</p>
+            </>
+          ) : (
+            <p>Price: ${price}</p>
+          )}
+          <button>Add to Cart</button>
+          <hr />
+        </div>
+      )
+    }
 
+    function App() {
+      return (
+        <>
+          <ProductDetails
+            imageSrc="imgs/cotton-socks.png"
+            product="Cotton socks"
+            price="10.90"
+            discountPrice="5.45"
+          />
+          <ProductDetails
+            imageSrc="imgs/tennis-balls.png"
+            product="Tennis balls"
+            price="6.00"
+          />
+          <ProductDetails
+            imageSrc="imgs/plain-t-shirt.png"
+            product="Plain T-Shirt"
+            price="7.99"
+          />
+        </>
+      )
+    }
 
-    </script>
-  </body>
+    root.render(
+      <App />
+    )
+  </script>
+</body>
+
 </html>
