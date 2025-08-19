@@ -27,7 +27,7 @@
         setInputText(event.target.value);
       }
 
-      function sendMessage() {
+      function pressSendFunc() {
         let newChatMessages = [
           // copies current data, then adds a new value to it (new current data = old data + new data)
           ...chatMessages,
@@ -54,6 +54,10 @@
         setInputText("");
       }
 
+      function pressEnterFunc(event) {
+        event.key === "Enter" && pressSendFunc()
+      }
+
       return (
         <>
           <input
@@ -62,10 +66,11 @@
             size="30"
             onChange={saveInputText}
             value={inputText}
+            onKeyDown={pressEnterFunc}
           />
           <button
             className="send"
-            onClick={sendMessage}
+            onClick={pressSendFunc}
           >Send</button>
         </>
       );
