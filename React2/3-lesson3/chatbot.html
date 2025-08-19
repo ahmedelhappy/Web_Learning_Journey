@@ -55,7 +55,8 @@
       }
 
       function pressEnterFunc(event) {
-        event.key === "Enter" && pressSendFunc()
+        event.key === "Enter" && pressSendFunc();
+        event.key === "Escape" && setInputText("");
       }
 
       return (
