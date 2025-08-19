@@ -46,6 +46,7 @@
     //=========================================
 
     // Exercise 3c
+    /*
     const container = document.querySelector('.js-container');
     const root = ReactDOM.createRoot(container)
     
@@ -67,9 +68,36 @@
     root.render(
       <App />
       );
-    
+    */
+
     //=========================================
     //=========================================
+
+    // Exercise 3d
+    const container = document.querySelector('.js-container');
+    const root = ReactDOM.createRoot(container)
+
+    function Counter() {
+      let [counter, setCounter] = React.useState(0)
+      function countFunc() {
+        setCounter(++counter);
+      }
+      return (
+        <>
+          <button onClick={countFunc}>
+            Clicked {counter} {counter !== 1 ? "times" : "time"}
+          </button>
+        </>
+      )
+    }
+
+    root.render(
+      <>
+        <Counter />
+        <Counter />
+      </>
+    );
+
 
 
 
