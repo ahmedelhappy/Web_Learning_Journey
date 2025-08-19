@@ -193,6 +193,7 @@
     //=========================================
 
     // Exercise 3g
+    /*
     const container = document.querySelector('.js-container');
     const root = ReactDOM.createRoot(container)
 
@@ -221,6 +222,73 @@
 
     root.render(
         <App />
+    );
+    */
+
+
+    //=========================================
+    //=========================================
+
+    // Exercise 3h
+    const container = document.querySelector('.js-container');
+    const root = ReactDOM.createRoot(container)
+
+    function DisplayAsYouType() {
+      let [inputText, setInputText] = React.useState("");
+
+
+      function Reset() {
+        function resetFunc() {
+          setInputText("");
+        }
+        return (
+          <>
+            <button onClick={resetFunc} >
+              Reset
+            </button>
+          </>
+        )
+      }
+
+
+      function Example() {
+        function exampleFunc() {
+          setInputText("Ahmed");
+        }
+
+        return (
+          <>
+            <button onClick={exampleFunc}>
+              Example
+            </button>
+          </>
+        )
+      }
+
+      function updateTextFunc(event) {
+        setInputText(event.target.value);
+      }
+
+      return (
+        <>
+          <input type="text" onChange={updateTextFunc} value={inputText} />
+          <Reset />
+          <Example />
+          <p>Hello {inputText}</p>
+        </>
+      )
+    }
+
+    function App() {
+      return (
+        <>
+          <DisplayAsYouType />
+        </>
+      )
+    }
+
+    root.render(
+      <App />
     );
 
   </script>
