@@ -142,6 +142,7 @@
     //=========================================
 
     // Exercise 3f
+    /*
     const container = document.querySelector('.js-container');
     const root = ReactDOM.createRoot(container)
 
@@ -184,7 +185,43 @@
     root.render(
         <App />
     );
+    
+    */
 
+
+    //=========================================
+    //=========================================
+
+    // Exercise 3g
+    const container = document.querySelector('.js-container');
+    const root = ReactDOM.createRoot(container)
+
+    function DisplayAsYouType() {
+      let [inputText, setInputText] = React.useState("");
+
+      function updateTextFunc(event) {
+        setInputText(event.target.value);
+      }
+      
+      return(
+        <>
+          <input type="text" onChange={updateTextFunc}/>
+          <p>Hello {inputText}</p>
+        </>
+      )
+    } 
+
+    function App() {
+      return (
+        <>
+          <DisplayAsYouType />
+        </>
+      )
+    }
+
+    root.render(
+        <App />
+    );
 
   </script>
 </body>
