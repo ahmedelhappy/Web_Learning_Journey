@@ -69,3 +69,15 @@
 
   console.log(object1 === object3); // false, because they have different references.
 */
+
+/*
+  innerHtml = <p>Hello</p> => insert a paragraph. (parses the html, and displays it)
+  innerText = inserts text.
+*/
+
+/*
+  typeof [1, 2] => object //Array are objects.
+  Array.isArray(myArray).
+  myArray.push
+  myArray.splice()
+*/
