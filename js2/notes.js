@@ -56,7 +56,7 @@
     message: 'hello',
     price: 799
   };  
-  const object2 = object1; //Copy by Reference
+  const object2 = object1; //Copy by Reference (arrays also)
 
   object1.message = 'Good job!';
   console.log(object1); // 'Good job!'
