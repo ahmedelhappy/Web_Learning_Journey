@@ -80,3 +80,25 @@
 ## Arrow Functions
 ![alt text](image.png)
 
+## Even Listeners
+  Adding & Removing Event Listeners
+  ![alt text](image-1.png)
+    so here "click" wasn't printed out because the first eventListener was removed.
+
+## Array Filter
+  ![alt text](image-2.png)
+
+## Array Map
+  ![alt text](image-3.png)
+
+## Data Attribute
+  ![alt text](image-4.png)
+  use in HTML cebab case, in JS dataset.camelCase.
+
+
+
+
+
+
+
+

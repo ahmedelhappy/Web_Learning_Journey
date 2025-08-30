@@ -16,6 +16,7 @@ console.log(`Min: ${min}`);
 console.log(`Max: ${max}`);
 */
 
+/*
 let button1 = document.querySelector(".btn");
 let button2 = document.querySelector(".btn2");
 let h1 = document.querySelector(".h1");
@@ -37,3 +38,6 @@ function stopIntervalFunc() {
   clearInterval(intervalId);
   running = false;
 }
+*/
+
+
