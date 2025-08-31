@@ -1,8 +1,5 @@
 # Notes
-  Some Notes While Reviewing JS.
-  <br>
-  I don't care about the preview of this md file.
-
+  This are some JS notes, like a cheat-sheet.
 ## Json
     Keys must be in double quotes (" ").
     Values can be:
@@ -95,9 +92,11 @@
   ![alt text](image-4.png)
   use in HTML cebab case, in JS dataset.camelCase.
 
-
-
-
+## Testing
+  ![alt text](image-6.png)
+  ![alt text](image-7.png)
+  Naming and grouping related tests
+  ![alt text](image-8.png)
 
 
 
