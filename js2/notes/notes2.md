@@ -77,7 +77,7 @@
 ## Arrow Functions
 ![alt text](image.png)
 
-## Even Listeners
+## Event Listeners
   Adding & Removing Event Listeners
   ![alt text](image-1.png)
     so here "click" wasn't printed out because the first eventListener was removed.
@@ -98,7 +98,19 @@
   ![alt text](image-8.png)
   Naming and grouping related tests
 
+## Testing Frameworks (Jasmine)
+describe function create suite <br>
+it function create a test <br>
+expect and .toEqual to match (easily readable in EN)
+![alt text](image-9.png)
+![alt text](image-10.png)
 
+## OOP
+Constructor
+![alt text](image-11.png)
 
+Private properties (add # also when using the private property inside the class)
+![alt text](image-12.png)
 
-
+## This Keyword
+![alt text](image-13.png)
