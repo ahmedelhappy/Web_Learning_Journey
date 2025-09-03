@@ -40,4 +40,56 @@ function stopIntervalFunc() {
 }
 */
 
+/*
+let xhr = new XMLHttpRequest();
+
+xhr.addEventListener("load", () => {
+  console.log(xhr.response);
+})
+
+xhr.open("GET", "https://supersimplebackend.dev/hello");
+xhr.send();
+
+// console.log(xhr.response); // cannot access it right away because it takes time.
+// will add eventListener, once the response arrive (load), will print it.
+*/
+
+/*
+let xhr2 = new XMLHttpRequest();
+xhr2.open("GET", "https://supersimplebackend.dev/hello");
+xhr2.send();
+*/
+
+function printHelloImmediately () {
+  console.log("Hello Immediately");
+}
+
+function printHello() {
+  setTimeout(() => {
+    console.log("hello");
+  }, 1000)
+}
+
+new Promise((resolve) => {
+  console.log("Start of the promise")
+  printHello(() => {
+    resolve();
+  });
+}).then(() => {
+  console.log("next step");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -114,3 +114,40 @@ Private properties (add # also when using the private property inside the class)
 
 ## This Keyword
 ![alt text](image-13.png)
+
+## XMLHttpRequest
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "https://supersimplebackend.dev/hello");
+    xhr.send();
+
+    // console.log(xhr.response); // cannot access it right away because it takes time.
+    // will add eventListener, once the response arrive (load), will print it.   
+
+    xhr.addEventListener("load", () => {
+      console.log(xhr.response);
+    })
+    // Put the eventListener above the send function (here is not really important, as the response takes time, but if the response was to arrive right away it wouldn't work)
+
+### Network Tab
+![alt text](image-16.png)
+
+### Status Code
+![alt text](image-14.png)
+if it starts with 4, it's our problem (for example you request a page that doesn't exist) <br>
+if starts with 5, it's the backend problem (for example the server crashes)
+
+### API
+![alt text](image-15.png)
+the supported back-end requests are called API
+
+---
+Writing a URL in the browser is a GET request.
+
+## Promises
+
+
+
+
+
