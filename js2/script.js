@@ -320,8 +320,25 @@ getUserAndPosts();
 console.log("The end")
 */
 
+let url = "https://api.github.com/users/ahmedelhappy/repos";
 
+async function fetchGitHub() {
 
+  let response = await fetch(url, {
+    headers: {
+      // "Authorization: TOKEN HERE
+    }
+  });
+  let data = await response.json();
+
+  data.forEach(item => {
+    let myDiv = document.createElement("div");
+    myDiv.textContent = item.name;
+    document.body.append(myDiv)
+  })
+}
+
+fetchGitHub();
 
 
 
