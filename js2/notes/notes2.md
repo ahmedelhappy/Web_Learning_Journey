@@ -220,7 +220,7 @@ Another Example:
     })
 
 
-### Promises
+## Promises
 [promise-execution](https://www.lydiahallie.com/blog/promise-execution)
 ![alt text](image-17.png)
 
@@ -228,5 +228,34 @@ Another Example:
 .catch() recovers the chain by turning the error into a resolved value (unless you rethrow). <br>
 meaning the .thens after .catch get executed by default
 
+## Async Await
+right here you should await inside an async function, otherwise will get an error.
+![alt text](image-18.png)
+
+on this next screenshot a comparison between using await & async VS .then()
+![alt text](image-19.png)
+
+Notes <br>
+![alt text](image-20.png)
+
+We use Try catch instead of .catch() as it may cause some issues.
+![alt text](image-21.png)
 
 
+### 📌 `Response.json()` (Summary)
+
+- **What it is:**  
+  A method of the `Response` object returned by `fetch()`.
+
+- **What it does:**  
+  - Reads the response **body stream** asynchronously  
+  - Parses it as JSON  
+  - Returns a **Promise** that resolves to a JS object
+
+- **Usage:**  
+
+  ```js
+  const response = await fetch(url);
+  const data = await response.json();
+
+![alt text](image-22.png)

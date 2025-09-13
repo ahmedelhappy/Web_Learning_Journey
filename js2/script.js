@@ -233,6 +233,7 @@ console.log("Hi");
 */
 
 /*
+//Promise Example
 // 1. Fetch a user
 fetch("https://jsonplaceholder.typicode.com/users/1")
   .then(response => response.json()) // Convert response to JS object
@@ -252,6 +253,9 @@ fetch("https://jsonplaceholder.typicode.com/users/1")
   });
 */
 
+
+/*
+//Promise Example
 let x;
 
 let promiseToReturnX = new Promise((resolve, reject) => {
@@ -275,7 +279,44 @@ promiseToReturnX
   // })
   .then((_) => console.log("before finally"))
   .finally((_) => console.log("Finally"));
+*/
+
+/*
+async function start() {
+  let data = await fetch('https://api.weather.gov/gridpoints/OKX/35,35/fosrecast')
+  let result = await data.json();
+  console.log(result)
+}
+
+start() 
+*/
+
+async function getUserAndPosts() {
+  try {
+    // 1. Fetch user
+    const userResponse = await fetch("https://jsonplaceholder.typicode.com/users/1");
+    console.log(userResponse);
+    console.log("===========");
+    const user = await userResponse.json();
+    console.log("👤 User:", user.name);
+
+    // 2. Fetch posts for that user
+    const postsResponse = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`);
+    const posts = await postsResponse.json();
+
+    console.log("📝 Posts by this user:");
+    posts.forEach(post => console.log("-", post.title));
+
+  } catch (error) {
+    console.error("❌ Something went wrong:", error);
+  } finally {
+    console.log("✅ Finished fetching data (success or error)");
+  }
+}
+
+getUserAndPosts();
+
+console.log("The end")
 
 
 
-  
