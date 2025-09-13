@@ -244,10 +244,53 @@ const response = await fetch(url);
 const data = await response.json();
 ```
 
-![alt text](image-22.png)
 
 - **Why it's async:**  
   The body might still be downloading when you call `.json()`, so it must wait for it to finish before parsing.
 
 - **Common mistake:**  
   Forgetting `await`, which gives you a **Promise** instead of the actual object.
+
+## 🌐 Fetch - Explanation & Examples | [colorCode](https://youtu.be/ubw2hdQIl4E?si=Y1PHheBddQmECimR)
+
+When you call `fetch(URL)`, JavaScript creates a **request** behind the scenes and sends it.  
+This is how it works under the hood:
+
+![Fetch Request Flow](image-23.png)
+
+---
+
+### 📌 Example
+Basic fetch example:
+
+![Fetch Example](image-24.png)
+
+---
+
+### ✅ Successful Fetch (Promise Resolved)
+In this case, the fetch request successfully **connects to the server** and returns a resolved promise.  
+However, if the server returns an error (like `404`), the **`catch` block will not run** — you have to manually check:
+
+- `response.status`
+- `response.ok`
+
+![Successful Fetch](image-26.png)
+
+---
+
+### ❌ Failed Fetch (Promise Rejected)
+If the fetch itself fails (e.g., **no internet connection**, **CORS error**, or **server unreachable**),  
+then the **`catch` block will run**.
+
+![Failed Fetch](image-25.png)
+
+---
+
+### 📤 POST Requests
+`POST` is generally used to **send data to the server**, such as submitting forms or uploading data.
+
+![POST Example](image-27.png)
+
+
+
+

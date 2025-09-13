@@ -291,6 +291,7 @@ async function start() {
 start() 
 */
 
+/*
 async function getUserAndPosts() {
   try {
     // 1. Fetch user
@@ -317,6 +318,13 @@ async function getUserAndPosts() {
 getUserAndPosts();
 
 console.log("The end")
+*/
+
+
+
+
+
+
 
 
 
