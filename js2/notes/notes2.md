@@ -3,12 +3,12 @@
 ## Json
     Keys must be in double quotes (" ").
     Values can be:
-    string ("hello")
-    number (123)
-    boolean (true / false)
-    null
-    array ([])
-    object ({})
+      string ("hello")
+      number (123)
+      boolean (true / false)
+      null
+      array ([])
+      object ({})
     No functions, no comments, no variables.
     {
       "name": "Ahmed",
@@ -22,9 +22,11 @@
     Values can be anything: strings, numbers, arrays, objects, functions, symbols, etc.
     You can add methods, variables, and dynamic properties.
 
+    let country = Egypt;
     const user = {
       name: "Ahmed",
       age: 21,
+      country: country, //Variable declared above
       skills: ["JavaScript", "React", "Node.js"],
       isStudent: true,
       greet: function() {
@@ -32,7 +34,7 @@
       }
     };
 
-    JSON.stringify(myObject) => converts it to Json
+    JSON.stringify(myObject) => converts to JSON
     JSON.parse(myJson) => converts to JS Object
 
 ## Note
@@ -140,14 +142,91 @@ if starts with 5, it's the backend problem (for example the server crashes)
 
 ### API
 ![alt text](image-15.png)
-the supported back-end requests are called API
-
----
+the supported back-end requests are called API <br>
 Writing a URL in the browser is a GET request.
 
-## Promises
+## Async JavaScript & Callback Functions | Color Code
+### callback hell
+
+    function orderPizza(callback) {
+      setTimeout(() => {
+        console.log("Pizza Ordered");
+        callback();
+      }, 1000);
+    }
+
+    function deliverPizza(callback) {
+      setTimeout(() => {
+        console.log("Pizza Delivered");
+        callback();
+      }, 1000);
+    }
+
+    function eatPizza(callback) {
+      setTimeout(() => {
+        console.log("Eating Pizza");
+        callback();
+      }, 1000);
+    }
+
+    // Callback Hell 
+    orderPizza(()=> {
+      deliverPizza(() => {
+        eatPizza(()=> {
+          console.log("Ate Pizza, every thing is done.")
+        })
+      })
+    })
+
+Note:  
+
+Passing a function reference (or an anonymous function) → delays execution until the function is called. 
+
+Calling the function immediately → runs it right now and passes its return value (usually undefined for async functions).
+
+Another Example:
+
+    //Example (Call back way)
+    console.log("Hi");
+
+    function walkDog(callback) {
+
+      setTimeout(() => {
+        console.log("You walk the dog");
+        callback();
+      }, 1500)
+    }
+
+    function cleanKitchen(callback) {
+
+      setTimeout(() => {
+        console.log("You clean The kitchen");
+        callback();
+      }, 2500)
+    }
+
+    function takeOutTrash(callback) {
+
+      setTimeout(() => {
+        console.log("You take out trash");
+        callback();
+      }, 500)
+    }
+
+    walkDog(() => {
+      cleanKitchen(() => takeOutTrash(() => {
+        console.log("You Finished All The Chores!")
+      }));
+    })
 
 
+### Promises
+[promise-execution](https://www.lydiahallie.com/blog/promise-execution)
+![alt text](image-17.png)
+
+### Note
+.catch() recovers the chain by turning the error into a resolved value (unless you rethrow). <br>
+meaning the .thens after .catch get executed by default
 
 
 
