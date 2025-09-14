@@ -291,6 +291,43 @@ then the **`catch` block will run**.
 
 ![POST Example](image-27.png)
 
+## 📝 Object Iteration | Side Notes
 
+### 1. `for...in`
+Iterates over **keys** (property names) in an object.
+
+    const user = { name: "Ahmed", age: 21 };
+
+    for (const key in user) {
+      console.log(key);         // "name", "age"
+      console.log(user[key]);   // "Ahmed", 21
+    }
+
+---
+
+### 2. `Object.keys()`
+Returns an **array of keys** → allows using array methods like `forEach`.
+
+    Object.keys(user).forEach(key => {
+      console.log(key, user[key]);
+    });
+
+---
+
+### 3. `Object.values()`
+Returns an **array of values**.
+
+    Object.values(user).forEach(value => {
+      console.log(value);
+    });
+
+---
+
+### 4. `Object.entries()`
+Returns an **array of [key, value] pairs**.
+
+    Object.entries(user).forEach(([key, value]) => {
+      console.log(`${key}: ${value}`);
+    });
 
 

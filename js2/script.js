@@ -253,7 +253,6 @@ fetch("https://jsonplaceholder.typicode.com/users/1")
   });
 */
 
-
 /*
 //Promise Example
 let x;
@@ -320,6 +319,7 @@ getUserAndPosts();
 console.log("The end")
 */
 
+/*
 let url = "https://api.github.com/users/ahmedelhappy/repos";
 
 async function fetchGitHub() {
@@ -339,6 +339,33 @@ async function fetchGitHub() {
 }
 
 fetchGitHub();
+*/
+
+
+/*
+async function getRandomJoke() {
+  let url = "https://official-joke-api.appspot.com/random_joke";
+  let data = await (await fetch(url)).json();
+
+  let myJoke = {
+    "setup": data.setup,
+    "punchline": data.punchline,
+  }
+
+  Object.values(myJoke).forEach(line => {
+    let myLineDiv = document.createElement("div");
+    myLineDiv.textContent = `${line}`;
+    document.body.append(myLineDiv);
+  })
+
+}
+
+getRandomJoke();
+
+// Response Object
+// Request object
+*/
+
 
 
 
