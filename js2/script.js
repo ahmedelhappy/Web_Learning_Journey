@@ -341,7 +341,6 @@ async function fetchGitHub() {
 fetchGitHub();
 */
 
-
 /*
 async function getRandomJoke() {
   let url = "https://official-joke-api.appspot.com/random_joke";
@@ -365,6 +364,67 @@ getRandomJoke();
 // Response Object
 // Request object
 */
+
+// Another Promise Example
+
+/*
+
+let msg;
+
+let myPromise = new Promise((resolve, reject) => {
+  
+  setTimeout((_) => {
+    msg = "hello";
+    resolve(msg);
+  }, 800);
+
+});
+
+myPromise.then(msg => {console.log(msg); return msg})
+.then(msg => msg += " Hello")
+.then(msg => console.log(msg))
+
+*/
+
+let msg;
+
+let myPromise = new Promise((resolve, reject) => {
+
+  setTimeout((_) => {
+    msg = "hello";
+    resolve(msg);
+  }, 800);
+
+});
+
+async function printHello() {
+  try {
+    msg = await myPromise;
+    console.log(msg)
+    msg += " Hello"
+    console.log(msg)
+  }
+  catch(error) {
+    console.log(error)
+  }
+  finally {
+    console.log("Finally")
+  }
+
+}
+
+printHello()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
