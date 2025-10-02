@@ -346,7 +346,7 @@ async function getRandomJoke() {
   let url = "https://official-joke-api.appspot.com/random_joke";
   let data = await (await fetch(url)).json();
 
-  let myJoke = {
+  let myJoke = 
     "setup": data.setup,
     "punchline": data.punchline,
   }
@@ -386,6 +386,9 @@ myPromise.then(msg => {console.log(msg); return msg})
 
 */
 
+
+/*
+
 let msg;
 
 let myPromise = new Promise((resolve, reject) => {
@@ -415,9 +418,38 @@ async function printHello() {
 
 printHello()
 
+*/
+// let myCounter;
+
+// if(localStorage.getItem("counter") === null) {
+//   myCounter = 0;
+// }
+// else {
+//   myCounter = localStorage.getItem("counter");
+// }
+
+// let myElement = document.createElement("button");
+// myElement.innerText = myCounter;
+
+// document.body.append(myElement);
+
+// myElement.addEventListener("click", () => {
+  //   myElement.innerText = myCounter;
+  //   myCounter++;
+//   localStorage.setItem("counter", myCounter);
+// })
 
 
+let counter = 10;
 
+if (  console.log("hello1")) {
+  console.log("hello2");
+}
+
+// for(let i = 0; i < 10; i ++) ;
+// {
+//   console.log("hello");
+// }
 
 
 

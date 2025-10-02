@@ -228,6 +228,21 @@ Meaning `.then()` after `.catch()` still executes by default.
 We use `try/catch` instead of `.catch()` to handle errors more clearly.  
 ![alt text](image-21.png)
 
+
+## 🌐 Fetch - Explanation & Examples | [colorCode](https://youtu.be/ubw2hdQIl4E?si=Y1PHheBddQmECimR)
+
+When you call `fetch(URL)`, JavaScript creates a **request** behind the scenes and sends it.  
+This is how it works under the hood:
+
+![Fetch Request Flow](image-23.png)
+
+---
+
+### 📌 Example
+Basic fetch example:
+
+![Fetch Example](image-24.png)
+
 ### 📌 `Response.json()` (Summary)
 
 - **What it is:**  
@@ -244,27 +259,11 @@ const response = await fetch(url);
 const data = await response.json();
 ```
 
-
 - **Why it's async:**  
   The body might still be downloading when you call `.json()`, so it must wait for it to finish before parsing.
 
 - **Common mistake:**  
   Forgetting `await`, which gives you a **Promise** instead of the actual object.
-
-## 🌐 Fetch - Explanation & Examples | [colorCode](https://youtu.be/ubw2hdQIl4E?si=Y1PHheBddQmECimR)
-
-When you call `fetch(URL)`, JavaScript creates a **request** behind the scenes and sends it.  
-This is how it works under the hood:
-
-![Fetch Request Flow](image-23.png)
-
----
-
-### 📌 Example
-Basic fetch example:
-
-![Fetch Example](image-24.png)
-
 ---
 
 ### ✅ Successful Fetch (Promise Resolved)
@@ -330,4 +329,16 @@ Returns an **array of [key, value] pairs**.
       console.log(`${key}: ${value}`);
     });
 
+## Numbers Notes
+
+| **Value**                  | **Meaning**                                       | **Example**                             |
+| -------------------------- | ------------------------------------------------- | --------------------------------------- |
+| `Infinity`                 | Positive infinity (bigger than any number)        | `1 / 0 → Infinity`                      |
+| `-Infinity`                | Negative infinity (smaller than any number)       | `-1 / 0 → -Infinity`                    |
+| `Number.MAX_VALUE`         | Largest finite number (\~1.79 × 10³⁰⁸)            | `console.log(Number.MAX_VALUE)`         |
+| `Number.MIN_VALUE`         | Smallest positive number (>0, very close to zero) | `console.log(Number.MIN_VALUE)`         |
+| `Number.POSITIVE_INFINITY` | Same as `Infinity`                                | `console.log(Number.POSITIVE_INFINITY)` |
+| `Number.NEGATIVE_INFINITY` | Same as `-Infinity`                               | `console.log(Number.NEGATIVE_INFINITY)` |
+| `NaN`                      | "Not a Number" (invalid math result)              | `0 / 0 → NaN`                           |
+| `Number.isFinite(x)`       | Checks if `x` is finite (not ±Infinity, not NaN)  | `Number.isFinite(42) → true`            |
 
