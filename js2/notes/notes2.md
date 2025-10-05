@@ -409,4 +409,5 @@ Returns an **array of [key, value] pairs**.
 <br>
 
 -> hoisting doesn't work with arrow functions
+-> 
 
