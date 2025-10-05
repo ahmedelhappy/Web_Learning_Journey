@@ -2,6 +2,45 @@
 This are some JS notes, like a cheat-sheet.
 
 
+## [Inheritance | Prototype | Proto](https://www.youtube.com/watch?v=jnME98ckDbQ&list=PL1PqvM2UQiMoGNTaxFMSK2cih633lpFKP&index=3)
+### Notes
+* `object.__proto__ === className.prototype`
+* prototype chain: when calling a method or a property, it first looks for it top level (current object), then goes to next prototype, then next... etc 
+* 2 types of properties, one that belongs to the constructor (class) and get inherited for all objects (like "Egyptian"), and one that doesn't belong to the constructor, and is unique to each object (like "myName").
+* C++ → Fast but heavier:
+Uses class-based inheritance with a fixed memory layout — each object contains all parent data and methods, making it faster but uses more memory.
+* C++ → Fast but heavier:
+Uses class-based inheritance with a fixed memory layout — each object contains all parent data and methods, making it faster but uses more memory.
+* JavaScript → Flexible but slower:
+Uses prototype-based inheritance where objects share methods via prototypes — this makes it more memory-efficient but slower due to runtime lookups.
+
+
+
+CODE 1
+```js
+// This is a constructor function, and yea it's outside a class.
+// This is old practice
+function Person() {
+  this.talk = _ => "talking"
+  // talk method (it's a property) is not on the Person class, it just gets copied to new objects 
+  // so here there is inheritance, like if I change myObj.talk() won't change.
+  // also not eff, as it gets copied on all the objects
+}
+```
+CODE 2
+```js
+function Person2() {
+}
+// talk method doesn't get copied on children
+Person2.prototype.talk = _ => "talking2";
+```
+<br>
+
+
+
+
+
+
 
 ## Json
 Keys must be in double quotes (" ").  

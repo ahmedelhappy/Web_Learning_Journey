@@ -443,13 +443,41 @@ printHello()
 
 
 
+// This is a constructor function, and yea it's outside a class.
+// This is old practice
+function Person() {
+  this.talk = _ => "talking"
+  // talk is not on the Person class, it just gets copied to new objects 
+  // talk method (it's a property) gets copied on children
+}
+
+function Person2() {
+}
+// talk method doesn't get copied on children
+
+Person2.prototype.talk = _ => "talking2";
+
+
+const me = new Person;
+console.log(me.talk());
+
+const name = "Abdullah";
+console.log(name.__proto__);
 
 
 
 
 
+function add (num1, num2) {
+  return num1 + num2;
+}
 
+console.log(add(10, 20));
 
+let myH1 = document.createElement("h1");
+myH1.textContent = add(10, 20);
 
+document.body.append(myH1);
 
+console.log(document)
 
