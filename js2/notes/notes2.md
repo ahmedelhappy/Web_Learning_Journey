@@ -1,6 +1,8 @@
 # Notes
 This are some JS notes, like a cheat-sheet.
 
+
+
 ## Json
 Keys must be in double quotes (" ").  
 Values can be:
@@ -290,7 +292,27 @@ then the **`catch` block will run**.
 
 ![POST Example](image-27.png)
 
-## 📝 Object Iteration | Side Notes
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+# 📝Side Notes
+some general notes, kinda off-topic.
+
+## Object Iteration
 
 ### 1. `for...in`
 Iterates over **keys** (property names) in an object.
@@ -330,7 +352,6 @@ Returns an **array of [key, value] pairs**.
     });
 
 ## Numbers Notes
-
 | **Value**                  | **Meaning**                                       | **Example**                             |
 | -------------------------- | ------------------------------------------------- | --------------------------------------- |
 | `Infinity`                 | Positive infinity (bigger than any number)        | `1 / 0 → Infinity`                      |
@@ -341,4 +362,12 @@ Returns an **array of [key, value] pairs**.
 | `Number.NEGATIVE_INFINITY` | Same as `-Infinity`                               | `console.log(Number.NEGATIVE_INFINITY)` |
 | `NaN`                      | "Not a Number" (invalid math result)              | `0 / 0 → NaN`                           |
 | `Number.isFinite(x)`       | Checks if `x` is finite (not ±Infinity, not NaN)  | `Number.isFinite(42) → true`            |
+
+
+<br>
+<br>
+<br>
+<br>
+
+-> hoisting doesn't work with arrow functions
 

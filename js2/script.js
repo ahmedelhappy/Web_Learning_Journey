@@ -440,17 +440,6 @@ printHello()
 // })
 
 
-let counter = 10;
-
-if (  console.log("hello1")) {
-  console.log("hello2");
-}
-
-// for(let i = 0; i < 10; i ++) ;
-// {
-//   console.log("hello");
-// }
-
 
 
 
