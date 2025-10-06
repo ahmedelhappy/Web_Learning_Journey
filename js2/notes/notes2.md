@@ -13,8 +13,7 @@ Uses class-based inheritance with a fixed memory layout — each object contains
 Uses class-based inheritance with a fixed memory layout — each object contains all parent data and methods, making it faster but uses more memory.
 * JavaScript → Flexible but slower:
 Uses prototype-based inheritance where objects share methods via prototypes — this makes it more memory-efficient but slower due to runtime lookups.
-
-
+* Factory Function → A regular function that creates and returns an object.
 
 CODE 1
 ```js
@@ -36,6 +35,32 @@ Person2.prototype.talk = _ => "talking2";
 ```
 <br>
 
+## factory functions, constructor functions, and classes
+### Factory Function
+![alt text](image-29.png)
+
+### Constructor Function
+![alt text](image-30.png)
+Behind The Scene (Next Img)
+![alt text](image-32.png)
+
+
+### Class
+![alt text](image-31.png)
+
+### Notes
+* In constructor functions, if you define methods inside the function, each object gets its own copy.
+
+* In classes, methods live in the prototype, so all instances share the same function reference.
+
+* Both can do inheritance, but classes make it much simpler and cleaner.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
@@ -410,4 +435,3 @@ Returns an **array of [key, value] pairs**.
 
 -> hoisting doesn't work with arrow functions
 -> 
-
