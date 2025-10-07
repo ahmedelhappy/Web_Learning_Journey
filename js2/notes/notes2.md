@@ -557,6 +557,20 @@ Why pure functions are important
 * ✅ Safe for concurrency / async logic
 
 
+## first-class functions 
+
+🔹 Definition
+
+In JavaScript, functions are first-class citizens (or first-class objects).
+That means functions are treated like any other value — just like numbers, strings, or objects.
+
+You can:
+* Store them in variables.
+* Pass them as arguments to other functions.
+* Return them from other functions.
+* Store them in objects or arrays.
+* Basically — functions are data.
+
 <br>
 <br>
 <br>
