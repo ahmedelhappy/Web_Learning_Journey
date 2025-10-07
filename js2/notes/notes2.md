@@ -540,6 +540,23 @@ console.log(obj.value); // ❌ still 10
 
 
 
+
+## Pure function
+
+A pure function in JavaScript is a function that:
+  * Always gives the same output for the same input.
+  * Does not cause side effects — it doesn’t change anything outside its scope (like variables, DOM, console, files, etc.).
+<hr>
+
+
+Why pure functions are important
+
+* ✅ Predictable and easy to test
+* ✅ Easier to debug (no hidden changes)
+* ✅ Reusable and composable (especially in functional programming)
+* ✅ Safe for concurrency / async logic
+
+
 <br>
 <br>
 <br>
