@@ -490,20 +490,56 @@ printHello()
 //   return _ => n++;
 // }
 
-class createCounter {
-  constructor(n) {
-    this.n = n;
-  }
+// class createCounter {
+//   constructor(n) {
+//     this.n = n;
+//   }
   
-  increment() {
-    return this.n++;
+//   increment() {
+//     return this.n++;
+//   }
+// }
+
+// let counter1 = new createCounter(10);
+// console.log(counter1.increment())
+// console.log(counter1.increment())
+// console.log(counter1.increment())
+
+
+// JAVASCRIPT PROBLEM SOLVING DAY 3
+
+// will solve it using factory function..
+
+function createCounter(init) {
+  let currentValue = init;
+  return {
+    value: currentValue,
+    increment: _ => ++currentValue,
+    decrement: _ => --currentValue,
+    reset: _ => {
+      currentValue = init;
+      return currentValue;
+    },
   }
 }
 
-let counter1 = new createCounter(10);
-console.log(counter1.increment())
-console.log(counter1.increment())
-console.log(counter1.increment())
+let counter1 = createCounter(10);
+let counter2 = createCounter(5);
+let counter3 = createCounter(1);
+
+console.log(counter10.increment());
+console.log(counter10.reset());
+console.log(counter10.decrement());
+console.log(counter10.decrement());
+console.log(counter10.decrement());
+console.log(counter10.decrement());
+console.log(counter10.decrement());
+console.log(counter10.reset());
+console.log(counter10.value)
+console.log(counter10.value)
+console.log(counter10.value)
+
+
 
 
 

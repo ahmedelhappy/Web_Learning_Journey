@@ -34,6 +34,9 @@ function Person2() {
 Person2.prototype.talk = _ => "talking2";
 ```
 <br>
+<br>
+<br>
+<br>
 
 ## factory functions, constructor functions, and classes
 ### Factory Function
@@ -48,13 +51,19 @@ Behind The Scene (Next Img)
 ### Class
 ![alt text](image-31.png)
 
-### Notes
+### 
 * In constructor functions, if you define methods inside the function, each object gets its own copy.
 
 * In classes, methods live in the prototype, so all instances share the same function reference.
 
 * Both can do inheritance, but classes make it much simpler and cleaner.
 
+<br>
+
+
+
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -77,8 +86,6 @@ Values can be:
 - array ([])
 - object ({})
 
-No functions, no comments, no variables.
-
 ```json
 {
   "name": "Ahmed",
@@ -87,6 +94,14 @@ No functions, no comments, no variables.
   "isStudent": true
 }
 ```
+
+* No functions, no comments, no variables.
+* localStorage only supports strings.
+
+
+
+
+
 
 ## Objects
 Keys can be unquoted (if they are valid identifiers).  
@@ -110,8 +125,11 @@ JSON.stringify(myObject) // converts to JSON
 JSON.parse(myJson) // converts to JS Object
 ```
 
-## Note
-localStorage only supports strings.
+
+
+
+
+
 
 ## undefined vs null
 ```js
@@ -123,7 +141,10 @@ func(undefined);  // 'default'
 func(null);       // null
 ```
 
+
+
 ## objects (reference behavior)
+
 ```js
 const object1 = { message: 'hello', price: 799 };  
 const object2 = object1; // Copy by Reference (arrays also)
@@ -136,9 +157,13 @@ const object3 = { message: 'Good job!', price: 799 };
 console.log(object1 === object3); // false (different references)
 ```
 
+
+
 ## innerHTML vs innerText
 - `innerHTML = "<p>Hello</p>"` → inserts a paragraph (parses HTML)
 - `innerText` → inserts text only.
+
+
 
 ## Array
 ```js
@@ -148,28 +173,38 @@ myArray.push()
 myArray.splice()
 ```
 
+
 ## Arrow Functions
 ![alt text](image.png)
+
 
 ## Event Listeners
 Adding & Removing Event Listeners  
 ![alt text](image-1.png)
 
+
 ## Array Filter
 ![alt text](image-2.png)
+
 
 ## Array Map
 ![alt text](image-3.png)
 
+
 ## Data Attribute
 ![alt text](image-4.png)
 
-Use kebab-case in HTML, camelCase in JS (`dataset.camelCase`).
+* Use kebab-case in HTML, camelCase in JS (`dataset.camelCase`).
+
+
+
 
 ## Testing
 ![alt text](image-6.png)  
 ![alt text](image-7.png)  
 ![alt text](image-8.png)
+
+
 
 ## Testing Frameworks (Jasmine)
 - `describe()` → create test suite  
@@ -178,17 +213,24 @@ Use kebab-case in HTML, camelCase in JS (`dataset.camelCase`).
 ![alt text](image-9.png)  
 ![alt text](image-10.png)
 
+
+
 ## OOP
-Constructor  
+### Constructor  
 ![alt text](image-11.png)
 
-Private properties (prefix with `#` and use inside the class)  
+* Private properties (prefix with `#` and use inside the class)  
 ![alt text](image-12.png)
+
+
 
 ## This Keyword
 ![alt text](image-13.png)
 
+
+
 ## XMLHttpRequest
+
 ```js
 let xhr = new XMLHttpRequest();
 
@@ -203,17 +245,25 @@ xhr.addEventListener("load", () => {
 ### Network Tab
 ![alt text](image-16.png)
 
+
+
 ### Status Code
 ![alt text](image-14.png)
 
 - **4xx** → client error (bad request, not found)
 - **5xx** → server error (crash, internal error)
 
+
+
 ### API
 ![alt text](image-15.png)
 
+
+
 ## Async JavaScript & Callback Functions | Color Code
+
 ### Callback Hell Example
+
 ```js
 function orderPizza(callback) {
   setTimeout(() => {
@@ -245,6 +295,7 @@ orderPizza(() => {
   });
 });
 ```
+
 
 Another Example:
 
@@ -279,6 +330,8 @@ walkDog(() => {
 });
 ```
 
+
+
 ## Promises
 [promise-execution](https://www.lydiahallie.com/blog/promise-execution)  
 ![alt text](image-17.png)
@@ -286,6 +339,8 @@ walkDog(() => {
 **Note:**  
 `.catch()` recovers the chain by turning the error into a resolved value (unless you rethrow).  
 Meaning `.then()` after `.catch()` still executes by default.
+
+
 
 ## Async Await
 ![alt text](image-18.png)  
@@ -295,10 +350,11 @@ We use `try/catch` instead of `.catch()` to handle errors more clearly.
 ![alt text](image-21.png)
 
 
-## 🌐 Fetch - Explanation & Examples | [colorCode](https://youtu.be/ubw2hdQIl4E?si=Y1PHheBddQmECimR)
 
-When you call `fetch(URL)`, JavaScript creates a **request** behind the scenes and sends it.  
-This is how it works under the hood:
+## [🌐 Fetch - Explanation & Examples](https://youtu.be/ubw2hdQIl4E?si=Y1PHheBddQmECimR)
+
+* When you call `fetch(URL)`, JavaScript creates a **request** behind the scenes and sends it.  
+  This is how it works under the hood:
 
 ![Fetch Request Flow](image-23.png)
 
@@ -308,6 +364,7 @@ This is how it works under the hood:
 Basic fetch example:
 
 ![Fetch Example](image-24.png)
+
 
 ### 📌 `Response.json()` (Summary)
 
@@ -357,18 +414,81 @@ then the **`catch` block will run**.
 ![POST Example](image-27.png)
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
+## JS closure
+
+* Closure = inner function + access to outer variables.
+
+* Variables stay alive as long as the inner function is referenced.
+
+* Common use cases: data privacy, counters, function factories, etc.
+``` js
+function createCounter(init) { // init param will be remembered, even after the function finishes execution.
+  let currentValue = init; // this as well
+  return {
+    value: currentValue,
+    increment: _ => ++currentValue, // inner function
+    decrement: _ => --currentValue,
+    reset: _ => {
+      currentValue = init;
+      return currentValue;
+    },
+  }
+}
+
+let counter1 = createCounter(10); 
+let counter2 = createCounter(5);
+let counter3 = createCounter(1);
+// so here each counter still remembers it's init value, even after manipulation. for example:
+counter1.increment(); // 11
+counter1.increment(); // 12
+counter1.reset(); // 10, so here it remembers the init value, cause it's kept somewhere in the memory.
+```
+
+
+### closure with constructor function (or class)
+
+* it doesn't work the same way with constructor..
+
+``` js
+class Person {
+  constructor(name) {
+    let name = name; // won't work (won't be remembered if I use it with a method)
+  }
+  myMethod() {return name} // won't work, instead you should assign it to this.name = name.
+                           // then access it in myMethod like this
+  myMethod2() {return this.name};
+} 
+```
+* so the bottom line, closure doesn't word the same way with constructor
+
+### However it's gonna work that way: 
+
+``` js 
+class Person {
+  constructor(name) {
+    let secret = "hidden";
+    this.getSecret = () => secret; // closure keeps secret alive
+  }
+}
+```
+
 <br>
 <br>
 
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
@@ -376,7 +496,7 @@ then the **`catch` block will run**.
 # 📝Side Notes
 some general notes, kinda off-topic.
 
-## Object Iteration
+* ## Object Iteration
 
 ### 1. `for...in`
 Iterates over **keys** (property names) in an object.
@@ -415,7 +535,7 @@ Returns an **array of [key, value] pairs**.
       console.log(`${key}: ${value}`);
     });
 
-## Numbers Notes
+* ## Numbers Notes
 | **Value**                  | **Meaning**                                       | **Example**                             |
 | -------------------------- | ------------------------------------------------- | --------------------------------------- |
 | `Infinity`                 | Positive infinity (bigger than any number)        | `1 / 0 → Infinity`                      |
@@ -433,5 +553,19 @@ Returns an **array of [key, value] pairs**.
 <br>
 <br>
 
--> hoisting doesn't work with arrow functions
--> 
+* hoisting doesn't work with arrow functions
+<br>
+<hr>
+
+* JavaScript gives strings methods like .toUpperCase() or .slice(), but under the hood, those methods return new strings — they don’t modify the original.
+
+* ## Primitive VS non-primitive
+![alt text](image-33.png)
+
+* if You confused when to use () with functions and when don't. <br>
+  let myVar = myFunction -> the function itself <br>
+  let myVar = myFunction() -> the returned value of the function
+
+
+
+
