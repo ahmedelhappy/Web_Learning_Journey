@@ -480,6 +480,66 @@ class Person {
 
 
 
+## JavaScript Value vs. Reference (Primitives vs. Objects) 
+
+* For primitives → the value is the actual data.
+* For objects → the value is a reference (memory address).
+* Passing primitives to a function
+
+```js
+let x = 10;
+
+function change(num) {
+  num = 20;
+}
+
+change(x);
+console.log(x); // ❌ still 10
+//num gets a copy of the value 10.
+//Changing num does not affect x.
+```
+
+
+* There is no way to directly pass a primitive “by reference” in JavaScript (unlike cpp) .
+* Passing objects (by reference value)
+
+
+```js
+let obj = { value: 10 };
+
+function change(o) {
+  o.value = 20;  // modifies the same object
+}
+
+change(obj);
+console.log(obj.value); // ✅ 20
+```
+
+* However Reassigning the parameter (does NOT affect original)
+
+```js
+let obj = { value: 10 };
+
+function change(o) {
+  o = { value: 20 }; // reassigns local reference
+}
+
+change(obj);
+console.log(obj.value); // ❌ still 10
+
+```
+
+
+* Non-primitive types (objects, arrays, functions) <br> 
+  When you assign or pass them around, you’re copying the reference, not the whole object.
+* Stack → variable names + references
+* Heap → actual objects, arrays, functions
+* Copying an object variable → copies reference, not object
+* Mutating object → affects all references
+* Reassigning variable → breaks the link
+
+
+
 <br>
 <br>
 <br>
