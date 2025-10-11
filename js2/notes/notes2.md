@@ -571,6 +571,8 @@ You can:
 * Store them in objects or arrays.
 * Basically — functions are data.
 
+
+##
 <br>
 <br>
 <br>
@@ -657,6 +659,11 @@ Returns an **array of [key, value] pairs**.
   let myVar = myFunction -> the function itself <br>
   let myVar = myFunction() -> the returned value of the function
 
+* Refresher: The different btw let i in arr VS let i of arr... <br>
+  in -> index <br>
+  of -> value
+
+  
 
 
 
