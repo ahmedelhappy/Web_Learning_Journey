@@ -54,6 +54,35 @@ let root = ReactDOM.createRoot(document.querySelector(".js-container"));
 /* ------------------------- */
 
 /* 3c Exercise */
+// function CounterButton() {
+//   let [count, setCount] = React.useState(0);
+
+//   function increaseCount() {
+//     setCount(++count);
+//   }
+
+//   return (
+//     <>
+//       <button onClick={increaseCount}>
+//         Clicked {count} {count === 1 ? "time" : "times"}
+//       </button>
+//     </>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <>
+//       <CounterButton />
+//     </>
+//   );
+// }
+
+// root.render(<App />);
+/* ------------------------- */
+
+
+/* 3d Exercise */
 function CounterButton() {
   let [count, setCount] = React.useState(0);
 
@@ -74,14 +103,12 @@ function App() {
   return (
     <>
       <CounterButton />
+      <CounterButton />
     </>
   );
 }
 
 root.render(<App />);
-/* ------------------------- */
-
-/* 3d Exercise */
 /* ------------------------- */
 
 /* 3e Exercise */
