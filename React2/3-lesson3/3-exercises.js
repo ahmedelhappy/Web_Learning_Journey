@@ -141,48 +141,73 @@ let root = ReactDOM.createRoot(document.querySelector(".js-container"));
 
 
 /* 3f Exercise */
-function CounterButton({ count, setCount }) {
-  function increaseCount() {
-    setCount(++count);
+// function CounterButton({ count, setCount }) {
+//   function increaseCount() {
+//     setCount(++count);
+//   }
+
+//   return (
+//     <>
+//       <button onClick={increaseCount}>
+//         Clicked {count} {count === 1 ? "time" : "times"}
+//       </button>
+//     </>
+//   );
+// }
+
+// function ResetButton({ setCount }) {
+//   function reset() {
+//     setCount(0);
+//   }
+
+//   return (
+//     <button onClick={reset}>
+//       Reset
+//     </button>
+//   )
+// }
+
+// function App() {
+//   let [count, setCount] = React.useState(0);
+
+//   return (
+//     <>
+//       <CounterButton count={count} setCount={setCount} />
+//       <CounterButton count={count} setCount={setCount} />
+//       <ResetButton setCount={setCount} />
+//     </>
+//   );
+// }
+
+// root.render(<App />);
+/* ------------------------- */
+
+
+/* 3g Exercise */
+function Input() {
+  let [inputText, setInputText] = React.useState(null);
+
+  function captureInput(e) {
+    setInputText(e.target.value);
   }
 
-  return (
+  return(
     <>
-      <button onClick={increaseCount}>
-        Clicked {count} {count === 1 ? "time" : "times"}
-      </button>
+      <input onChange={captureInput} />
+      <p>Hello {inputText} </p>
     </>
-  );
-}
-
-function ResetButton({ setCount }) {
-  function reset() {
-    setCount(0);
-  }
-
-  return (
-    <button onClick={reset}>
-      Reset
-    </button>
   )
 }
 
 function App() {
-  let [count, setCount] = React.useState(0);
-
   return (
     <>
-      <CounterButton count={count} setCount={setCount} />
-      <CounterButton count={count} setCount={setCount} />
-      <ResetButton setCount={setCount} />
+      <Input />
     </>
   );
 }
 
 root.render(<App />);
-/* ------------------------- */
-
-/* 3g Exercise */
 /* ------------------------- */
 
 /* 3h Exercise */
