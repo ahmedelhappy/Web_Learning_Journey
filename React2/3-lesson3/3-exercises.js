@@ -236,29 +236,9 @@ let root = ReactDOM.createRoot(document.querySelector(".js-container"));
 
 
 /* 3i Exercise */
-function Form({ inputText, setInputText }) {
-  return (
-    <>
-      <input onChange={(e) => setInputText(e.target.value)} value={inputText} />
-      <button onClick={() => setInputText("Ahmed")}>Example</button>
-      <button onClick={() => setInputText("")}>Reset</button>
-      <p>Hello {inputText}</p>
-    </>
-  );
-}
 
+//Solved on chatbot project...
 
-function App() {
-  let [inputText, setInputText] = React.useState("");
-
-  return (
-    <>
-      <Form inputText={inputText} setInputText={setInputText} />
-    </>
-  );
-}
-
-root.render(<App />);
 /* ------------------------- */
 
 /* 3j Exercise */

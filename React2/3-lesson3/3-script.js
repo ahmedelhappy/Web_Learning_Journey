@@ -3,7 +3,7 @@ const root = ReactDOM.createRoot(container);
 
 function ChatInput({ chatMessages, setChatMessages }) {
   const [inputText, setInputText] = React.useState("");
-  
+
   function saveInputText(event) {
     setInputText(event.target.value);
   }
@@ -35,9 +35,12 @@ function ChatInput({ chatMessages, setChatMessages }) {
     setInputText("");
   }
 
-  function clickEnter(e) {
+  function onKeyDown(e) {
     if (e.key === "Enter") {
       sendMessage();
+    }
+    if (e.key === "Escape") {
+      setInputText("");
     }
   }
 
@@ -48,14 +51,14 @@ function ChatInput({ chatMessages, setChatMessages }) {
         size="30"
         value={inputText} //"controlled input" to be able to reset it after clicking the button.
         onChange={saveInputText}
-        onKeyDown={clickEnter}
+        onKeyDown={onKeyDown}
       />
       <button onClick={sendMessage} >Send</button>
     </div>
   );
 }
 
-function ChatMessage({ message, sender }) {
+function ChatMessageTemp({ message, sender }) {
   return (
     <div>
       {sender === "robot" && <img src="imgs/robot.png" width={50} />}
@@ -65,13 +68,13 @@ function ChatMessage({ message, sender }) {
   );
 }
 
-// This uses ChatMessage as a blueprint
+// This uses ChatMessageTemp as a blueprint
 function ChatMessages({ chatMessages }) {
   return (
     <>
       {chatMessages.map((chatMessage) => {
         return (
-          <ChatMessage
+          <ChatMessageTemp
             message={chatMessage.message}
             sender={chatMessage.sender}
             key={chatMessage.id}
