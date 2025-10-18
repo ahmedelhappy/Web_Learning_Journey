@@ -8,7 +8,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
     setInputText(event.target.value);
   }
 
-  function sendMessage() {
+  async function sendMessage() {
     // Saving it in newChatMessages variable to save the new value in it to pass it to the useState,
     // Because useState is async.
     const newChatMessages = [ 
@@ -21,7 +21,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
     ];
     setChatMessages(newChatMessages);
 
-    const response = Chatbot.getResponse(inputText);
+    const response = await Chatbot.getResponseAsync(inputText);
 
     setChatMessages([
       ...newChatMessages,
