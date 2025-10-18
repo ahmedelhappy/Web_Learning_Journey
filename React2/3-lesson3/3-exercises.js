@@ -139,7 +139,6 @@ let root = ReactDOM.createRoot(document.querySelector(".js-container"));
 // root.render(<App />);
 /* ------------------------- */
 
-
 /* 3f Exercise */
 // function CounterButton({ count, setCount }) {
 //   function increaseCount() {
@@ -182,35 +181,57 @@ let root = ReactDOM.createRoot(document.querySelector(".js-container"));
 // root.render(<App />);
 /* ------------------------- */
 
-
 /* 3g Exercise */
-function Input() {
-  let [inputText, setInputText] = React.useState(null);
+// function Input() {
+//   let [inputText, setInputText] = React.useState(null);
 
-  function captureInput(e) {
-    setInputText(e.target.value);
-  }
+//   function captureInput(e) {
+//     setInputText(e.target.value);
+//   }
 
-  return(
-    <>
-      <input onChange={captureInput} />
-      <p>Hello {inputText} </p>
-    </>
-  )
-}
+//   return(
+//     <>
+//       <input onChange={captureInput} />
+//       <p>Hello {inputText} </p>
+//     </>
+//   )
+// }
 
-function App() {
+// function App() {
+//   return (
+//     <>
+//       <Input />
+//     </>
+//   );
+// }
+
+// root.render(<App />);
+/* ------------------------- */
+
+/* 3h Exercise */
+function Form({ inputText, setInputText }) {
   return (
     <>
-      <Input />
+      <input onChange={(e) => setInputText(e.target.value)} value={inputText} />
+      <button onClick={() => setInputText("Ahmed")}>Example</button>
+      <button onClick={() => setInputText("")}>Reset</button>
+      <p>Hello {inputText}</p>
+    </>
+  );
+}
+
+
+function App() {
+  let [inputText, setInputText] = React.useState("");
+
+  return (
+    <>
+      <Form inputText={inputText} setInputText={setInputText} />
     </>
   );
 }
 
 root.render(<App />);
-/* ------------------------- */
-
-/* 3h Exercise */
 /* ------------------------- */
 
 /* 3i Exercise */
