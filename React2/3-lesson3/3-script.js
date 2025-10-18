@@ -3,6 +3,7 @@ const root = ReactDOM.createRoot(container);
 
 function ChatInput({ chatMessages, setChatMessages }) {
   const [inputText, setInputText] = React.useState("");
+  
   function saveInputText(event) {
     setInputText(event.target.value);
   }
@@ -34,6 +35,12 @@ function ChatInput({ chatMessages, setChatMessages }) {
     setInputText("");
   }
 
+  function clickEnter(e) {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  }
+
   return (
     <div>
       <input
@@ -41,8 +48,9 @@ function ChatInput({ chatMessages, setChatMessages }) {
         size="30"
         value={inputText} //"controlled input" to be able to reset it after clicking the button.
         onChange={saveInputText}
+        onKeyDown={clickEnter}
       />
-      <button onClick={sendMessage}>Send</button>
+      <button onClick={sendMessage} >Send</button>
     </div>
   );
 }
