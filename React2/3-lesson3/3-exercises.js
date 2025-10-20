@@ -237,18 +237,30 @@ let root = ReactDOM.createRoot(document.querySelector(".js-container"));
 
 /* 3i Exercise */
 
-//Solved on chatbot project...
+// Solved on chatbot project...
 
 /* ------------------------- */
 
 /* 3j Exercise */
+
+// Solved on chatbot project...
+
 /* ------------------------- */
 
 /* 3k Exercise */
+
+// Solved on chatbot project...
+
 /* ------------------------- */
 
 /* 3l Exercise */
+
+// Solved on chatbot project...
+
 /* ------------------------- */
 
 /* 3m Exercise */
+
+// Solved on chatbot project...
+
 /* ------------------------- */
