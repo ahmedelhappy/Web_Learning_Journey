@@ -1,5 +1,3 @@
-
-
 /* 4a Exercise */
 /* .no-button {
   color: white;
@@ -9,7 +7,6 @@
   padding: 5px 10px;
 } */
 /* ------------------------- */
-
 
 /* 4b Exercise */
 /* .is-button-on {
@@ -22,8 +19,7 @@
 } */
 /* ------------------------- */
 
-
- /* 4c Exercise */
+/* 4c Exercise */
 /* .is-button-on, .is-button-off{
   color: white;
   background-color: rgb(25, 135, 84);
@@ -38,9 +34,8 @@
 } */
 /* ------------------------- */
 
-
- /* 4d Exercise */
-  p {
+/* 4d Exercise */
+/* p {
     font-weight:500;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -61,37 +56,71 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+  } */
 /* ------------------------- */
 
+/* 4e Exercise */
+p {
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
- /* 4e Exercise */
+input {
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.sign-up-button,
+.login-button {
+  color: white;
+  padding: 8px 12px;
+  margin-top: 8px;
+  margin-right: 5px;
+  background-color: rgb(0, 123, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pass-container {
+  display: flex;
+  gap: 6px;
+}
+
+.show-password-button {
+  border: none;
+  background-color:white;
+  margin: 0;
+  padding-bottom: 6px;
+}
+
+img {
+  width: 20px;
+}
+
+
+
 /* ------------------------- */
 
-
- /* 4f Exercise */
+/* 4f Exercise */
 /* ------------------------- */
 
-
- /* 4g Exercise */
+/* 4g Exercise */
 /* ------------------------- */
 
-
- /* 4h Exercise */
+/* 4h Exercise */
 /* ------------------------- */
 
-
- /* 4i Exercise */
+/* 4i Exercise */
 /* ------------------------- */
 
-
- /* 4j Exercise */
+/* 4j Exercise */
 /* ------------------------- */
 
-
- /* 4k Exercise */
+/* 4k Exercise */
 /* ------------------------- */
 
-
- /* 4l Exercise */
+/* 4l Exercise */
 /* ------------------------- */
