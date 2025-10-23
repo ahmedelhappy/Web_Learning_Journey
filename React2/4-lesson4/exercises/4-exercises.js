@@ -56,15 +56,17 @@ const container = document.querySelector(".js-container");
 ReactDOM.createRoot(container).render(<App />);
 
 function App() {
-  const [isButtonOn, setIsButtonOn] = React.useState(true);
 
   return (
-    <button 
-    className = {isButtonOn ? "is-button-on" : "is-button-off"}
-    onClick={() => isButtonOn? setIsButtonOn(false) : setIsButtonOn(true)}
-    >
-      {isButtonOn? "ON" : "OFF"}
-    </button>
+    <>
+      <p>Hello, welcome to my website</p>
+      <input placeholder="Email" type="email" />
+      <br />
+      <input placeholder="Password" type="Password" />
+      <br />
+      <button>Login</button>
+      <button>Sign Up</button>
+    </>
   )
 }
 

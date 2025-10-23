@@ -40,18 +40,28 @@
 
 
  /* 4d Exercise */
-.is-button-on, .is-button-off{
-  color: white;
-  background-color: rgb(25, 135, 84);
-  border: none;
-  border-radius: 3px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
+  p {
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-.is-button-off {
-  background-color: rgb(220, 53, 69);
-}
+  input {
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-width: 1px;
+  }
+
+  button {
+    color: white;
+    padding: 8px 12px;
+    margin-top: 8px;
+    margin-right: 5px;
+    background-color: rgb(0, 123, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 /* ------------------------- */
 
 
