@@ -69,35 +69,52 @@
 /* ------------------------- */
 
 /* 4e Exercise */
+// const container = document.querySelector(".js-container");
+// ReactDOM.createRoot(container).render(<App />);
+
+// function App() {
+//   const [showPass, setShowPass] = React.useState(false);
+
+//   return (
+//     <>
+//       <p>Hello, welcome to my website</p>
+//       <input placeholder="Email" type="email" />
+//       <br />
+//       <div className="pass-container">
+//         <input placeholder="Password" type={!showPass ? "password" : "text"} />
+//         <button
+//           className="show-password-button"
+//           onClick={() => (showPass ? setShowPass(false) : setShowPass(true))}
+//         >
+//           <img src="https://cdn-icons-png.flaticon.com/128/2767/2767146.png"></img>
+//         </button>
+//       </div>
+//       <br />
+//       <button className="login-button">Login</button>
+//       <button className="sign-up-button">Sing up</button>
+//     </>
+//   );
+// }
+/* ------------------------- */
+
+/* 4f Exercise */
 const container = document.querySelector(".js-container");
 ReactDOM.createRoot(container).render(<App />);
 
 function App() {
-  const [showPass, setShowPass] = React.useState(false);
-
+  const [time, setTime] = React.useState(dayjs().format("HH:mm:ss"));
+  React.useEffect(()=> {
+    setInterval(()=> {
+      setTime(dayjs().format("HH:mm:ss"));
+    }, 1000)
+  }, [])
+  // https://chatgpt.com/share/68fa5586-155c-8006-95a6-b1238b7c99c4
   return (
     <>
-      <p>Hello, welcome to my website</p>
-      <input placeholder="Email" type="email" />
-      <br />
-      <div className="pass-container">
-        <input placeholder="Password" type={!showPass ? "password" : "text"} />
-        <button
-          className="show-password-button"
-          onClick={() => (showPass ? setShowPass(false) : setShowPass(true))}
-        >
-          <img src="https://cdn-icons-png.flaticon.com/128/2767/2767146.png"></img>
-        </button>
-      </div>
-      <br />
-      <button className="login-button">Login</button>
-      <button className="sign-up-button">Sing up</button>
+      <p>Current Time: {time}</p>
     </>
   );
 }
-/* ------------------------- */
-
-/* 4f Exercise */
 /* ------------------------- */
 
 /* 4g Exercise */

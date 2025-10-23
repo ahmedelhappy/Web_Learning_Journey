@@ -60,7 +60,7 @@
 /* ------------------------- */
 
 /* 4e Exercise */
-p {
+/* p {
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -99,12 +99,50 @@ input {
 img {
   width: 20px;
 }
-
+ */
 
 
 /* ------------------------- */
 
 /* 4f Exercise */
+p {
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.sign-up-button,
+.login-button {
+  color: white;
+  padding: 8px 12px;
+  margin-top: 8px;
+  margin-right: 5px;
+  background-color: rgb(0, 123, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pass-container {
+  display: flex;
+  gap: 6px;
+}
+
+.show-password-button {
+  border: none;
+  background-color:white;
+
+}
+
+img {
+  width: 20px;
+}
 /* ------------------------- */
 
 /* 4g Exercise */
