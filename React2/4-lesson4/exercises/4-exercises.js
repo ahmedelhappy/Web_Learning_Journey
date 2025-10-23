@@ -1,18 +1,34 @@
-const container = document.querySelector(".js-container");
-ReactDOM.createRoot(container).render(<App />);
-
-function App() {
-  return (
-    <button className="no-button">No</button>
-  )
-}
 
 /* 4a Exercise */
+// const container = document.querySelector(".js-container");
+// ReactDOM.createRoot(container).render(<App />);
+
+// function App() {
+//   return (
+//     <button className="no-button">No</button>
+//   )
+// }
 
 /* ------------------------- */
 
 
 /* 4b Exercise */
+const container = document.querySelector(".js-container");
+ReactDOM.createRoot(container).render(<App />);
+
+function App() {
+  const [isButtonOn, setIsButtonOn] = React.useState(true);
+
+  return (
+    <button 
+    className="is-button-on"
+    onClick={() => isButtonOn? setIsButtonOn(false) : setIsButtonOn(true)}
+    >
+      {isButtonOn? "true" : "false"}
+    </button>
+  )
+}
+
 /* ------------------------- */
 
 

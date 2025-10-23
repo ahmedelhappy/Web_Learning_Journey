@@ -1,17 +1,25 @@
 
 
 /* 4a Exercise */
-.no-button {
+/* .no-button {
   color: white;
   background-color: rgb(25, 135, 84);
   border: none;
   border-radius: 3px;
   padding: 5px 10px;
-}
+} */
 /* ------------------------- */
 
 
 /* 4b Exercise */
+.is-button-on {
+  color: white;
+  background-color: rgb(25, 135, 84);
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
 /* ------------------------- */
 
 
