@@ -106,6 +106,7 @@ function App() {
   React.useEffect(()=> {
     setInterval(()=> {
       setTime(dayjs().format("HH:mm:ss"));
+      console.log("run code")
     }, 1000)
   }, [])
   // https://chatgpt.com/share/68fa5586-155c-8006-95a6-b1238b7c99c4
