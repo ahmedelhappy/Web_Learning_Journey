@@ -98,30 +98,48 @@
 /* ------------------------- */
 
 /* 4f Exercise */
-const container = document.querySelector(".js-container");
-ReactDOM.createRoot(container).render(<App />);
+// const container = document.querySelector(".js-container");
+// ReactDOM.createRoot(container).render(<App />);
 
-function App() {
-  const [time, setTime] = React.useState(dayjs().format("HH:mm:ss"));
-  React.useEffect(()=> {
-    setInterval(()=> {
-      setTime(dayjs().format("HH:mm:ss"));
-      console.log("run code")
-    }, 1000)
-  }, [])
-  // https://chatgpt.com/share/68fa5586-155c-8006-95a6-b1238b7c99c4
-  return (
-    <>
-      <p>Current Time: {time}</p>
-    </>
-  );
-}
+// function App() {
+//   const [time, setTime] = React.useState(dayjs().format("HH:mm:ss"));
+//   React.useEffect(()=> {
+//     setInterval(()=> {
+//       setTime(dayjs().format("HH:mm:ss"));
+//     }, 1000)
+//   }, [])
+//   // https://chatgpt.com/share/68fa5586-155c-8006-95a6-b1238b7c99c4
+//   return (
+//     <>
+//       <p>Current Time: {time}</p>
+//     </>
+//   );
+// }
 /* ------------------------- */
 
 /* 4g Exercise */
+// const container = document.querySelector(".js-container");
+// ReactDOM.createRoot(container).render(<App />);
+
+// function App() {
+//   const [time, setTime] = React.useState(dayjs().format("HH:mm:ss"));
+//   React.useEffect(()=> {
+//     setInterval(()=> {
+//       setTime(dayjs().format("HH:mm:ss"));
+//       console.log("run code")
+//     }, 1000)
+//   }, [])
+//   // https://chatgpt.com/share/68fa5586-155c-8006-95a6-b1238b7c99c4
+//   return (
+//     <>
+//       <p>Current Time: {time}</p>
+//     </>
+//   );
+// }
 /* ------------------------- */
 
 /* 4h Exercise */
+
 /* ------------------------- */
 
 /* 4i Exercise */
