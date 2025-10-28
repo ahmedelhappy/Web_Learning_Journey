@@ -139,7 +139,64 @@
 /* ------------------------- */
 
 /* 4h Exercise */
+// const container = document.querySelector(".js-container");
+// const root = ReactDOM.createRoot(container);
 
+// function App() {
+//   const [count, setCount] = React.useState(0);
+//   function autoClick() {
+//     setInterval(() => {setCount(prev => prev + 1)
+//       console.log("ran")
+//     }, 1000);
+
+//     // setInterval(() => setCount(count + 1), 1000);
+//   }
+
+//   return (
+//     <>
+//       <button onClick={() => setCount(count + 1)}>
+//         Clicked {count} {count === 1 ? "time" : "times"}
+//       </button>
+//       <button onClick={autoClick}>Auto Click</button>
+//       <button onClick={() => setCount(0)}>Reset</button>
+//     </>
+//   );
+// }
+
+// root.render(<App />);
+
+const container = document.querySelector(".js-container");
+const root = ReactDOM.createRoot(container);
+
+function App() {
+  const [count, setCount] = React.useState(0);
+  const buttonRef = React.useRef();
+
+  function autoClick() {
+    setInterval(() => {
+      const buttonElem = buttonRef.current;
+      if (buttonElem) {
+        buttonElem.click();
+      }
+    }, 1000);
+  }
+
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)} ref={buttonRef}>
+        Clicked {count} {count === 1 ? "time" : "times"}
+      </button>
+
+      <button onClick={autoClick} >
+        Auto Click
+      </button>
+      
+      <button onClick={() => setCount(0)}>Reset</button>
+    </>
+  );
+}
+
+root.render(<App />);
 /* ------------------------- */
 
 /* 4i Exercise */
