@@ -116,8 +116,21 @@ function ChatMessage({ message, sender }) {
   );
 }
 
+function useAutoScroll(dependencies) {
+  const containerRef  = React.useRef(null);
+  
+  React.useEffect(() => {
+    const containerElem = containerRef.current;
+    if (containerElem) {
+      containerElem.scrollTop = containerElem.scrollHeight;
+    }
+  }, dependencies);
+
+  return containerRef ;
+}
+
 function ChatMessages({ chatMessages }) {
-  const chatMessagesRef = React.useRef(null);
+  const chatMessagesRef = useAutoScroll([chatMessages]);
 
   React.useEffect(() => {
     const containerElem = chatMessagesRef.current;
