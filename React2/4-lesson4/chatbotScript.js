@@ -1,33 +1,73 @@
 function ChatInput({ chatMessages, setChatMessages }) {
   const [inputText, setInputText] = React.useState("");
 
+  // used useState because when react re-renders the function, doesn't set it back to "false"
+  // Check out MS whiteboard lesson 3.
+  const [isLoading, setIsLoading] = React.useState(false); 
+
   function saveInputText(event) {
     setInputText(event.target.value);
   }
 
-  function sendMessage() {
+
+  async function sendMessage() {    
+    // Saving it in newChatMessages variable to save the new value in it to pass it to the useState,
+    // Because useState is async.
+    setInputText("");
+
+    if (inputText === "") {
+      console.log("Enter a Valid Message");
+      return;
+    }
+
+    if(isLoading) {
+      console.log("Wait for model response");
+      return;
+    }
+
+    setIsLoading(true);
+
     const newChatMessages = [
       ...chatMessages,
       {
+        // User message.
         message: inputText,
         sender: "user",
         id: crypto.randomUUID(),
       },
+      {
+        // Loading msg, will be deleted later.
+        message: <img src="loading-spinner.gif" className="loading-spinner-img" />,
+        sender: "robot",
+        id: crypto.randomUUID(),
+      },
     ];
 
-    setChatMessages(newChatMessages);
+    setChatMessages(newChatMessages); // update the chatMessage (state) to show the Loading msg.
 
-    const response = Chatbot.getResponse(inputText);
+
+    const response = await Chatbot.getResponseAsync(inputText);
+
     setChatMessages([
-      ...newChatMessages,
+      ...newChatMessages.slice(0, newChatMessages.length - 1), // remove the loading message.
       {
+        // Robot Response.
         message: response,
         sender: "robot",
         id: crypto.randomUUID(),
       },
     ]);
+    setIsLoading(false);
+  }
 
-    setInputText("");
+
+  function onKeyDown(e) {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+    if (e.key === "Escape") {
+      setInputText("");
+    }
   }
 
   return (
@@ -35,13 +75,12 @@ function ChatInput({ chatMessages, setChatMessages }) {
       <input
         placeholder="Send a message to Chatbot"
         size="30"
+        value={inputText} //"controlled input" to be able to reset it after clicking the button.
         onChange={saveInputText}
-        value={inputText}
+        onKeyDown={onKeyDown}
         className="chat-input"
       />
-      <button onClick={sendMessage} className="send-button">
-        Send
-      </button>
+      <button onClick={sendMessage} className="send-button">Send</button>
     </div>
   );
 }
@@ -103,34 +142,21 @@ function ChatMessages({ chatMessages }) {
 }
 
 function App() {
-  const [chatMessages, setChatMessages] = React.useState([
-    {
-      message: "hello chatbot",
-      sender: "user",
-      id: "id1",
-    },
-    {
-      message: "Hello! How can I help you?",
-      sender: "robot",
-      id: "id2",
-    },
-    {
-      message: "can you get me todays date?",
-      sender: "user",
-      id: "id3",
-    },
-    {
-      message: "Today is September 27",
-      sender: "robot",
-      id: "id4",
-    },
-  ]);
+  const [chatMessages, setChatMessages] = React.useState([]);
+
   // const [chatMessages, setChatMessages] = array;
   // const chatMessages = array[0];
   // const setChatMessages = array[1];
 
   return (
     <div className="app-container">
+      {chatMessages.length === 0 && (
+        <p className="welcome-message">
+          Welcome to the chatbot project! Send a message using the textbox
+          below.
+        </p>
+      )}
+
       <ChatMessages chatMessages={chatMessages} />
       <ChatInput
         chatMessages={chatMessages}

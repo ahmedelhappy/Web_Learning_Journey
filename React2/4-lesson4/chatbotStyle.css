@@ -39,6 +39,11 @@ body {
   flex-direction: column;
 }
 
+.welcome-message {
+  color: rgb(120, 120, 120);
+  text-align: center;
+}
+
 .chat-message-user {
   display: flex;
   justify-content: end;
@@ -48,6 +53,11 @@ body {
 .chat-message-robot {
   display: flex;
   align-items: start;
+}
+
+.loading-spinner-img {
+  height: 40px;
+  margin: -15px;
 }
 
 .chat-message-text {
