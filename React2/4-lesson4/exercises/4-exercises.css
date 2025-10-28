@@ -101,7 +101,6 @@ img {
 }
  */
 
-
 /* ------------------------- */
 
 /* 4f Exercise */
@@ -152,6 +151,27 @@ img {
 /* ------------------------- */
 
 /* 4i Exercise */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(222, 222, 222);
+  gap: 10px;
+}
+
+button {
+  background-color: rgb(25, 135, 84);
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  cursor: pointer;
+}
 /* ------------------------- */
 
 /* 4j Exercise */

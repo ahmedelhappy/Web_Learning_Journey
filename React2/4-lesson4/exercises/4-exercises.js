@@ -182,17 +182,18 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <button onClick={() => setCount(count + 1)} ref={buttonRef}>
         Clicked {count} {count === 1 ? "time" : "times"}
       </button>
+      
+      <button onClick={() => setCount(0)}>Reset</button>
 
       <button onClick={autoClick} >
         Auto Click
       </button>
       
-      <button onClick={() => setCount(0)}>Reset</button>
-    </>
+    </div>
   );
 }
 
