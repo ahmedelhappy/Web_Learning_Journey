@@ -1,0 +1,17 @@
+/* well, the code in here is only related to the app style */
+
+.app-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-message {
+  color: rgb(120, 120, 120);
+  text-align: center;
+}
+
