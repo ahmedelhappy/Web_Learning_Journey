@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import { useState }from 'react'
 import { Chatbot } from 'supersimpledev'
 import LoadingSpinnerImage from '../assets/loading-spinner.gif'
@@ -40,12 +41,14 @@ export function ChatInput({ chatMessages, setChatMessages }) {
         message: inputText,
         sender: "user",
         id: crypto.randomUUID(),
+        time: dayjs().valueOf(), 
       },
       {
         // Loading msg, will be deleted later.
         message: <img src={LoadingSpinnerImage} className="loading-spinner-img" />,
         sender: "robot",
         id: crypto.randomUUID(),
+        time: dayjs().valueOf(), 
       },
     ];
 
