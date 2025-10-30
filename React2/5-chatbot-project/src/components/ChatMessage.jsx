@@ -1,7 +1,8 @@
 // being used inside ChatMessages.jsx component.
-import RobotProfileImage from '../assets/robot.png'
-import UserProfileImage from '../assets/profile-1.jpg'
-import "./ChatMessage.css"
+import dayjs from "dayjs";
+import RobotProfileImage from "../assets/robot.png";
+import UserProfileImage from "../assets/profile-1.jpg";
+import "./ChatMessage.css";
 
 export function ChatMessage({ message, sender }) {
   // const message = props.message;
@@ -18,8 +19,9 @@ export function ChatMessage({ message, sender }) {
     );
   }
   */
-  
-  console.log(UserProfileImage)
+
+  console.log(UserProfileImage);
+  const time = dayjs().valueOf();
 
   return (
     <div
@@ -28,7 +30,11 @@ export function ChatMessage({ message, sender }) {
       {sender === "robot" && (
         <img src={RobotProfileImage} className="chat-message-profile" />
       )}
-      <div className="chat-message-text">{message}</div>
+      <div className="message-and-time">
+        <div className="chat-message-text">{message}</div>
+        <div className="time">{dayjs(time).format("h:mma")}</div>
+      </div>
+
       {sender === "user" && (
         <img src={UserProfileImage} className="chat-message-profile" />
       )}
