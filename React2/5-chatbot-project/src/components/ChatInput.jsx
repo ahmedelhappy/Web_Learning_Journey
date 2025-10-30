@@ -90,6 +90,7 @@ export function ChatInput({ chatMessages, setChatMessages }) {
         className="chat-input"
       />
       <button onClick={sendMessage} className="send-button">Send</button>
+      <button onClick={()=> setChatMessages([])} className="clear-button" >Clear</button>
     </div>
   );
 }
